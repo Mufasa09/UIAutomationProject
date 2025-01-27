@@ -59,6 +59,7 @@ namespace UIAutomationProject.Tests
         {
             Thread.Sleep(number);
 
+        }
         public void VerifyLoginError()
         {
             Thread.Sleep(3000);
