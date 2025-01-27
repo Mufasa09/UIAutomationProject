@@ -13,6 +13,21 @@ Scenario: Verify you can log in the site
 		| UserName | locked_out_user |
 		| Password | secret_sauce    |
 	Then I verify login error
+		| Key      | Value           |
+		| UserName | locked_out_user |
+		| Password | secret_sauce    |
+
+Scenario: I verify all elements are displayed on login page
+	When I verify the title of the site is Swag Labs
+	Then I verify login page elements
+
+Scenario: I verify negative login scenario
+	Given I verify the title of the site is Swag Labs
+	When I verify login page elements
+	Then I verify login error
+		| Key      | Value |
+		| UserName |       |
+		| Password |       |
 
 Scenario Outline: Verify you can log in the site with multiple users
 	Given I verify the title of the site is Swag Labs

@@ -2,6 +2,7 @@ using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 using UIAutomationProject.Tests;
+using UIAutomationProject.Utilities.Data;
 
 namespace UIAutomationProject.StepDefinitions
 {
@@ -29,7 +30,6 @@ namespace UIAutomationProject.StepDefinitions
         public void VerifySiteTitle(string title)
         {
             Tests.VerifyTitle(title);
-
         }
 
         [Then(@"I verify login error")]
@@ -38,5 +38,18 @@ namespace UIAutomationProject.StepDefinitions
             Tests.VerifyLoginError();
         }
 
+
+        [Then(@"I verify login error")]
+        public void ThenIVerifyUserIsOnTheMainPage(Table data)
+        {
+            Tests.VerifyLoginError(data.CreateInstance<BaseData>());
+        }
+
+        [When(@"I verify login page elements")]
+        [Then(@"I verify login page elements")]
+        public void ThenIVerifyLoginPageElements()
+        {
+            Tests.VerifyLoginPageElements();
+        }
     }
 }

@@ -22,22 +22,20 @@ namespace UIAutomationProject.Tests.SauceDemoTests
 
         public void EnterUserCredSauceDemo(BaseData baseData)
         {
-            Thread.Sleep(3000);
+
+            Wait(2000);
             driver.FindElement(SauceDemoLoginPage.UserNameTextBox).SendKeys(baseData.UserName);
             driver.FindElement(SauceDemoLoginPage.PasswordTextBox).SendKeys(baseData.Password);
-            Thread.Sleep(3000);
             driver.FindElement(SauceDemoLoginPage.LoginButton).Click();
         }
 
         public void VerifyProductPage()                
-
         {
-            Thread.Sleep(3000);
+            Wait(3000);
             if(driver.FindElements(SauceDemoLoginPage.LoginErrorContainer).Count() > 0)
                 Assert.IsTrue(driver.FindElement(SauceDemoLoginPage.LoginErrorContainer).Text.Contains("Epic sadface: Sorry, this user has been locked out."));
             else
                 Assert.IsTrue(driver.FindElement(SauceDemoInventoryPage.Title).Text.Contains("Products"));
         }
-
     }
 }

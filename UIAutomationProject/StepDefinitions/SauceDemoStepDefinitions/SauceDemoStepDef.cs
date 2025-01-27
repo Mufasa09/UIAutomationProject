@@ -29,8 +29,5 @@ namespace UIAutomationProject.StepDefinitions.SauceDemoStepDefinitions
         {
             SauceDemoTests.VerifyProductPage();
         }
-
-
-
     }
 }
