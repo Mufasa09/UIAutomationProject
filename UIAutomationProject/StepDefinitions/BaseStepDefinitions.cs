@@ -30,7 +30,6 @@ namespace UIAutomationProject.StepDefinitions
         public void VerifySiteTitle(string title)
         {
             Tests.VerifyTitle(title);
-
         }
 
         [When("I enter user credentials")]

@@ -12,6 +12,7 @@ namespace UIAutomationProject.Tests
         public BaseTests(IWebDriver _driver) 
         {
             driver = _driver;
+            SauceDemoLoginPage = new SauceDemoLoginPage();
         }
 
         SauceDemoLoginPage SauceDemoLoginPage { get; set; }
@@ -23,6 +24,7 @@ namespace UIAutomationProject.Tests
 
         public void VerifyTitle(string title)
         {
+            Wait(3000);
             driver.Title.Contains(title);
         }
 
@@ -34,7 +36,7 @@ namespace UIAutomationProject.Tests
 
         public void VerifyLoginError(BaseData baseData)
         {
-            Thread.Sleep(3000);
+            Wait(3000);
             if(driver.FindElements(SauceDemoLoginPage.LoginErrorContainer).Count() > 0)
                 if (baseData.UserName != null)
                     Assert.IsTrue(driver.FindElement(SauceDemoLoginPage.LoginErrorContainer).Text.Contains("Epic sadface: Sorry, this user has been locked out."));
@@ -50,6 +52,11 @@ namespace UIAutomationProject.Tests
             Assert.IsTrue(driver.FindElement(SauceDemoLoginPage.LoginButton).Enabled);
             Assert.IsTrue(driver.FindElement(SauceDemoLoginPage.LoginUserCredentialsText).Displayed);
             Assert.IsTrue(driver.FindElement(SauceDemoLoginPage.LoginPasswordCredentialsText).Displayed);
+        }
+
+        public void Wait(int number)
+        {
+            Thread.Sleep(number);
         }
     }
 }
