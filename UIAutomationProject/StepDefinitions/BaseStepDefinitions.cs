@@ -32,13 +32,12 @@ namespace UIAutomationProject.StepDefinitions
             Tests.VerifyTitle(title);
         }
 
-        [When("I enter user credentials")]
-        [Then("I enter user credentials")]
-        public void EnterUserCredentials(Table data)
+        [Then(@"I verify login error")]
+        public void ThenIVerifyUserIsOnTheMainPage()
         {
-        //    Tests.EnterUserCred(data.CreateInstance<>());
-
+            Tests.VerifyLoginError();
         }
+
 
         [Then(@"I verify login error")]
         public void ThenIVerifyUserIsOnTheMainPage(Table data)

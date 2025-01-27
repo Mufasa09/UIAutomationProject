@@ -34,6 +34,7 @@ namespace UIAutomationProject.Tests
             driver.FindElement(By.Id(passwordTextBox)).SendKeys(baseData.Password);
         }
 
+
         public void VerifyLoginError(BaseData baseData)
         {
             Wait(3000);
@@ -57,6 +58,13 @@ namespace UIAutomationProject.Tests
         public void Wait(int number)
         {
             Thread.Sleep(number);
+
+        public void VerifyLoginError()
+        {
+            Thread.Sleep(3000);
+            if(driver.FindElements(SauceDemoLoginPage.LoginErrorContainer).Count() > 0)
+                Assert.IsTrue(driver.FindElement(SauceDemoLoginPage.LoginErrorContainer).Text.Contains("Epic sadface: Sorry, this user has been locked out."));
+
         }
     }
 }

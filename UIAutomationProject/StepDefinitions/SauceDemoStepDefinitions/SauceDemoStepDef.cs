@@ -24,7 +24,6 @@ namespace UIAutomationProject.StepDefinitions.SauceDemoStepDefinitions
 
         }
 
-
         [Then(@"I verify user is on the main page")]
         public void ThenIVerifyUserIsOnTheMainPage()
         {
