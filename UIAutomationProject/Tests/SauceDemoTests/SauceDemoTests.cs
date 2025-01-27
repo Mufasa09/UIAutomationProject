@@ -24,8 +24,8 @@ namespace UIAutomationProject.Tests.SauceDemoTests
         {
 
             Wait(2000);
-            driver.FindElement(SauceDemoLoginPage.UserNameTextBox).SendKeys(baseData.UserName);
-            driver.FindElement(SauceDemoLoginPage.PasswordTextBox).SendKeys(baseData.Password);
+            driver.FindElement(SauceDemoLoginPage.UserNameTextBox).SendKeys(UserAccountName(baseData.Role));
+            driver.FindElement(SauceDemoLoginPage.PasswordTextBox).SendKeys(UserAccountPassword(baseData.Role));
             driver.FindElement(SauceDemoLoginPage.LoginButton).Click();
         }
 
