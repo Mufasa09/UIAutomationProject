@@ -56,6 +56,9 @@ namespace UIAutomationProject.StepDefinitions
         {
             Tests.VerifyLoginPageElements();
         }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     }
 }

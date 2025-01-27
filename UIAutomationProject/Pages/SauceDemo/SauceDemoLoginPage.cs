@@ -10,8 +10,11 @@ namespace UIAutomationProject.Pages.SauceDemo
         public By LoginButton => By.Id("login-button");
         public By LoginUserCredentialsText => By.Id("login_credentials");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         public By LoginPasswordCredentialsText => By.Id("login_password");
 =======
+=======
+>>>>>>> Stashed changes
         public By LoginPasswordCredentialsText => By.XPath("//div[contains(@class,'login_password')]");
         public By LoginFailureText => By.XPath("//*[contains(@text,'Epic sadface: Sorry, this user has been locked out.')]");
         public By LoginErrorContainer => By.XPath("//h3[contains(@data-test,'error')]");

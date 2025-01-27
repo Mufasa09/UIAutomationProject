@@ -32,6 +32,9 @@ namespace UIAutomationProject.StepDefinitions.SauceDemoStepDefinitions
             SauceDemoTests.VerifyProductPage();
         }
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     }
 }
