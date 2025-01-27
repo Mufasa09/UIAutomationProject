@@ -30,5 +30,25 @@ namespace UIAutomationProject.Tests
             driver.FindElement(By.Id(userNameTextBox)).SendKeys(baseData.UserName);
             driver.FindElement(By.Id(passwordTextBox)).SendKeys(baseData.Password);
         }
+
+        public void VerifyLoginError(BaseData baseData)
+        {
+            Thread.Sleep(3000);
+            if(driver.FindElements(SauceDemoLoginPage.LoginErrorContainer).Count() > 0)
+                if (baseData.UserName != null)
+                    Assert.IsTrue(driver.FindElement(SauceDemoLoginPage.LoginErrorContainer).Text.Contains("Epic sadface: Sorry, this user has been locked out."));
+                else
+                    Assert.IsTrue(driver.FindElement(SauceDemoLoginPage.LoginErrorContainer).Text.Contains("Epic sadface: Username is required"));
+        }
+
+        public void VerifyLoginPageElements()
+        {
+            Assert.IsTrue(driver.FindElement(SauceDemoLoginPage.UserNameTextBox).Displayed);
+            Assert.IsTrue(driver.FindElement(SauceDemoLoginPage.PasswordTextBox).Displayed);
+            Assert.IsTrue(driver.FindElement(SauceDemoLoginPage.LoginButton).Displayed);
+            Assert.IsTrue(driver.FindElement(SauceDemoLoginPage.LoginButton).Enabled);
+            Assert.IsTrue(driver.FindElement(SauceDemoLoginPage.LoginUserCredentialsText).Displayed);
+            Assert.IsTrue(driver.FindElement(SauceDemoLoginPage.LoginPasswordCredentialsText).Displayed);
+        }
     }
 }

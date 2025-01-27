@@ -116,6 +116,171 @@ this.FeatureBackground();
 #line 12
  testRunner.When("I enter user credentials on SauceDemo site", ((string)(null)), table1, "When ");
 #line hidden
+<<<<<<< Updated upstream
+=======
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Key",
+                            "Value"});
+                table2.AddRow(new string[] {
+                            "UserName",
+                            "locked_out_user"});
+                table2.AddRow(new string[] {
+                            "Password",
+                            "secret_sauce"});
+#line 15
+ testRunner.Then("I verify login error", ((string)(null)), table2, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("I verify all elements are displayed on login page")]
+        public virtual void IVerifyAllElementsAreDisplayedOnLoginPage()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("I verify all elements are displayed on login page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 20
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 6
+this.FeatureBackground();
+#line hidden
+#line 21
+ testRunner.When("I verify the title of the site is Swag Labs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 22
+ testRunner.Then("I verify login page elements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("I verify negative login scenario")]
+        public virtual void IVerifyNegativeLoginScenario()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("I verify negative login scenario", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 24
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 6
+this.FeatureBackground();
+#line hidden
+#line 25
+ testRunner.Given("I verify the title of the site is Swag Labs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 26
+ testRunner.When("I verify login page elements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Key",
+                            "Value"});
+                table3.AddRow(new string[] {
+                            "UserName",
+                            ""});
+                table3.AddRow(new string[] {
+                            "Password",
+                            ""});
+#line 27
+ testRunner.Then("I verify login error", ((string)(null)), table3, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Verify you can log in the site with multiple users")]
+        [NUnit.Framework.TestCaseAttribute("standard_user", "secret_sauce", null)]
+        [NUnit.Framework.TestCaseAttribute("performance_glitch_user", "secret_sauce", null)]
+        [NUnit.Framework.TestCaseAttribute("visual_user", "secret_sauce", null)]
+        [NUnit.Framework.TestCaseAttribute("error_user", "secret_sauce", null)]
+        public virtual void VerifyYouCanLogInTheSiteWithMultipleUsers(string userName, string password, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("UserName", userName);
+            argumentsOfScenario.Add("Password", password);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can log in the site with multiple users", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 33
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 6
+this.FeatureBackground();
+#line hidden
+#line 34
+ testRunner.Given("I verify the title of the site is Swag Labs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Key",
+                            "Value"});
+                table4.AddRow(new string[] {
+                            "UserName",
+                            string.Format("{0}", userName)});
+                table4.AddRow(new string[] {
+                            "Password",
+                            string.Format("{0}", password)});
+#line 35
+ testRunner.When("I enter user credentials on SauceDemo site", ((string)(null)), table4, "When ");
+#line hidden
+#line 39
+ testRunner.Then("I verify user is on the main page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+>>>>>>> Stashed changes
             }
             this.ScenarioCleanup();
         }

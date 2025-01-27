@@ -24,5 +24,14 @@ namespace UIAutomationProject.StepDefinitions.SauceDemoStepDefinitions
 
         }
 
+<<<<<<< Updated upstream
+=======
+        [Then(@"I verify user is on the main page")]
+        public void ThenIVerifyUserIsOnTheMainPage()
+        {
+            SauceDemoTests.VerifyProductPage();
+        }
+
+>>>>>>> Stashed changes
     }
 }
