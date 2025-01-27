@@ -19,13 +19,24 @@ namespace UIAutomationProject.Tests.SauceDemoTests
         SauceDemoLoginPage SauceDemoLoginPage { get; set; }
         SauceDemoInventoryPage SauceDemoInventoryPage { get; set; }
 
+        public void NavigateToSDSite()
+        {
+            driver.Navigate().GoToUrl("https://www.saucedemo.com/");
+        }
 
         public void EnterUserCredSauceDemo(BaseData baseData)
         {
-
             Wait(2000);
             driver.FindElement(SauceDemoLoginPage.UserNameTextBox).SendKeys(UserAccountName(baseData.Role));
             driver.FindElement(SauceDemoLoginPage.PasswordTextBox).SendKeys(UserAccountPassword(baseData.Role));
+            driver.FindElement(SauceDemoLoginPage.LoginButton).Click();
+        }
+
+        public void EnterUserCredSauceDemo(string role)
+        {
+            Wait(2000);
+            driver.FindElement(SauceDemoLoginPage.UserNameTextBox).SendKeys(UserAccountName(role));
+            driver.FindElement(SauceDemoLoginPage.PasswordTextBox).SendKeys(UserAccountPassword(role));
             driver.FindElement(SauceDemoLoginPage.LoginButton).Click();
         }
 
