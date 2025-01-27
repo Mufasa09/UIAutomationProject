@@ -119,11 +119,8 @@ this.FeatureBackground();
                             "Key",
                             "Value"});
                 table1.AddRow(new string[] {
-                            "UserName",
-                            "locked_out_user"});
-                table1.AddRow(new string[] {
-                            "Password",
-                            "secret_sauce"});
+                            "Role",
+                            "locked_out"});
 #line 11
  testRunner.When("I enter user credentials on SauceDemo site", ((string)(null)), table1, "When ");
 #line hidden
@@ -131,12 +128,9 @@ this.FeatureBackground();
                             "Key",
                             "Value"});
                 table2.AddRow(new string[] {
-                            "UserName",
-                            "locked_out_user"});
-                table2.AddRow(new string[] {
-                            "Password",
-                            "secret_sauce"});
-#line 15
+                            "Role",
+                            "locked_out"});
+#line 14
  testRunner.Then("I verify login error", ((string)(null)), table2, "Then ");
 #line hidden
             }
@@ -150,7 +144,7 @@ this.FeatureBackground();
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("I verify all elements are displayed on login page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 20
+#line 18
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -173,10 +167,10 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line hidden
-#line 21
+#line 19
  testRunner.When("I verify the title of the site is Swag Labs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 22
+#line 20
  testRunner.Then("I verify login page elements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -190,7 +184,7 @@ this.FeatureBackground();
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("I verify negative login scenario", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 24
+#line 22
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -213,22 +207,19 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line hidden
-#line 25
+#line 23
  testRunner.Given("I verify the title of the site is Swag Labs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 26
+#line 24
  testRunner.When("I verify login page elements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
                 table3.AddRow(new string[] {
-                            "UserName",
+                            "Role",
                             ""});
-                table3.AddRow(new string[] {
-                            "Password",
-                            ""});
-#line 27
+#line 25
  testRunner.Then("I verify login error", ((string)(null)), table3, "Then ");
 #line hidden
             }
@@ -237,18 +228,17 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify you can log in the site with multiple users")]
-        [NUnit.Framework.TestCaseAttribute("standard_user", "secret_sauce", null)]
-        [NUnit.Framework.TestCaseAttribute("performance_glitch_user", "secret_sauce", null)]
-        [NUnit.Framework.TestCaseAttribute("visual_user", "secret_sauce", null)]
-        [NUnit.Framework.TestCaseAttribute("error_user", "secret_sauce", null)]
-        public virtual void VerifyYouCanLogInTheSiteWithMultipleUsers(string userName, string password, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("standard", null)]
+        [NUnit.Framework.TestCaseAttribute("performance_user", null)]
+        [NUnit.Framework.TestCaseAttribute("visual_user", null)]
+        [NUnit.Framework.TestCaseAttribute("error_user", null)]
+        public virtual void VerifyYouCanLogInTheSiteWithMultipleUsers(string role, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("UserName", userName);
-            argumentsOfScenario.Add("Password", password);
+            argumentsOfScenario.Add("Role", role);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can log in the site with multiple users", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 32
+#line 29
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -271,22 +261,19 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line hidden
-#line 33
+#line 30
  testRunner.Given("I verify the title of the site is Swag Labs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
                 table4.AddRow(new string[] {
-                            "UserName",
-                            string.Format("{0}", userName)});
-                table4.AddRow(new string[] {
-                            "Password",
-                            string.Format("{0}", password)});
-#line 34
+                            "Role",
+                            string.Format("{0}", role)});
+#line 31
  testRunner.When("I enter user credentials on SauceDemo site", ((string)(null)), table4, "When ");
 #line hidden
-#line 38
+#line 34
  testRunner.Then("I verify user is on the main page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

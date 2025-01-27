@@ -1,0 +1,33 @@
+﻿[
+  //SauceDemo
+  {
+    "username": "standard_user",
+    "role": "standard",
+    "password": "secret_sauce"
+  },
+  {
+    "username": "locked_out_user",
+    "role": "locked_out",
+    "password": "secret_sauce"
+  },
+  {
+    "username": "problem_user",
+    "role": "problem_user",
+    "password": "secret_sauce"
+  },
+  {
+    "username": "performance_glitch_user",
+    "role": "performance_user",
+    "password": "secret_sauce"
+  },
+  {
+    "username": "error_user",
+    "role": "error_user",
+    "password": "secret_sauce"
+  },
+  {
+    "username": "visual_user",
+    "role": "visual_user",
+    "password": "secret_sauce"
+  }
+]
