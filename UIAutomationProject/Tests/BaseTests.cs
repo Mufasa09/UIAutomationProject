@@ -62,7 +62,7 @@ namespace UIAutomationProject.Tests
         }
         public void VerifyLoginError()
         {
-            Thread.Sleep(3000);
+            Wait(3000);
             if(driver.FindElements(SauceDemoLoginPage.LoginErrorContainer).Count() > 0)
                 Assert.IsTrue(driver.FindElement(SauceDemoLoginPage.LoginErrorContainer).Text.Contains("Epic sadface: Sorry, this user has been locked out."));
 
