@@ -22,7 +22,8 @@ namespace UIAutomationProject.StepDefinitions
         {
             Tests.NavigateToSite(site);
 
-        }
+        }  
+       
 
         [Given("I verify the title of the site is (.*)")]
         [When("I verify the title of the site is (.*)")]

@@ -4,13 +4,11 @@ Basic scenarios of the site
 
 
 Background:
-	Given Navigate to site https://www.saucedemo.com/
+	Given Navigate to SauceDemo site
 
 Scenario: Verify you can log in the site
 	Given I verify the title of the site is Swag Labs
-	When I enter user credentials on SauceDemo site
-		| Key  | Value      |
-		| Role | locked_out |
+	When I enter locked_out user credentials on SauceDemo site
 	Then I verify login error
 		| Key  | Value      |
 		| Role | locked_out |
@@ -28,14 +26,14 @@ Scenario: I verify negative login scenario
 
 Scenario Outline: Verify you can log in the site with multiple users
 	Given I verify the title of the site is Swag Labs
-	When I enter user credentials on SauceDemo site
+	When I enter <Role> user credentials on SauceDemo site
 		| Key  | Value  |
 		| Role | <Role> |
 	Then I verify user is on the main page
 
 Examples:
 	| Role             |
-	| standard    |
+	| standard         |
 	| performance_user |
 	| visual_user      |
 	| error_user       |

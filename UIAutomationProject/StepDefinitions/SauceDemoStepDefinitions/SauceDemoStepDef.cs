@@ -16,12 +16,25 @@ namespace UIAutomationProject.StepDefinitions.SauceDemoStepDefinitions
         }
         SauceDemoTests SauceDemoTests { get; }
 
-        [When("I enter user credentials on SauceDemo site")]
-        [Then("I enter user credentials on SauceDemo site")]
-        public void EnterUserCredentials(Table data)
+        [Given("Navigate to SauceDemo site")]
+        public void NavigateToSauceDemoSite()
+        {
+            SauceDemoTests.NavigateToSDSite();
+        }
+
+        [When("I enter (.*) user credentials on SauceDemo site")]
+        [Then("I enter (.*) user credentials on SauceDemo site")]
+        public void EnterUserCredentials(string role, Table data)
         {
             SauceDemoTests.EnterUserCredSauceDemo(data.CreateInstance<BaseData>());
 
+        }
+
+        [When("I enter (.*) user credentials on SauceDemo site")]
+        [Then("I enter (.*) user credentials on SauceDemo site")]
+        public void EnterUserCredentials(string role)
+        {
+            SauceDemoTests.EnterUserCredSauceDemo(role);
         }
 
         [Then(@"I verify user is on the main page")]
