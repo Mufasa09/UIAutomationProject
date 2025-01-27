@@ -33,7 +33,6 @@ namespace UIAutomationProject.StepDefinitions
 
         }
 
-<<<<<<< Updated upstream
         [When("I enter user credentials")]
         [Then("I enter user credentials")]
         public void EnterUserCredentials(Table data)
@@ -42,8 +41,6 @@ namespace UIAutomationProject.StepDefinitions
 
         }
 
-
-=======
         [Then(@"I verify login error")]
         public void ThenIVerifyUserIsOnTheMainPage(Table data)
         {
@@ -56,9 +53,5 @@ namespace UIAutomationProject.StepDefinitions
         {
             Tests.VerifyLoginPageElements();
         }
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
     }
 }

@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using UIAutomationProject.Pages.SauceDemo;
 using UIAutomationProject.Utilities.Data;
 
@@ -20,6 +21,15 @@ namespace UIAutomationProject.Tests.SauceDemoTests
         {
             driver.FindElement(SauceDemoLoginPage.UserNameTextBox).SendKeys(baseData.UserName);
             driver.FindElement(SauceDemoLoginPage.PasswordTextBox).SendKeys(baseData.Password);
+        }
+
+        public void VerifyProductPage()
+        {
+            Thread.Sleep(3000);
+            if (driver.FindElements(SauceDemoLoginPage.LoginErrorContainer).Count() > 0)
+                    Assert.IsTrue(driver.FindElement(SauceDemoLoginPage.LoginErrorContainer).Text.Contains("Epic sadface: Sorry, this user has been locked out."));
+                else
+                    Assert.IsTrue(driver.FindElement(SauceDemoLoginPage.LoginErrorContainer).Text.Contains("Epic sadface: Username is required"));
         }
     }
 }

@@ -10,10 +10,6 @@ Background:
 Scenario: Verify you can log in the site
 	Given I verify the title of the site is Swag Labs
 	When I enter user credentials on SauceDemo site
-<<<<<<< Updated upstream
-		| Key      | Value         |
-		| UserName | standard_user |
-=======
 		| Key      | Value           |
 		| UserName | locked_out_user |
 		| Password | secret_sauce    |
@@ -49,4 +45,3 @@ Examples:
 	| performance_glitch_user | secret_sauce |
 	| visual_user             | secret_sauce |
 	| error_user              | secret_sauce |
->>>>>>> Stashed changes

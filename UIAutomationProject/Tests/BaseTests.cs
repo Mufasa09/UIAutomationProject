@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using UIAutomationProject.Pages.SauceDemo;
 using UIAutomationProject.Utilities.Data;
 
