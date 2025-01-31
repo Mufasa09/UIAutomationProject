@@ -21,7 +21,7 @@ namespace UIAutomationProject.Helpers
         [BeforeScenario]
         public void BeforeScenario()
         {
-            Driver = _factory.ChooseDriver(WebDriverFactory.BrowserType.Chrome);
+            Driver = _factory.ChooseDriver(WebDriverFactory.BrowserType.Edge);
             _objectContainer.RegisterInstanceAs(Driver);
 
         }
