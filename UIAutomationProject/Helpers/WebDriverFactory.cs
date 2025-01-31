@@ -1,5 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Edge;
+using OpenQA.Selenium.Firefox;
 
 namespace UIAutomationProject.Helpers
 {
@@ -11,14 +13,22 @@ namespace UIAutomationProject.Helpers
             switch (browserType)
             {
                 case BrowserType.Chrome:
-                    ChromeOptions option = new ChromeOptions();
-                    option.AddArguments("start-maximized");
-
-                    return new ChromeDriver(option); 
-                case BrowserType.Edge:
-                case BrowserType.IE:
+                    ChromeOptions chromeOption = new ChromeOptions();
+                    chromeOption.AddArguments("start-maximized");
+                    // chromeOption.AddArgument("headless");
+                    return new ChromeDriver(chromeOption);
                 case BrowserType.Firefox:
-                    return null;
+                    FirefoxOptions firefoxOption = new FirefoxOptions();
+                    firefoxOption.AddArguments("start-maximized");
+                    // firefoxOption.AddArgument("headless");
+                    return new FirefoxDriver(firefoxOption);
+                case BrowserType.Edge:
+                    var edgeOptions = new EdgeOptions();
+                    edgeOptions.AddArgument("start-maximized");
+                    /*To run in headless*/
+                   // edgeOptions.AddArgument("headless");
+                    return new EdgeDriver(edgeOptions);
+                case BrowserType.IE:
 
                 default:
                     throw new ArgumentOutOfRangeException("No browser was found");
