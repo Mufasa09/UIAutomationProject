@@ -15,7 +15,7 @@ namespace UIAutomationProject.Helpers
                 case BrowserType.Chrome:
                     ChromeOptions chromeOption = new ChromeOptions();
                     chromeOption.AddArguments("start-maximized");
-                    // chromeOption.AddArgument("headless");
+                     chromeOption.AddArgument("headless");
                     return new ChromeDriver(chromeOption);
                 case BrowserType.Firefox:
                     FirefoxOptions firefoxOption = new FirefoxOptions();

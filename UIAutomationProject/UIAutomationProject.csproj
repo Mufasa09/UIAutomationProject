@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Features\API\" />
     <Folder Include="Screenshots\" />
   </ItemGroup>
 

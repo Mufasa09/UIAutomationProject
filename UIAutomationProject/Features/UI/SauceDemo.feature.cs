@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace UIAutomationProject.Features
+namespace UIAutomationProject.Features.UI
 {
     using TechTalk.SpecFlow;
     using System;
@@ -35,7 +35,7 @@ namespace UIAutomationProject.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "SauceDemo", "Basic scenarios of the site", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/UI", "SauceDemo", "Basic scenarios of the Sauce Demo site", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -118,14 +118,14 @@ this.FeatureBackground();
 #line 11
  testRunner.When("I enter locked_out user credentials on SauceDemo site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table1.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Role",
                             "locked_out"});
 #line 12
- testRunner.Then("I verify login error", ((string)(null)), table1, "Then ");
+ testRunner.Then("I verify login error", ((string)(null)), table3, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -207,14 +207,14 @@ this.FeatureBackground();
 #line 22
  testRunner.When("I verify login page elements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table2.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "Role",
                             ""});
 #line 23
- testRunner.Then("I verify login error", ((string)(null)), table2, "Then ");
+ testRunner.Then("I verify login error", ((string)(null)), table4, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -258,14 +258,14 @@ this.FeatureBackground();
 #line 28
  testRunner.Given("I verify the title of the site is Swag Labs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table3.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "Role",
                             string.Format("{0}", role)});
 #line 29
- testRunner.When(string.Format("I enter {0} user credentials on SauceDemo site", role), ((string)(null)), table3, "When ");
+ testRunner.When(string.Format("I enter {0} user credentials on SauceDemo site", role), ((string)(null)), table5, "When ");
 #line hidden
 #line 32
  testRunner.Then("I verify user is on the main page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

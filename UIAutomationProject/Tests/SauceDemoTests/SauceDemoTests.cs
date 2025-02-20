@@ -16,9 +16,13 @@ namespace UIAutomationProject.Tests.SauceDemoTests
             SauceDemoInventoryPage = new SauceDemoInventoryPage();
         }
 
+        #region Variables
         SauceDemoLoginPage SauceDemoLoginPage { get; set; }
         SauceDemoInventoryPage SauceDemoInventoryPage { get; set; }
+        #endregion
 
+
+        #region Methods
         public void NavigateToSDSite()
         {
             driver.Navigate().GoToUrl("https://www.saucedemo.com/");
@@ -48,5 +52,6 @@ namespace UIAutomationProject.Tests.SauceDemoTests
             else
                 Assert.IsTrue(driver.FindElement(SauceDemoInventoryPage.Title).Text.Contains("Products"));
         }
+        #endregion
     }
 }
