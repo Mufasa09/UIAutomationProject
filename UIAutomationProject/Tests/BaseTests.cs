@@ -16,8 +16,11 @@ namespace UIAutomationProject.Tests
             SauceDemoLoginPage = new SauceDemoLoginPage();
         }
 
+        #region Variables
         SauceDemoLoginPage SauceDemoLoginPage { get; set; }
+        #endregion
 
+        #region Methods
         public void NavigateToSite(string site)
         {
             driver.Navigate().GoToUrl(site);
@@ -115,6 +118,7 @@ namespace UIAutomationProject.Tests
             var Account = WebsiteUserDataTransfer(user);
             return Account.Item2;
         }
+        #endregion
     }
 
 }

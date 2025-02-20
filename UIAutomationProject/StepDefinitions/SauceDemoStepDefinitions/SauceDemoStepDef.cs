@@ -7,10 +7,10 @@ using UIAutomationProject.Utilities.Data;
 namespace UIAutomationProject.StepDefinitions.SauceDemoStepDefinitions
 {
     [Binding]
-    public class SauceDemoStepDef
+    public class APIStepDef
     {
 
-        public SauceDemoStepDef(IWebDriver driver)
+        public APIStepDef(IWebDriver driver)
         {
             SauceDemoTests = new SauceDemoTests(driver);
         }

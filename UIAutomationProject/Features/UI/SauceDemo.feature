@@ -1,6 +1,6 @@
 ﻿Feature: SauceDemo
 
-Basic scenarios of the site
+Basic scenarios of the Sauce Demo site
 
 
 Background:
