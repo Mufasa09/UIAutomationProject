@@ -1,10 +1,7 @@
-﻿Feature: SauceDemo
+﻿Feature: SauceDemo Login Tests
 
 Basic scenarios of the Sauce Demo site
 
-
-Background:
-	Given Navigate to SauceDemo site
 
 Scenario: Verify you can log in the site
 	Given I verify the title of the site is Swag Labs

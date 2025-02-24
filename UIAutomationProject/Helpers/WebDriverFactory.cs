@@ -8,14 +8,15 @@ namespace UIAutomationProject.Helpers
     public class WebDriverFactory
     {
 
-        public IWebDriver ChooseDriver(BrowserType browserType)
+        public IWebDriver ChooseDriver(BrowserType browserType, bool headless)
         {
             switch (browserType)
             {
                 case BrowserType.Chrome:
                     ChromeOptions chromeOption = new ChromeOptions();
                     chromeOption.AddArguments("start-maximized");
-                     chromeOption.AddArgument("headless");
+                    if(headless)
+                         chromeOption.AddArgument("headless");
                     return new ChromeDriver(chromeOption);
                 case BrowserType.Firefox:
                     FirefoxOptions firefoxOption = new FirefoxOptions();
