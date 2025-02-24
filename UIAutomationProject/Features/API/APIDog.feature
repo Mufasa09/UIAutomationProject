@@ -4,7 +4,6 @@ Basic scenarios of the API site
 
 
 Scenario: Verify basic API calls
-	#Given I navigate to API site
 	When I verify successful api call
 		| Key        | Value |
 		| StatusCode | OK    |
@@ -14,7 +13,6 @@ Scenario: Verify basic API calls
 	#	| StatusCode | OK      |
 
 Scenario: Verify basic API calls for jsonplaceholder
-	#Given I navigate to API site
 	When I verify successful api call
 		| Key        | Value |
 		| StatusCode | OK    |
