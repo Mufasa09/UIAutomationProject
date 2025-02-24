@@ -10,16 +10,17 @@ namespace UIAutomationProject.StepDefinitions.API
     public class APIStepDef
     {
 
-        public APIStepDef(IWebDriver driver)
+        public APIStepDef(IAPIStorage apiStorage)
         {
-            APITests = new APITests();
+            APITests = new APITests(apiStorage);
         }
         APITests APITests { get; }
 
         [Given("I navigate to API site")]
         public void BasicAPICall()
         {
-            APITests.NavigateToAPISite("https://apidog.com/");
+            //APITests.NavigateToAPISite("https://apidog.com/");
+            APITests.NavigateToAPISite("https://jsonplaceholder.typicode.com");
         }
 
         [When(@"I verify successful api call")]
@@ -33,6 +34,13 @@ namespace UIAutomationProject.StepDefinitions.API
         {
             APITests.VerifyResponseBody(data.CreateInstance<APIData>());
         }
+
+        [Then(@"I make an api post call")]
+        public void ThenIMakeAnApiPostCall(Table data)
+        {
+            APITests.VerifyPostData(data.CreateInstance<APIData>());
+        }
+
 
     }
 }

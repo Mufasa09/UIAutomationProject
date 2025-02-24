@@ -1,0 +1,8 @@
+﻿{
+  //Feature file Urls
+  "SauceDemoUrl": "https://www.saucedemo.com/",
+  "UltimateQAUrl": "https://ultimateqa.com/",
+  "APIDogUrl": "https://jsonplaceholder.typicode.com",
+  //Other Settings
+  "Headless": false
+}
