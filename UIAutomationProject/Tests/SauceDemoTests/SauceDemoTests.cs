@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
+using TechTalk.SpecFlow;
 using UIAutomationProject.Pages.SauceDemo;
 using UIAutomationProject.Utilities.Data;
 
@@ -15,43 +16,122 @@ namespace UIAutomationProject.Tests.SauceDemoTests
             driver = _driver;
             SauceDemoLoginPage = new SauceDemoLoginPage();
             SauceDemoInventoryPage = new SauceDemoInventoryPage();
+            SauceDemoCartPage = new SauceDemoCartPage();
         }
 
         #region Variables
         SauceDemoLoginPage SauceDemoLoginPage { get; set; }
         SauceDemoInventoryPage SauceDemoInventoryPage { get; set; }
+        SauceDemoCartPage SauceDemoCartPage { get; set; }
         #endregion
 
 
         #region Methods
-        public void NavigateToSDSite()
-        {
-            driver.Navigate().GoToUrl("https://www.saucedemo.com/");
-        }
 
         public void EnterUserCredSauceDemo(BaseData baseData)
         {
             Wait(2000);
-            driver.FindElement(SauceDemoLoginPage.UserNameTextBox).SendKeys(UserAccountName(baseData.Role));
-            driver.FindElement(SauceDemoLoginPage.PasswordTextBox).SendKeys(UserAccountPassword(baseData.Role));
-            driver.FindElement(SauceDemoLoginPage.LoginButton).Click();
+            Enter(SauceDemoLoginPage.UserNameTextBox, baseData.Role);
+            Enter(SauceDemoLoginPage.PasswordTextBox, "secret_sauce");
+            Click(SauceDemoLoginPage.LoginButton);
         }
 
         public void EnterUserCredSauceDemo(string role)
         {
             Wait(2000);
-            driver.FindElement(SauceDemoLoginPage.UserNameTextBox).SendKeys(UserAccountName(role));
-            driver.FindElement(SauceDemoLoginPage.PasswordTextBox).SendKeys(UserAccountPassword(role));
-            driver.FindElement(SauceDemoLoginPage.LoginButton).Click();
+            Enter(SauceDemoLoginPage.UserNameTextBox, role);
+            Enter(SauceDemoLoginPage.PasswordTextBox, "secret_sauce");
+            Click(SauceDemoLoginPage.LoginButton);
         }
 
         public void VerifyProductPage()                
         {
             Wait(3000);
             if(driver.FindElements(SauceDemoLoginPage.LoginErrorContainer).Count() > 0)
-                Assert.IsTrue(driver.FindElement(SauceDemoLoginPage.LoginErrorContainer).Text.Contains("Epic sadface: Sorry, this user has been locked out."));
+                VerifyTextData(SauceDemoLoginPage.LoginErrorContainer, "Epic sadface: Sorry, this user has been locked out.", true);
             else
-                Assert.IsTrue(driver.FindElement(SauceDemoInventoryPage.Title).Text.Contains("Products"));
+                VerifyTextData(SauceDemoInventoryPage.Title, "Products", true);
+        }
+
+        public void AddItemToCart(string item, string action = "add")
+        {
+            Wait(3000);
+            switch (item)
+            {
+                case "Sauce Labs Backpack":
+                    Click(SauceDemoInventoryPage.SauceLabsBackpack(action));
+                    break;
+                case "Sauce Labs Bike Light":
+                    Click(SauceDemoInventoryPage.SauceLabsBikeLight(action));
+                    break;
+                case "Sauce Labs Bolt T-Shirt":
+                    Click(SauceDemoInventoryPage.SauceLabsBoltTshirt(action));
+                    break;
+                case "Sauce Labs Fleece Jacket":
+                    Click(SauceDemoInventoryPage.SauceLabsFleeceJacket(action));
+                    break;
+                case "Sauce Labs Onesie":
+                    Click(SauceDemoInventoryPage.SauceLabsOnsie(action));
+                    break;                
+                case "Test.allTheThings() T-Shirt (Red)":
+                    Click(SauceDemoInventoryPage.SauceLabsTshirtRed(action));
+                    break;
+                default:
+                    throw new NotFoundException();
+            }
+        }
+
+
+        public void AddItemToCart(InventoryData item, string action = "add")
+        {
+            Wait(3000);
+            switch (item.ItemName)
+            {
+                case "Sauce Labs Backpack":
+                    Click(SauceDemoInventoryPage.SauceLabsBackpack(action));
+                    break;
+                case "Sauce Labs Bike Light":
+                    Click(SauceDemoInventoryPage.SauceLabsBikeLight(action));
+                    break;
+                case "Sauce Labs Bolt T-Shirt":
+                    Click(SauceDemoInventoryPage.SauceLabsBoltTshirt(action));
+                    break;
+                case "Sauce Labs Fleece Jacket":
+                    Click(SauceDemoInventoryPage.SauceLabsFleeceJacket(action));
+                    break;
+                case "Sauce Labs Onesie":
+                    Click(SauceDemoInventoryPage.SauceLabsOnsie(action));
+                    break;
+                case "Test.allTheThings() T-Shirt (Red)":
+                    Click(SauceDemoInventoryPage.SauceLabsTshirtRed(action));
+                    break;
+                default:
+                    throw new NotFoundException();
+            }
+        }
+
+        public void VerifyItemsInCart(string data)
+        {
+            VerifyTextData(SauceDemoInventoryPage.CartDescription,data, true);
+        }
+
+        public void VerifyItemsInCart(InventoryData data)
+        {
+            Click(SauceDemoCartPage.ShoppingCartLink);
+            VerifyTextData(SauceDemoInventoryPage.CartDescription, data.ItemName, true);
+        }
+
+        public void ClearCart()
+        {
+            int finalCount = CartCount();
+            for (int cartCount = 1; cartCount <= finalCount; cartCount++)
+                Click(SauceDemoInventoryPage.RemoveButton);
+        }
+
+        public int CartCount()
+        {
+            string count = GrabText(SauceDemoInventoryPage.ShoppingCartBadge);
+            return Int32.Parse(count);
         }
         #endregion
     }

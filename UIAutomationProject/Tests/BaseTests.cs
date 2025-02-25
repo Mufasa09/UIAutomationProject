@@ -34,8 +34,9 @@ namespace UIAutomationProject.Tests
 
         public void EnterUserCred(BaseData baseData, string userNameTextBox, string passwordTextBox)
         {
-            driver.FindElement(By.Id(userNameTextBox)).SendKeys(baseData.UserName);
-            driver.FindElement(By.Id(passwordTextBox)).SendKeys(baseData.Password);
+
+            Enter(By.Id(userNameTextBox), baseData.UserName);
+            Enter(By.Id(passwordTextBox), baseData.Password);
         }
 
 
@@ -44,19 +45,19 @@ namespace UIAutomationProject.Tests
             Wait(3000);
             if (driver.FindElements(SauceDemoLoginPage.LoginErrorContainer).Count() > 0)
                 if (baseData.Role != null)
-                    Assert.IsTrue(driver.FindElement(SauceDemoLoginPage.LoginErrorContainer).Text.Contains("Epic sadface: Sorry, this user has been locked out."));
+                    VerifyTextData(SauceDemoLoginPage.LoginErrorContainer, "Epic sadface: Sorry, this user has been locked out.", true);
                 else
-                    Assert.IsTrue(driver.FindElement(SauceDemoLoginPage.LoginErrorContainer).Text.Contains("Epic sadface: Username is required"));
+                    VerifyTextData(SauceDemoLoginPage.LoginErrorContainer, "Epic sadface: Username is required", true);
         }
 
         public void VerifyLoginPageElements()
         {
-            Assert.IsTrue(driver.FindElement(SauceDemoLoginPage.UserNameTextBox).Displayed);
-            Assert.IsTrue(driver.FindElement(SauceDemoLoginPage.PasswordTextBox).Displayed);
-            Assert.IsTrue(driver.FindElement(SauceDemoLoginPage.LoginButton).Displayed);
-            Assert.IsTrue(driver.FindElement(SauceDemoLoginPage.LoginButton).Enabled);
-            Assert.IsTrue(driver.FindElement(SauceDemoLoginPage.LoginUserCredentialsText).Displayed);
-            Assert.IsTrue(driver.FindElement(SauceDemoLoginPage.LoginPasswordCredentialsText).Displayed);
+            VerifyDataIsPresent(SauceDemoLoginPage.UserNameTextBox, true);
+            VerifyDataIsPresent(SauceDemoLoginPage.PasswordTextBox, true);
+            VerifyDataIsPresent(SauceDemoLoginPage.LoginButton, true);
+            VerifyDataIsEnabled(SauceDemoLoginPage.LoginButton, true);
+            VerifyDataIsPresent(SauceDemoLoginPage.LoginUserCredentialsText, true);
+            VerifyDataIsPresent(SauceDemoLoginPage.LoginPasswordCredentialsText, true);
         }
 
         public void Wait(int number)
@@ -64,11 +65,98 @@ namespace UIAutomationProject.Tests
             Thread.Sleep(number);
         }
 
+        #region Main Selenium Functions
+
+        /// <summary>
+        /// Enters the text into UI element 
+        /// </summary>
+        /// <param name="loc">UI Element</param>
+        /// <param name="text">Text to send</param>
+        public void Enter(By loc, string text)
+        {
+            driver.FindElement(loc).SendKeys(text);
+        }
+
+        /// <summary>
+        /// Clicks on the UI Element
+        /// </summary>
+        /// <param name="loc">UI Element</param>
+        public void Click(By loc)
+        {
+            driver.FindElement(loc).Click();
+        }
+
+        /// <summary>
+        /// Verifies if data is present
+        /// </summary>
+        /// <param name="loc">UI Element</param>
+        /// <param name="data">User data</param>
+        /// <param name="boolData">Tests whether it is present</param>
+        public void VerifyTextData(By loc, string data, bool boolData)
+        {
+            if(boolData)
+                Assert.IsTrue(driver.FindElement(loc).Text.Contains(data));
+            else
+                Assert.IsFalse(driver.FindElement(loc).Text.Contains(data));
+        }
+
+        /// <summary>
+        /// Verifies if data is present
+        /// </summary>
+        /// <param name="loc">UI Element</param>
+        /// <param name="data">User data</param>
+        /// <param name="boolData">Tests whether it is present</param>
+        public bool VerifyTextDataBool(By loc, string data, bool boolData)
+        {
+            if (boolData)
+            {
+                Assert.IsTrue(driver.FindElement(loc).Text.Contains(data));
+                return true;
+            }
+            else
+            {
+                Assert.IsFalse(driver.FindElement(loc).Text.Contains(data));
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Verifies if current locator is present
+        /// </summary>
+        /// <param name="loc">UI Element</param>
+        /// <param name="boolData">Tests whether it is present</param>
+        public void VerifyDataIsPresent(By loc, bool boolData)
+        {
+            if (boolData)
+                Assert.IsTrue(driver.FindElement(loc).Displayed);
+            else
+                Assert.IsFalse(driver.FindElement(loc).Displayed);
+        }
+
+        /// <summary>
+        /// Verifies if current locator is enabled or disbaled
+        /// </summary>
+        /// <param name="loc">UI Element</param>
+        /// <param name="boolData">Tests whether it is present</param>
+        public void VerifyDataIsEnabled(By loc, bool boolData)
+        {
+            if (boolData)
+                Assert.IsTrue(driver.FindElement(loc).Enabled);
+            else
+                Assert.IsFalse(driver.FindElement(loc).Enabled);
+        }
+
+        public string GrabText(By loc)
+        {
+            return driver.FindElement(loc).Text;
+        }
+        
+        #endregion
         public void VerifyLoginError()
         {
             Wait(3000);
             if (driver.FindElements(SauceDemoLoginPage.LoginErrorContainer).Count() > 0)
-                Assert.IsTrue(driver.FindElement(SauceDemoLoginPage.LoginErrorContainer).Text.Contains("Epic sadface: Sorry, this user has been locked out."));
+                VerifyTextData(SauceDemoLoginPage.LoginErrorContainer, "Epic sadface: Sorry, this user has been locked out.", true);
         }
 
         //Use of a Tuple function. So that you can return multiple objects

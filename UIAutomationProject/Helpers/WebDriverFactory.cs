@@ -3,6 +3,9 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
 
+/// <summary>
+/// Purpose of this class is to designate which browser to run selenium automation
+/// </summary>
 namespace UIAutomationProject.Helpers
 {
     public class WebDriverFactory
@@ -21,22 +24,20 @@ namespace UIAutomationProject.Helpers
                 case BrowserType.Firefox:
                     FirefoxOptions firefoxOption = new FirefoxOptions();
                     firefoxOption.AddArguments("start-maximized");
-                    // firefoxOption.AddArgument("headless");
+                    if (headless)
+                        firefoxOption.AddArgument("headless");
                     return new FirefoxDriver(firefoxOption);
                 case BrowserType.Edge:
                     var edgeOptions = new EdgeOptions();
                     edgeOptions.AddArgument("start-maximized");
-                    /*To run in headless*/
-                   // edgeOptions.AddArgument("headless");
+                    if (headless)
+                        edgeOptions.AddArgument("headless");
                     return new EdgeDriver(edgeOptions);
-                case BrowserType.IE:
-
                 default:
-                    throw new ArgumentOutOfRangeException("No browser was found");
+                    throw new NotFoundException("No browser was found");
             }
         }
         
-
         public enum BrowserType
         {
             Chrome,
