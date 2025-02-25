@@ -4,6 +4,9 @@ using System;
 using System.IO;
 using TechTalk.SpecFlow;
 
+/// <summary>
+/// Purpose of this class is to create screenshots during and after scenarios
+/// </summary>
 namespace UIAutomationProject.Support
 {
     [Binding]

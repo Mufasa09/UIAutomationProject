@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace UIAutomationProject.Features.UI
+namespace UIAutomationProject.Features.UI.SauceDemo
 {
     using TechTalk.SpecFlow;
     using System;
@@ -35,7 +35,7 @@ namespace UIAutomationProject.Features.UI
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/UI", "SauceDemo Login Tests", "Basic scenarios of the Sauce Demo site", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/UI/SauceDemo", "SauceDemo Login Tests", "Basic scenarios of the Sauce Demo login ", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -104,7 +104,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I verify the title of the site is Swag Labs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 8
- testRunner.When("I enter locked_out user credentials on SauceDemo site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I enter locked_out_user user credentials on SauceDemo site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
@@ -204,8 +204,9 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify you can log in the site with multiple users")]
-        [NUnit.Framework.TestCaseAttribute("standard", null)]
-        [NUnit.Framework.TestCaseAttribute("performance_user", null)]
+        [NUnit.Framework.TestCaseAttribute("standard_user", null)]
+        [NUnit.Framework.TestCaseAttribute("performance_glitch_user", null)]
+        [NUnit.Framework.TestCaseAttribute("problem_user", null)]
         [NUnit.Framework.TestCaseAttribute("visual_user", null)]
         [NUnit.Framework.TestCaseAttribute("error_user", null)]
         public virtual void VerifyYouCanLogInTheSiteWithMultipleUsers(string role, string[] exampleTags)

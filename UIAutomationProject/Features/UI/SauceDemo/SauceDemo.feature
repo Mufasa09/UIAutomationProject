@@ -1,11 +1,11 @@
 ﻿Feature: SauceDemo Login Tests
 
-Basic scenarios of the Sauce Demo site
+Basic scenarios of the Sauce Demo login 
 
 
 Scenario: Verify you can log in the site
 	Given I verify the title of the site is Swag Labs
-	When I enter locked_out user credentials on SauceDemo site
+	When I enter locked_out_user user credentials on SauceDemo site
 	Then I verify login error
 		| Key  | Value      |
 		| Role | locked_out |
@@ -29,8 +29,9 @@ Scenario Outline: Verify you can log in the site with multiple users
 	Then I verify user is on the main page
 
 Examples:
-	| Role             |
-	| standard         |
-	| performance_user |
-	| visual_user      |
-	| error_user       |
+	| Role                    |
+	| standard_user           |
+	| performance_glitch_user |
+	| problem_user            |
+	| visual_user             |
+	| error_user              |

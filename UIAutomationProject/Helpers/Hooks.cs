@@ -22,12 +22,15 @@ namespace UIAutomationProject.Helpers
         {
             _objectContainer = objectContainer;
             featureContext = _featureContext;
- 
 
-            Directory.SetCurrentDirectory(Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), @$"..\..\..\\Utilities\")));
+            string path = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            string directoryName = Path.GetFullPath(Path.Combine(path, @"..\..\..\\Utilities\"));
+
+            //Directory.SetCurrentDirectory(Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), @$"..\..\..\\Utilities\")));
 
             Configuration = new ConfigurationBuilder()
-            .SetBasePath(Environment.CurrentDirectory)
+            //.SetBasePath(Environment.CurrentDirectory)
+            .SetBasePath(directoryName)
             .AddJsonFile("testsettings.json", optional: true)
             .AddJsonFile($"testsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")}.json", optional: true)
             .AddEnvironmentVariables()

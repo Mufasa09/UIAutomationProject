@@ -106,7 +106,7 @@ this.ScenarioInitialize(scenarioInfo);
                 table1.AddRow(new string[] {
                             "StatusCode",
                             "OK"});
-#line 8
+#line 7
  testRunner.When("I verify successful api call", ((string)(null)), table1, "When ");
 #line hidden
             }
@@ -120,7 +120,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify basic API calls for jsonplaceholder", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 16
+#line 15
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -146,7 +146,7 @@ this.ScenarioInitialize(scenarioInfo);
                 table2.AddRow(new string[] {
                             "StatusCode",
                             "OK"});
-#line 18
+#line 16
  testRunner.When("I verify successful api call", ((string)(null)), table2, "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
@@ -167,7 +167,7 @@ this.ScenarioInitialize(scenarioInfo);
                 table3.AddRow(new string[] {
                             "APIUrl",
                             "https://jsonplaceholder.typicode.com/posts"});
-#line 21
+#line 19
  testRunner.Then("I make an api post call", ((string)(null)), table3, "Then ");
 #line hidden
             }
