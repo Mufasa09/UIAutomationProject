@@ -8,11 +8,10 @@ using System.Threading.Tasks;
 
 namespace UIAutomationProject.Pages.SauceDemo
 {
-    public class SauceDemoInventoryPage
+    public class SauceDemoInventoryPage : SauceDemoBasePage
     {
         public string title = "Products";
         public By Menu => By.Id("react-burger-menu-btn");
-        public By ShoppingCart => By.XPath("//a[contains(@class,'shopping_cart_link')]");
         public By Title => By.XPath("//span[contains(@class,'title')]");
 
         #region Products

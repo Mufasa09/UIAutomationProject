@@ -38,6 +38,13 @@ namespace UIAutomationProject.StepDefinitions.SauceDemoStepDefinitions
             SauceDemoTests.VerifyProductPage();
         }
 
+        [Then(@"I logout")]
+        public void ThenILogout()
+        {
+            SauceDemoTests.VerifyICanLogout();
+        }
+
+
         [Then(@"I (.*) the item (.*) to the cart")]
         public void ThenIAddAnItemToTheCart(string action, string item)
         {

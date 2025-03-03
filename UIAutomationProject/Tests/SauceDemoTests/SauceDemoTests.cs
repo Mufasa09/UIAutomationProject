@@ -53,6 +53,16 @@ namespace UIAutomationProject.Tests.SauceDemoTests
                 VerifyTextData(SauceDemoInventoryPage.Title, "Products", true);
         }
 
+        public void VerifyICanLogout()
+        {
+            Wait(2000);
+            Click(SauceDemoInventoryPage.MenuButton);
+            Wait(500);
+            Click(SauceDemoInventoryPage.LogoutLink);
+            Wait(2000);
+            VerifyDataIsPresent(SauceDemoLoginPage.LoginButton,true);
+        }
+
         public void AddItemToCart(string item, string action = "add")
         {
             Wait(3000);

@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/UIAutomationProject/Screenshots/02252025
+/UIAutomationProject/Screenshots/03022025/SauceDemo Login Tests/Verify you can log in the site with multiple users and logout
