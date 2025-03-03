@@ -35,3 +35,19 @@ Examples:
 	| problem_user            |
 	| visual_user             |
 	| error_user              |
+
+Scenario Outline: Verify you can log in the site with multiple users and logout
+	Given I verify the title of the site is Swag Labs
+	When I enter <Role> user credentials on SauceDemo site
+		| Key  | Value  |
+		| Role | <Role> |
+	Then I verify user is on the main page
+	* I logout
+
+Examples:
+	| Role                    |
+	| standard_user           |
+	| performance_glitch_user |
+	| problem_user            |
+	| visual_user             |
+	| error_user              |
