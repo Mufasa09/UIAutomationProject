@@ -30,6 +30,8 @@ namespace UIAutomationProject.Tests.SauceDemoTests
 
         public void EnterUserCredSauceDemo(BaseData baseData)
         {
+            Console.WriteLine($"Thread ID: {Thread.CurrentThread.ManagedThreadId}");
+            Console.WriteLine($"Time: {DateTime.Now}");
             Wait(2000);
             Enter(SauceDemoLoginPage.UserNameTextBox, baseData.Role);
             Enter(SauceDemoLoginPage.PasswordTextBox, "secret_sauce");

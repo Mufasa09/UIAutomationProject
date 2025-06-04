@@ -109,14 +109,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 8
  testRunner.Then("I add the item Sauce Labs Backpack to the cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table8.AddRow(new string[] {
+                table6.AddRow(new string[] {
                             "ItemName",
                             "Sauce Labs Backpack"});
 #line 9
- testRunner.And("I verify items in cart before removing", ((string)(null)), table8, "* ");
+ testRunner.And("I verify items in cart before removing", ((string)(null)), table6, "* ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -162,23 +162,23 @@ this.ScenarioInitialize(scenarioInfo);
 #line 16
  testRunner.When("I enter standard_user user credentials on SauceDemo site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table9.AddRow(new string[] {
+                table7.AddRow(new string[] {
                             "ItemName",
                             string.Format("{0}", itemName)});
 #line 17
- testRunner.Then("I add the item to the cart", ((string)(null)), table9, "Then ");
+ testRunner.Then("I add the item to the cart", ((string)(null)), table7, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table10.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "ItemName",
                             string.Format("{0}", itemName)});
 #line 20
- testRunner.And("I verify items in cart before removing", ((string)(null)), table10, "* ");
+ testRunner.And("I verify items in cart before removing", ((string)(null)), table8, "* ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -224,23 +224,23 @@ this.ScenarioInitialize(scenarioInfo);
 #line 35
  testRunner.When("I enter performance_glitch_user user credentials on SauceDemo site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table11.AddRow(new string[] {
+                table9.AddRow(new string[] {
                             "ItemName",
                             string.Format("{0}", itemName)});
 #line 36
- testRunner.Then("I add the item to the cart", ((string)(null)), table11, "Then ");
+ testRunner.Then("I add the item to the cart", ((string)(null)), table9, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table12.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "ItemName",
                             string.Format("{0}", itemName)});
 #line 39
- testRunner.And("I verify items in cart before removing", ((string)(null)), table12, "* ");
+ testRunner.And("I verify items in cart before removing", ((string)(null)), table10, "* ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -286,23 +286,23 @@ this.ScenarioInitialize(scenarioInfo);
 #line 54
  testRunner.When("I enter visual_user user credentials on SauceDemo site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table13.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "ItemName",
                             string.Format("{0}", itemName)});
 #line 55
- testRunner.Then("I add the item to the cart", ((string)(null)), table13, "Then ");
+ testRunner.Then("I add the item to the cart", ((string)(null)), table11, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table14.AddRow(new string[] {
+                table12.AddRow(new string[] {
                             "ItemName",
                             string.Format("{0}", itemName)});
 #line 58
- testRunner.And("I verify items in cart before removing", ((string)(null)), table14, "* ");
+ testRunner.And("I verify items in cart before removing", ((string)(null)), table12, "* ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -348,13 +348,76 @@ this.ScenarioInitialize(scenarioInfo);
 #line 73
  testRunner.When("I enter visual_user user credentials on SauceDemo site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
+                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Key",
+                            "Value"});
+                table13.AddRow(new string[] {
+                            "ItemName",
+                            string.Format("{0}", itemName)});
+#line 74
+ testRunner.Then("I add the item to the cart", ((string)(null)), table13, "Then ");
+#line hidden
+                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Key",
+                            "Value"});
+                table14.AddRow(new string[] {
+                            "ItemName",
+                            string.Format("{0}", itemName)});
+#line 77
+ testRunner.And("I verify items in cart before removing", ((string)(null)), table14, "* ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Verify you can add 2 items to the cart as a problem user")]
+        [NUnit.Framework.TestCaseAttribute("Sauce Labs Backpack", "", null)]
+        [NUnit.Framework.TestCaseAttribute("Sauce Labs Bike Light", "", null)]
+        [NUnit.Framework.TestCaseAttribute("Sauce Labs Bolt T-Shirt", "", null)]
+        [NUnit.Framework.TestCaseAttribute("Sauce Labs Fleece Jacket", "", null)]
+        [NUnit.Framework.TestCaseAttribute("Sauce Labs Onesie", "", null)]
+        [NUnit.Framework.TestCaseAttribute("Test.allTheThings() T-Shirt (Red)", "", null)]
+        public virtual void VerifyYouCanAdd2ItemsToTheCartAsAProblemUser(string itemName, string _, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("ItemName", itemName);
+            argumentsOfScenario.Add("", _);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can add 2 items to the cart as a problem user", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 149
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 150
+ testRunner.Given("I verify the title of the site is Swag Labs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 151
+ testRunner.When("I enter visual_user user credentials on SauceDemo site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
                 TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
                 table15.AddRow(new string[] {
                             "ItemName",
                             string.Format("{0}", itemName)});
-#line 74
+#line 152
  testRunner.Then("I add the item to the cart", ((string)(null)), table15, "Then ");
 #line hidden
                 TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
@@ -363,7 +426,7 @@ this.ScenarioInitialize(scenarioInfo);
                 table16.AddRow(new string[] {
                             "ItemName",
                             string.Format("{0}", itemName)});
-#line 77
+#line 155
  testRunner.And("I verify items in cart before removing", ((string)(null)), table16, "* ");
 #line hidden
             }

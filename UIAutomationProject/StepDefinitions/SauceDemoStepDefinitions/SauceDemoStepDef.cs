@@ -1,28 +1,29 @@
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
+using UIAutomationProject.Helpers;
 using UIAutomationProject.Tests.SauceDemoTests;
 using UIAutomationProject.Utilities.Data;
 
 namespace UIAutomationProject.StepDefinitions.SauceDemoStepDefinitions
 {
     [Binding]
-    public class APIStepDef
+    public class SauceDemoStepDef
     {
 
-        public APIStepDef(IWebDriver driver)
+        public SauceDemoStepDef()
         {
-            SauceDemoTests = new SauceDemoTests(driver);
+            SauceDemoTests = new SauceDemoTests(DriverFactory.getWebDriver());
         }
         SauceDemoTests SauceDemoTests { get; }
 
-        [When("I enter (.*) user credentials on SauceDemo site")]
-        [Then("I enter (.*) user credentials on SauceDemo site")]
-        public void EnterUserCredentials(string role, Table data)
-        {
-            SauceDemoTests.EnterUserCredSauceDemo(data.CreateInstance<BaseData>());
+        //[When("I enter (.*) user credentials on SauceDemo site")]
+        //[Then("I enter (.*) user credentials on SauceDemo site")]
+        //public void EnterUserCredentials(Table data)
+        //{
+        //    SauceDemoTests.EnterUserCredSauceDemo(data.CreateInstance<BaseData>());
 
-        }
+        //}
 
         [When("I enter (.*) user credentials on SauceDemo site")]
         [Then("I enter (.*) user credentials on SauceDemo site")]

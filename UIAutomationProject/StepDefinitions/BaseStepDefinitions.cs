@@ -1,6 +1,8 @@
+using NUnit.Framework;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
+using UIAutomationProject.Helpers;
 using UIAutomationProject.Tests;
 using UIAutomationProject.Utilities.Data;
 
@@ -10,9 +12,9 @@ namespace UIAutomationProject.StepDefinitions
     public class BaseStepDefinitions 
     {
 
-        public BaseStepDefinitions(IWebDriver driver)
+        public BaseStepDefinitions()
         {
-            Tests = new BaseTests(driver);
+            Tests = new BaseTests(DriverFactory.getWebDriver());
         }
         BaseTests Tests { get; }
 

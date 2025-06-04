@@ -11,23 +11,24 @@ namespace UIAutomationProject.Helpers
     public class WebDriverFactory
     {
 
-        public IWebDriver ChooseDriver(BrowserType browserType, bool headless)
+        public IWebDriver ChooseDriver(string browser, bool headless)
         {
-            switch (browserType)
+            switch (browser)
             {
-                case BrowserType.Chrome:
+                case "Chrome":
                     ChromeOptions chromeOption = new ChromeOptions();
                     chromeOption.AddArguments("start-maximized");
-                    if(headless)
+                    chromeOption.AddArguments("incognito");
+                    if (headless)
                          chromeOption.AddArgument("headless");
                     return new ChromeDriver(chromeOption);
-                case BrowserType.Firefox:
+                case "Firefox":
                     FirefoxOptions firefoxOption = new FirefoxOptions();
                     firefoxOption.AddArguments("start-maximized");
                     if (headless)
                         firefoxOption.AddArgument("headless");
                     return new FirefoxDriver(firefoxOption);
-                case BrowserType.Edge:
+                case "Edge":
                     var edgeOptions = new EdgeOptions();
                     edgeOptions.AddArgument("start-maximized");
                     if (headless)
@@ -36,14 +37,6 @@ namespace UIAutomationProject.Helpers
                 default:
                     throw new NotFoundException("No browser was found");
             }
-        }
-        
-        public enum BrowserType
-        {
-            Chrome,
-            Edge,
-            IE,
-            Firefox
         }
     }
 }

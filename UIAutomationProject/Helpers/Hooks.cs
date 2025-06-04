@@ -15,6 +15,9 @@ namespace UIAutomationProject.Helpers
         private string baseUrl = "";
         private FeatureContext featureContext;
         private string featureName = "";
+        string browser = "Chrome";
+        string returnString;
+        bool headless = false;
         public HttpClient _httpClient;
         public IConfiguration Configuration { get; }
 
@@ -22,20 +25,25 @@ namespace UIAutomationProject.Helpers
         {
             _objectContainer = objectContainer;
             featureContext = _featureContext;
-
             string path = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
             string directoryName = Path.GetFullPath(Path.Combine(path, @"..\..\..\\Utilities\"));
 
             //Directory.SetCurrentDirectory(Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), @$"..\..\..\\Utilities\")));
 
             Configuration = new ConfigurationBuilder()
-            //.SetBasePath(Environment.CurrentDirectory)
             .SetBasePath(directoryName)
             .AddJsonFile("testsettings.json", optional: true)
             .AddJsonFile($"testsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")}.json", optional: true)
             .AddEnvironmentVariables()
             .Build();
-            bool headless = Configuration.GetValue<bool>("Headless");
+        }
+
+
+        [BeforeScenario]
+        public void BeforeScenario()
+        {
+             headless = Configuration.GetValue<bool>("Headless");
+             browser = Configuration.GetValue<string>("Browser");
 
             featureName = featureContext.FeatureInfo.Title;
 
@@ -46,17 +54,12 @@ namespace UIAutomationProject.Helpers
             _APIStorage = new APIStorage();
             _APIStorage.BaseUrl = baseUrl;
             _APIStorage.response = _APIStorage.GetResponse(baseUrl);
-            Driver = new WebDriverFactory().ChooseDriver(WebDriverFactory.BrowserType.Chrome, headless);
+            DriverFactory.setDriver(new WebDriverFactory().ChooseDriver(browser, headless));
+            Driver = DriverFactory.getWebDriver();
+            Console.WriteLine($"[Thread {Thread.CurrentThread.ManagedThreadId}] Launching browser...");
             _objectContainer.RegisterInstanceAs(Driver);
             _objectContainer.RegisterInstanceAs(_APIStorage);
             _objectContainer.RegisterInstanceAs(Configuration);
-        }
-
-
-        [BeforeScenario]
-        public void BeforeScenario()
-        {
-
             Driver.Manage().Window.Maximize();
             if (featureName.Contains("API"))
             {
@@ -69,12 +72,11 @@ namespace UIAutomationProject.Helpers
         [AfterScenario]
         public void AfterScenario()
         {
-            Driver.Quit();
+            DriverFactory.removeDriver();
         }
 
         public string WebsiteSelector(string featureName)
         {
-            string returnString = "";
             switch (featureName)
             {
                 case string a when a.Contains("SauceDemo"):
