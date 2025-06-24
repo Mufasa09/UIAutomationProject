@@ -2,6 +2,7 @@
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Remote;
 
 /// <summary>
 /// Purpose of this class is to designate which browser to run selenium automation
@@ -11,7 +12,7 @@ namespace UIAutomationProject.Helpers
     public class WebDriverFactory
     {
 
-        public IWebDriver ChooseDriver(string browser, bool headless)
+        public IWebDriver ChooseDriver(string browser, bool headless, bool useRemote)
         {
             switch (browser)
             {
@@ -21,7 +22,15 @@ namespace UIAutomationProject.Helpers
                     chromeOption.AddArguments("incognito");
                     if (headless)
                          chromeOption.AddArgument("headless");
-                    return new ChromeDriver(chromeOption);
+                    if (useRemote)
+                    {
+                        var driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), chromeOption.ToCapabilities());
+                        return driver;
+                    }
+                    else
+                    {
+                        return new ChromeDriver(chromeOption);
+                    }
                 case "Firefox":
                     FirefoxOptions firefoxOption = new FirefoxOptions();
                     firefoxOption.AddArguments("start-maximized");

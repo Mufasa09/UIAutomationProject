@@ -17,7 +17,7 @@ namespace UIAutomationProject.Helpers
         private string featureName = "";
         string browser = "Chrome";
         string returnString;
-        bool headless = false;
+        bool useRemote, headless = false;
         public HttpClient _httpClient;
         public IConfiguration Configuration { get; }
 
@@ -44,6 +44,7 @@ namespace UIAutomationProject.Helpers
         {
              headless = Configuration.GetValue<bool>("Headless");
              browser = Configuration.GetValue<string>("Browser");
+            useRemote = Configuration.GetValue<bool>("Remote");
 
             featureName = featureContext.FeatureInfo.Title;
 
@@ -54,7 +55,7 @@ namespace UIAutomationProject.Helpers
             _APIStorage = new APIStorage();
             _APIStorage.BaseUrl = baseUrl;
             _APIStorage.response = _APIStorage.GetResponse(baseUrl);
-            DriverFactory.setDriver(new WebDriverFactory().ChooseDriver(browser, headless));
+            DriverFactory.setDriver(new WebDriverFactory().ChooseDriver(browser, headless, useRemote));
             Driver = DriverFactory.getWebDriver();
             Console.WriteLine($"[Thread {Thread.CurrentThread.ManagedThreadId}] Launching browser...");
             _objectContainer.RegisterInstanceAs(Driver);
