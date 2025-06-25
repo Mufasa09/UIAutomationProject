@@ -38,7 +38,20 @@ stages:
 
         echo "Running docker compose up"
         docker compose -f docker-compose.yml up -d
+
+    - script: |
+        cd "$SYSTEM_DEFAULTWORKINGDIRECTORY/UIAutomationProject"
+        dotnet test --logger "trx"
+      displayName: 'Build & Run Tests'
+
+    - script: |
+        cd "$SYSTEM_DEFAULTWORKINGDIRECTORY/UIAutomationProject"
+        docker compose down
+      displayName: 'Tear Down Grid'
+      condition: always()
+
     - task: PublishTestResults@2
       inputs:
-        testResultsFiles: '**/test-results/*.xml'  # adjust path & pattern to your test results
+        testResultsFiles: '**/test-results/*.xml'
         testRunTitle: 'Selenium UI Tests'
+      displayName: 'Publish Test Results'
