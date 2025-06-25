@@ -5,6 +5,6 @@
   "APIDogUrl": "https://jsonplaceholder.typicode.com",
   //Other Settings
   "Headless": false,
-  "Remote": true,
+  "Remote": false,
   "Browser": "Chrome"
 }
