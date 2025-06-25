@@ -1,29 +1,56 @@
-# Docker
-# Build a Docker image
-# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
-
 trigger:
-- master
+- main
 
-resources:
-- repo: self
+pool:
+  vmImage: 'ubuntu-latest'
 
 variables:
-  tag: '$(Build.BuildId)'
+  buildConfiguration: 'Release'
 
-stages:
-- stage: Build
-  displayName: Build image
-  jobs:
-  - job: Build
-    displayName: Build
-    pool:
-      vmImage: ubuntu-latest
-    steps:
-    - task: Docker@2
-      displayName: Build an image
-      inputs:
-        command: build
-        dockerfile: '$(Build.SourcesDirectory)/UIAutomationProject/Dockerfile'
-        tags: |
-          $(tag)
+steps:
+# 1. Checkout code
+- task: Checkout@1
+
+# 2. Install Docker and Docker Compose (if needed)
+- task: DockerInstaller@0
+  inputs:
+    dockerVersion: 'latest'
+
+# 3. Start Selenium Grid via Docker Compose
+- script: |
+    docker-compose -f docker-compose.yml up -d
+    echo "Waiting for Selenium Hub to be ready..."
+    sleep 15  # You can improve this with health checks
+  displayName: 'Start Selenium Grid'
+
+# 4. Restore and build your test project
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'restore'
+    projects: '**/*.csproj'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    projects: '**/*.csproj'
+    arguments: '--configuration $(buildConfiguration)'
+
+# 5. Run the Selenium tests
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'test'
+    projects: '**/UIAutomationProject.csproj'
+    arguments: '--configuration $(buildConfiguration) --logger trx'
+  displayName: 'Run Selenium Tests'
+
+# 6. Publish test results (optional)
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'VSTest'
+    testResultsFiles: '**/TestResults/*.trx'
+    failTaskOnFailedTests: true
+
+# 7. Shutdown Docker containers
+- script: |
+    docker-compose down
+  displayName: 'Tear down Selenium Grid'
