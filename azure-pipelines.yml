@@ -38,3 +38,7 @@ stages:
 
         echo "Running docker compose up"
         docker compose -f docker-compose.yml up -d
+    - task: PublishTestResults@2
+      inputs:
+        testResultsFiles: '**/test-results/*.xml'  # adjust path & pattern to your test results
+        testRunTitle: 'Selenium UI Tests'
