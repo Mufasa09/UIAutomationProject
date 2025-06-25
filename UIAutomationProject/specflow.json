@@ -1,0 +1,6 @@
+{
+  "runtime": {
+    "executionOrder": "random",
+    "testThreadCount": 3
+  }
+}

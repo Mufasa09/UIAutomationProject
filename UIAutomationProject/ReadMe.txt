@@ -46,6 +46,7 @@ Then use the command line to build the project
 docker buildx build -f Dockerfile -t uiautomationproject .
 
 If file name error displays then rename file using command
+Make sure your in the project directory where the file is located
 ren Dockerfile.dockerfile Dockerfile
 
 then run the command to create container:
@@ -58,3 +59,14 @@ then run the command:
 dotnet test
 
 #This will run your tests within the docker container
+You should see in your docker desktop the selenium-chome container action button become a stop button. Which means it's active
+
+#To see web browser running in docker
+Download a VC viewer. Such as RealVC Viewer
+Enter the address...
+You can get your adress by opening a command prompt and enter wsl -d docker-desktop ip a | findstr "inet"
+Look for the line that has the IP/20. Copy that IP
+Paste it in the VC viewer address along with 5900....So it should display as IP:5900
+Enter password which is secret
+You should see your browser pop up in the VC viewer with tests running
+
