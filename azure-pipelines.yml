@@ -39,6 +39,12 @@ stages:
         echo "Running docker compose up"
         docker compose -f docker-compose.yml up -d
 
+    - task: UseDotNet@2
+      displayName: 'Install .NET 6 SDK'
+      inputs:
+        packageType: 'sdk'
+        version: '6.0.x'
+
     - script: |
         cd "$SYSTEM_DEFAULTWORKINGDIRECTORY/UIAutomationProject"
         dotnet test --logger "trx"
