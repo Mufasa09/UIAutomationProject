@@ -33,7 +33,7 @@ stages:
         echo "Working Dir: $SYSTEM_DEFAULTWORKINGDIRECTORY"
         ls -la "$SYSTEM_DEFAULTWORKINGDIRECTORY"
 
-        cd "$SYSTEM_DEFAULTWORKINGDIRECTORY/_Mufasa09_UIAutomationProject/UIAutomationProject"
+        cd "$SYSTEM_DEFAULTWORKINGDIRECTORY/UIAutomationProject"
         ls -la  # show files here to confirm docker-compose.yml exists
 
         echo "Running docker compose up"
