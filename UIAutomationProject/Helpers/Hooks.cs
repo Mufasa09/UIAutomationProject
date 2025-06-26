@@ -58,7 +58,7 @@ namespace UIAutomationProject.Helpers
             _APIStorage.response = _APIStorage.GetResponse(baseUrl);
             DriverFactory.setDriver(new WebDriverFactory().ChooseDriver(browser, headless, useRemote));
             Driver = DriverFactory.getWebDriver();
-            Console.WriteLine($"[Thread {Thread.CurrentThread.ManagedThreadId}] Launching browser...");
+            Console.WriteLine($"LOG:[Thread {Thread.CurrentThread.ManagedThreadId}] Launching browser...");
             _objectContainer.RegisterInstanceAs(Driver);
             _objectContainer.RegisterInstanceAs(_APIStorage);
             _objectContainer.RegisterInstanceAs(Configuration);

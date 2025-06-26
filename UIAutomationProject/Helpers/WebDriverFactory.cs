@@ -22,17 +22,18 @@ namespace UIAutomationProject.Helpers
                     chromeOption.AddArguments("incognito");
                     chromeOption.AddArguments("--no-sandbox", "--disable-dev-shm-usage");
                     //This creates a temp folder, so that you can chrome in parallel (specifically inside Azure CI/CD)
-                    //Chrome doesn't allow sharing user data directory
-                    string tempUserDataDir = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
-                    Directory.CreateDirectory(tempUserDataDir);
-                    Console.WriteLine($"Using user-data-dir: {tempUserDataDir}");
-                    chromeOption.AddArgument($"--user-data-dir={tempUserDataDir}");
+                    if (!useRemote)
+                    {
+                        string tempUserDataDir = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
+                        Directory.CreateDirectory(tempUserDataDir);
+                        Console.WriteLine($"LOG: Using user-data-dir: {tempUserDataDir}");
+                        chromeOption.AddArgument($"--user-data-dir={tempUserDataDir}");
+                    }
                     if (headless)
                          chromeOption.AddArgument("headless");
                     if (useRemote)
                     {
-                        var driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), chromeOption.ToCapabilities());
-                        return driver;
+                        return new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), chromeOption.ToCapabilities());
                     }
                     else
                     {
