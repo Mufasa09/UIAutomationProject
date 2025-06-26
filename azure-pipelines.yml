@@ -47,7 +47,7 @@ stages:
 
     - script: |
         cd "$SYSTEM_DEFAULTWORKINGDIRECTORY/UIAutomationProject"
-        dotnet test --logger "trx"
+        dotnet test --logger "trx;LogFileName=test-results.trx" --results-directory test-results
       displayName: 'Build & Run Tests'
 
     - script: |
