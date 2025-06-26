@@ -5,6 +5,9 @@
 trigger:
 - master
 
+pool:
+  vmImage: 'ubuntu-latest' 
+  
 resources:
 - repo: self
 
@@ -20,10 +23,41 @@ stages:
     pool:
       vmImage: ubuntu-latest
     steps:
-    - task: Docker@2
-      displayName: Build an image
+    - script: |
+        echo "Docker version:"
+        docker --version
+
+        echo "Docker Compose version:"
+        docker compose version
+
+        echo "Working Dir: $SYSTEM_DEFAULTWORKINGDIRECTORY"
+        ls -la "$SYSTEM_DEFAULTWORKINGDIRECTORY"
+
+        cd "$SYSTEM_DEFAULTWORKINGDIRECTORY/UIAutomationProject"
+        ls -la  # show files here to confirm docker-compose.yml exists
+
+        echo "Running docker compose up"
+        docker compose -f docker-compose.yml up -d
+
+    - task: UseDotNet@2
+      displayName: 'Install .NET 6 SDK'
       inputs:
-        command: build
-        dockerfile: '$(Build.SourcesDirectory)/UIAutomationProject/Dockerfile'
-        tags: |
-          $(tag)
+        packageType: 'sdk'
+        version: '6.0.x'
+
+    - script: |
+        cd "$SYSTEM_DEFAULTWORKINGDIRECTORY/UIAutomationProject"
+        dotnet test --logger "trx"
+      displayName: 'Build & Run Tests'
+
+    - script: |
+        cd "$SYSTEM_DEFAULTWORKINGDIRECTORY/UIAutomationProject"
+        docker compose down
+      displayName: 'Tear Down Grid'
+      condition: always()
+
+    - task: PublishTestResults@2
+      inputs:
+        testResultsFiles: '**/test-results/*.xml'
+        testRunTitle: 'Selenium UI Tests'
+      displayName: 'Publish Test Results'
