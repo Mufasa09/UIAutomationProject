@@ -26,7 +26,8 @@ namespace UIAutomationProject.Helpers
             _objectContainer = objectContainer;
             featureContext = _featureContext;
             string path = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-            string directoryName = Path.GetFullPath(Path.Combine(path, @"..\..\..\\Utilities\"));
+            string baseDir = Directory.GetParent(AppContext.BaseDirectory).Parent.Parent.Parent.FullName;
+            string directoryName = Path.Combine(baseDir, "Utilities");
 
             //Directory.SetCurrentDirectory(Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), @$"..\..\..\\Utilities\")));
 
