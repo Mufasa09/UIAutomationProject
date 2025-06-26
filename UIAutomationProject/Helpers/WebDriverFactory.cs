@@ -18,8 +18,10 @@ namespace UIAutomationProject.Helpers
             {
                 case "Chrome":
                     ChromeOptions chromeOption = new ChromeOptions();
+                    string tempUserDataDir = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
                     chromeOption.AddArguments("start-maximized");
                     chromeOption.AddArguments("incognito");
+                    chromeOption.AddArgument($"--user-data-dir={tempUserDataDir}");
                     if (headless)
                          chromeOption.AddArgument("headless");
                     if (useRemote)
