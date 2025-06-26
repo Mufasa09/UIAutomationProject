@@ -58,6 +58,7 @@ stages:
 
     - task: PublishTestResults@2
       inputs:
-        testResultsFiles: '**/test-results/*.xml'
+        testResultsFiles: '**/test-results/*.trx'
         testRunTitle: 'Selenium UI Tests'
+      condition: succeededOrFailed()
       displayName: 'Publish Test Results'
