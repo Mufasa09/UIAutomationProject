@@ -55,6 +55,11 @@ stages:
         docker compose down
       displayName: 'Tear Down Grid'
       condition: always()
+      
+    - script: |
+        echo "Looking for .trx files..."
+        find $(Build.SourcesDirectory) -name "*.trx"
+      displayName: 'Debug: Find test results'
 
     - task: PublishTestResults@2
       inputs:
