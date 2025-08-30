@@ -9,7 +9,6 @@ namespace UIAutomationProject.Tests.SauceDemoTests
     public class SauceDemoTests : BaseTests
     {
         private IWebDriver driver;
-        private string URL = "";
 
         public SauceDemoTests(IWebDriver _driver) : base(_driver)
         {

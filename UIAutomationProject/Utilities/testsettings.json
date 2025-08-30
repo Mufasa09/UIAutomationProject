@@ -5,6 +5,7 @@
   "APIDogUrl": "https://jsonplaceholder.typicode.com",
   //Other Settings
   "Headless": false,
-  "Remote": true,
+  //To run in docker change to true
+  "Remote": false,
   "Browser": "Chrome"
 }

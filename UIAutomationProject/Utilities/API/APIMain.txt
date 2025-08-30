@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -113,7 +114,7 @@
 
   <p>
     <a href="https://zuplo.link/json-server-web" target="_blank">
-      <img src="https://github.com/typicode/json-server/assets/5502029/928b7526-0fdf-46ae-80d9-27fa0ef5f430" class="mb-two" style="height: 100px" />
+      <img src="https://github.com/user-attachments/assets/adfee31f-a8b6-4684-9a9b-af4f03ac5b75" class="mb-two" style="height: 100px" />
     </a>
   </p>
 

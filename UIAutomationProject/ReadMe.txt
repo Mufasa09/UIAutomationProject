@@ -70,3 +70,6 @@ Paste it in the VC viewer address along with 5900....So it should display as IP:
 Enter password which is secret
 You should see your browser pop up in the VC viewer with tests running
 
+To ensure docker nodes are running, then you need to run this whereever your docker-compose is located:
+docker-compose -f docker-compose.yml up -d
+

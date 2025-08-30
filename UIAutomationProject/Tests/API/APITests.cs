@@ -26,6 +26,7 @@ namespace UIAutomationProject.Tests
         public void NavigateToAPISite(string url)
         {
             response = httpClient.GetAsync(url).Result;
+          
         }
 
         public void VerifySuccessMessage(APIData data)
@@ -36,10 +37,9 @@ namespace UIAutomationProject.Tests
 
         public void VerifyResponseBody(APIData data)
         {
+            string baseDir = Directory.GetParent(AppContext.BaseDirectory).Parent.Parent.Parent.FullName;
+            string directoryName = Path.GetFullPath(Path.Combine(baseDir, $"Utilities\\API\\{data.TxtFile}.txt"));
 
-            string path = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-
-            string directoryName = Path.GetFullPath(Path.Combine(path, @$"..\..\..\\Utilities\API\{data.TxtFile}.txt"));
 
             //Reads in file
             using (StreamReader DataFile = new StreamReader(@directoryName))

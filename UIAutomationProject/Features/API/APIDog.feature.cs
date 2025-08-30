@@ -109,6 +109,18 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
  testRunner.When("I verify successful api call", ((string)(null)), table1, "When ");
 #line hidden
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Key",
+                            "Value"});
+                table2.AddRow(new string[] {
+                            "TxtFile",
+                            "APIMain"});
+                table2.AddRow(new string[] {
+                            "StatusCode",
+                            "OK"});
+#line 10
+ testRunner.Then("I verify response body", ((string)(null)), table2, "Then ");
+#line hidden
             }
             this.ScenarioCleanup();
         }
@@ -140,35 +152,38 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Key",
-                            "Value"});
-                table2.AddRow(new string[] {
-                            "StatusCode",
-                            "OK"});
-#line 16
- testRunner.When("I verify successful api call", ((string)(null)), table2, "When ");
-#line hidden
                 TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
                 table3.AddRow(new string[] {
+                            "StatusCode",
+                            "OK"});
+#line 16
+ testRunner.When("I verify successful api call", ((string)(null)), table3, "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Key",
+                            "Value"});
+                table4.AddRow(new string[] {
                             "userID",
                             "1"});
-                table3.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "id",
                             "101"});
-                table3.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "title",
                             "Test"});
-                table3.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "body",
                             "Testing it out please"});
-                table3.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "APIUrl",
                             "https://jsonplaceholder.typicode.com/posts"});
+                table4.AddRow(new string[] {
+                            "TxtFile",
+                            "APIMain.txt"});
 #line 19
- testRunner.Then("I make an api post call", ((string)(null)), table3, "Then ");
+ testRunner.Then("I make an api post call", ((string)(null)), table4, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
