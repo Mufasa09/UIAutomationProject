@@ -47,7 +47,7 @@ stages:
 
     - script: |
         cd "$SYSTEM_DEFAULTWORKINGDIRECTORY/UIAutomationProject"
-        dotnet test --logger "trx"
+        dotnet test 
       displayName: 'Build & Run Tests'
 
     - script: |
@@ -55,9 +55,4 @@ stages:
         docker compose down
       displayName: 'Tear Down Grid'
       condition: always()
-
-    - task: PublishTestResults@2
-      inputs:
-        testResultsFiles: '**/test-results/*.xml'
-        testRunTitle: 'Selenium UI Tests'
-      displayName: 'Publish Test Results'
+    
