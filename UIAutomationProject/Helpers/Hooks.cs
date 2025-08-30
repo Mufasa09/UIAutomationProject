@@ -90,6 +90,9 @@ namespace UIAutomationProject.Helpers
                 case string a when a.Contains("APIDog"):
                     returnString = "APIDog";
                     return returnString;
+                case string a when a.Contains("Charles Schwab"):
+                    returnString = "CharlesSchwab";
+                    return returnString;
                 default:
                     throw new NotFoundException();
             }

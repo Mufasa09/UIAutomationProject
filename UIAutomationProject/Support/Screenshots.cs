@@ -14,7 +14,7 @@ namespace UIAutomationProject.Support
     {
         private readonly IWebDriver driver;
         private static string Date;
-        private string testName;
+        private String testName;
         private string featureName;
         private string stepName;
         private ScenarioContext scenarioContext;
@@ -38,8 +38,10 @@ namespace UIAutomationProject.Support
             Date = DateTime.Now.ToString("MMddyyyy");
 
             testName = scenarioContext.ScenarioInfo.Title;
+            testName = testName.Substring(0, Math.Min(testName.Length, 30));
             featureName = featureContext.FeatureInfo.Title;
             stepName = scenarioContext.StepContext.StepInfo.Text;
+            stepName = testName.Substring(0, Math.Min(testName.Length, 30));
             Directory.CreateDirectory(Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), @$"..\..\..\\Screenshots\{Date}\{featureName}\{testName}")));
             var screenshot = takesScreenshot.GetScreenshot();
             string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(Path.GetTempFileName());

@@ -3,7 +3,7 @@ using UIAutomationProject.Pages.CharlesSchwab;
 
 namespace UIAutomationProject.Tests.CharlesSchwabTests
 {
-    public class IntelligentPortfolioTests : BaseTests
+    public class IntelligentPortfolioTests : CharlesSchwabBaseTests
     {
         private IWebDriver driver;
 

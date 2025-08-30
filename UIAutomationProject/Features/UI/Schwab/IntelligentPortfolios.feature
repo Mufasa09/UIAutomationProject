@@ -1,12 +1,10 @@
-﻿Feature: Intelligent Portfolios Tests
+﻿Feature: Charles Schwab Intelligent Portfolios
 
-Basic scenarios of the Sauce Demo login 
+Basic scenarios of the Charles Schwab Intelligent Portfolios
 
 
-Scenario: Verify you can log in the site
-	Given I verify the title of the site is Swag Labs
-	When I enter locked_out_user user credentials on SauceDemo site
-	Then I verify login error
-		| Key  | Value      |
-		| Role | locked_out |
+Scenario: Verify you can access the site
+	Given I verify the title of the site is Charles Schwab | A Modern Approach to Investing and Retirement Planning | Charles Schwab
+	When I navigate to Automated Investing from Advice
+	Then I verify the title of the site is Schwab Intelligent Portfolios | Charles Schwab
 

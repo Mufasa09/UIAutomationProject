@@ -3,6 +3,7 @@
   "SauceDemoUrl": "https://www.saucedemo.com/",
   "UltimateQAUrl": "https://ultimateqa.com/",
   "APIDogUrl": "https://jsonplaceholder.typicode.com",
+  "CharlesSchwabUrl": "https://www.schwab.com/",
   //Other Settings
   "Headless": false,
   //To run in docker change to true

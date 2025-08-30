@@ -24,8 +24,14 @@ namespace UIAutomationProject.StepDefinitions
         {
             Tests.NavigateToSite(site);
 
-        }  
-       
+        }
+
+        [Then(@"I verify the page is displayed")]
+        public void ThenIVerifyThePageIsDisplayed(Table data)
+        {
+            Tests.PageVerification(data.CreateInstance<BaseData>());
+        }
+
 
         [Given("I verify the title of the site is (.*)")]
         [When("I verify the title of the site is (.*)")]

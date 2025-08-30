@@ -26,9 +26,17 @@ namespace UIAutomationProject.Tests
             driver.Navigate().GoToUrl(site);
         }
 
+        public void PageVerification(BaseData baseData)
+        {
+            if (baseData.Title != null)
+            {
+                driver.Title.Contains(baseData.Title);
+            }
+        }
+
         public void VerifyTitle(string title)
         {
-            Wait(3000);
+            Wait(1000);
             driver.Title.Contains(title);
         }
 

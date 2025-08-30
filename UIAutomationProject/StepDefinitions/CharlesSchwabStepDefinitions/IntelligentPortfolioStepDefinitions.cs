@@ -1,7 +1,10 @@
-﻿using UIAutomationProject.Tests.CharlesSchwabTests;
+﻿using TechTalk.SpecFlow;
+using UIAutomationProject.Helpers;
+using UIAutomationProject.Tests.CharlesSchwabTests;
 
 namespace UIAutomationProject.StepDefinitions.CharlesSchwabStepDefinitions
 {
+    [Binding]
     public class IntelligentPortfolioStepDefinitions
     {
 
@@ -12,20 +15,15 @@ namespace UIAutomationProject.StepDefinitions.CharlesSchwabStepDefinitions
         }
         IntelligentPortfolioTests IntelligentPortfolioTests { get; }
 
-        //[When("I enter (.*) user credentials on SauceDemo site")]
-        //[Then("I enter (.*) user credentials on SauceDemo site")]
-        //public void EnterUserCredentials(Table data)
-        //{
-        //    SauceDemoTests.EnterUserCredSauceDemo(data.CreateInstance<BaseData>());
 
-        //}
 
-        [When("I enter (.*) user credentials on SauceDemo site")]
-        [Then("I enter (.*) user credentials on SauceDemo site")]
-        public void EnterUserCredentials(string role)
+        [When(@"I navigate to (.*) from (.*)")]
+        public void WhenINavigateToIntelligentPortfolio(String subMenu, String menu)
         {
-            SauceDemoTests.EnterUserCredSauceDemo(role);
+            IntelligentPortfolioTests.NavigateToPages(subMenu, menu);
         }
+
+
 
     }
 }
