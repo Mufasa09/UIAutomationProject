@@ -41,6 +41,14 @@ namespace UIAutomationProject.StepDefinitions
             Tests.VerifyTitle(title);
         }
 
+        [Given("I verify the url of the site is (.*)")]
+        [When("I verify the url of the site is (.*)")]
+        [Then("I verify the url of the site is (.*)")]
+        public void VerifySiteURL(string url)
+        {
+            Tests.VerifyURL(url);
+        }
+
         [Then(@"I verify login error")]
         public void ThenIVerifyUserIsOnTheMainPage()
         {

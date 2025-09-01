@@ -19,11 +19,35 @@ namespace UIAutomationProject.Tests.CharlesSchwabTests
             Click(ConvertMenuStringToBy(subMenu));
         }
 
-        public void AccessGetStartedButton()
+        public void AccessButton(String button)
         {
-            Click(IntelligentPortfoliosPage.GetStartedButton);
-            Wait(2000);
-            SwitchNewWindow();
+            switch (button)
+            {
+                case "Get Started":
+                    Click(IntelligentPortfoliosPage.GetStartedButton);
+                    Wait(2000);
+                    SwitchNewWindow();
+                    break;
+                case "Take a deeper dive":
+                    Click(IntelligentPortfoliosPage.TakeADeeperDive);
+                    break;
+                case "See how we stack up":
+                    Click(IntelligentPortfoliosPage.StackUpButton);
+                    break;
+                case "Open an account":
+                    Click(IntelligentPortfoliosPage.OpenAnAccountButton);
+                    Wait(2000);
+                    SwitchNewWindow();
+                    break;
+                case "Find a local branch to apply in person":
+                    Click(IntelligentPortfoliosPage.FindBranch);
+                    Wait(2000);
+                    SwitchNewWindow();
+                    break;
+
+                default: 
+                    throw new NotFoundException("Not found");
+            }
         }
 
 

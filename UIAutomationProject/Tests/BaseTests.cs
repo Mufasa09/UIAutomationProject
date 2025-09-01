@@ -62,6 +62,12 @@ namespace UIAutomationProject.Tests
             Assert.AreEqual(title, driver.Title);
         }
 
+        public void VerifyURL(string url)
+        {
+            Wait(2000);
+            Assert.AreEqual(url, driver.Url);
+        }
+
         public void EnterUserCred(BaseData baseData, string userNameTextBox, string passwordTextBox)
         {
 
