@@ -27,7 +27,7 @@ namespace UIAutomationProject.Tests
         }
         public void SwitchNewWindow()
         {
-            IList<string> windowHandles = new List<string>(driver.WindowHandles);
+            List<string> windowHandles = GrabWindowHandles();
             driver.SwitchTo().Window(windowHandles[1]);
         }
 
@@ -39,7 +39,7 @@ namespace UIAutomationProject.Tests
 
         public void AllWindows()
         {
-            IReadOnlyCollection<string> allWindows = driver.WindowHandles;
+            List<string> allWindows = GrabWindowHandles();
 
             foreach (string window in allWindows)
             {
@@ -56,6 +56,11 @@ namespace UIAutomationProject.Tests
             }
         }
 
+        public List<string> GrabWindowHandles()
+        {
+            return new List<string>(driver.WindowHandles);
+        }
+
         public void VerifyTitle(string title)
         {
             Wait(2000);
@@ -66,6 +71,7 @@ namespace UIAutomationProject.Tests
         {
             Wait(2000);
             Assert.AreEqual(url, driver.Url);
+            
         }
 
         public void EnterUserCred(BaseData baseData, string userNameTextBox, string passwordTextBox)
