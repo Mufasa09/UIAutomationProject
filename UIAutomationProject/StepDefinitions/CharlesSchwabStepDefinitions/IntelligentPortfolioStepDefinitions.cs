@@ -17,11 +17,20 @@ namespace UIAutomationProject.StepDefinitions.CharlesSchwabStepDefinitions
 
 
 
+        [Given(@"I navigate to (.*) from (.*)")]
         [When(@"I navigate to (.*) from (.*)")]
         public void WhenINavigateToIntelligentPortfolio(String subMenu, String menu)
         {
             IntelligentPortfolioTests.NavigateToPages(subMenu, menu);
         }
+
+        [When(@"I access the Get Started button")]
+        [Then(@"I access the Get Started button")]
+        public void ThenIAccessGetStartedButton()
+        {
+            IntelligentPortfolioTests.AccessGetStartedButton();
+        }
+
 
 
 

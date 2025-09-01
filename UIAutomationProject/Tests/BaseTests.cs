@@ -25,6 +25,28 @@ namespace UIAutomationProject.Tests
         {
             driver.Navigate().GoToUrl(site);
         }
+        public void SwitchNewWindow()
+        {
+            IList<string> windowHandles = new List<string>(driver.WindowHandles);
+            driver.SwitchTo().Window(windowHandles[1]);
+        }
+
+
+        public void SwitchWindow(String window)
+        {
+            driver.SwitchTo().Window(window);
+        }
+
+        public void AllWindows()
+        {
+            IReadOnlyCollection<string> allWindows = driver.WindowHandles;
+
+            foreach (string window in allWindows)
+            {
+                Console.WriteLine("Window Handle: " + window);
+            }
+            Console.WriteLine(allWindows.Count);
+        }
 
         public void PageVerification(BaseData baseData)
         {
@@ -36,8 +58,8 @@ namespace UIAutomationProject.Tests
 
         public void VerifyTitle(string title)
         {
-            Wait(1000);
-            driver.Title.Contains(title);
+            Wait(2000);
+            Assert.AreEqual(title, driver.Title);
         }
 
         public void EnterUserCred(BaseData baseData, string userNameTextBox, string passwordTextBox)

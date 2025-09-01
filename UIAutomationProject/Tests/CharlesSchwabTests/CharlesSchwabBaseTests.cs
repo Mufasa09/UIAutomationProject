@@ -19,10 +19,19 @@ namespace UIAutomationProject.Tests.CharlesSchwabTests
             Click(ConvertMenuStringToBy(subMenu));
         }
 
+        public void AccessGetStartedButton()
+        {
+            Click(IntelligentPortfoliosPage.GetStartedButton);
+            Wait(2000);
+            SwitchNewWindow();
+        }
 
+
+        #region Helper functions
         public By ConvertMenuStringToBy(String item)
         {
-            return By.XPath($"//*[contains(@data-dl-link.name,'{item}')]");
+            return By.XPath($"//*[@data-dl-link.name='{item}']");
         }
+        #endregion
     }
 }
