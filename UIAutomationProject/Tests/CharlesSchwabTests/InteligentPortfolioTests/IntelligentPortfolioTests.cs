@@ -15,9 +15,5 @@ namespace UIAutomationProject.Tests.CharlesSchwabTests
 
         public IntelligentPortfoliosPage IntelligentPortfoliosPage;
 
-        public void test()
-        {
-
-        }
     }
 }

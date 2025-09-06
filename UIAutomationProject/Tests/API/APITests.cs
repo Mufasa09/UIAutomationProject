@@ -1,7 +1,9 @@
 ﻿using FluentAssertions;
+using OpenQA.Selenium;
 using System.Collections.Specialized;
 using System.Net;
 using System.Text;
+using UIAutomationProject.Helpers;
 using UIAutomationProject.Utilities.Data;
 
 namespace UIAutomationProject.Tests
@@ -12,6 +14,7 @@ namespace UIAutomationProject.Tests
         public APITests(IAPIStorage apiStorage)
         {
             _apiStorage = apiStorage;
+            User = new User("APITests", apiStorage.BaseUrl);
         }
 
         #region Variables
@@ -19,6 +22,7 @@ namespace UIAutomationProject.Tests
         private HttpResponseMessage? response = null;
         private string? _StatusCode;
         private string? _ResponseBody;
+        User User { get; set; }
 
         #endregion
 

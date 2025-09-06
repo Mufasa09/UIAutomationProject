@@ -1,22 +1,29 @@
-﻿using OpenQA.Selenium;
+﻿using Boa.Constrictor.Selenium;
+using OpenQA.Selenium;
+using UIAutomationProject.Helpers;
+using UIAutomationProject.Pages;
 using UIAutomationProject.Pages.CharlesSchwab;
 
 namespace UIAutomationProject.Tests.CharlesSchwabTests
 {
     public class CharlesSchwabBaseTests : BaseTests
     {
+        IWebDriver driver;
         public CharlesSchwabBaseTests(IWebDriver _driver) : base(_driver)
         {
+            driver = _driver;
             IntelligentPortfoliosPage = new IntelligentPortfoliosPage();
         }
 
         IntelligentPortfoliosPage IntelligentPortfoliosPage { get; set; }
+        User User { get; set; }
 
         public void NavigateToPages(String subMenu, String menu)
         {
-            Click(ConvertMenuStringToBy(menu));
-            Wait(200);
-            Click(ConvertMenuStringToBy(subMenu));
+            User = new User("NavigateToPages", driver);
+            User.Can(Boa.Constrictor.Selenium.BrowseTheWeb.With(driver));
+            User.AttemptsTo(Click.On(ConvertMenuStringToWebLocator(menu)));
+            User.AttemptsTo(Click.On(ConvertMenuStringToWebLocator(subMenu)));
         }
 
         public void AccessButton(String button)
@@ -24,24 +31,21 @@ namespace UIAutomationProject.Tests.CharlesSchwabTests
             switch (button)
             {
                 case "Get Started":
-                    Click(IntelligentPortfoliosPage.GetStartedButton);
-                    Wait(2000);
+                    User.AttemptsTo(Click.On(IntelligentPortfoliosPage.GetStartedButton));
                     SwitchNewWindow();
                     break;
                 case "Take a deeper dive":
-                    Click(IntelligentPortfoliosPage.TakeADeeperDive);
+                    User.AttemptsTo(Click.On(IntelligentPortfoliosPage.TakeADeeperDive));
                     break;
                 case "See how we stack up":
-                    Click(IntelligentPortfoliosPage.StackUpButton);
+                    User.AttemptsTo(Click.On(IntelligentPortfoliosPage.StackUpButton));
                     break;
                 case "Open an account":
-                    Click(IntelligentPortfoliosPage.OpenAnAccountButton);
-                    Wait(2000);
+                    User.AttemptsTo(Click.On(IntelligentPortfoliosPage.OpenAnAccountButton));
                     SwitchNewWindow();
                     break;
                 case "Find a local branch to apply in person":
-                    Click(IntelligentPortfoliosPage.FindBranch);
-                    Wait(2000);
+                    User.AttemptsTo(Click.On(IntelligentPortfoliosPage.FindBranch));
                     SwitchNewWindow();
                     break;
 
@@ -54,7 +58,12 @@ namespace UIAutomationProject.Tests.CharlesSchwabTests
         #region Helper functions
         public By ConvertMenuStringToBy(String item)
         {
-            return By.XPath($"//*[@data-dl-link.name='{item}']");
+            return BasePage.CustomExactXpath("data-dl-link.name", item);
+        }
+
+        public static WebLocator ConvertMenuStringToWebLocator(String item)
+        {
+            return BasePage.ExactLocator("data-dl-link.name", item);
         }
         #endregion
     }

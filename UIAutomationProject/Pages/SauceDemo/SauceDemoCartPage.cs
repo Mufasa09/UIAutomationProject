@@ -1,12 +1,13 @@
-﻿using OpenQA.Selenium;
+﻿using Boa.Constrictor.Selenium;
+using OpenQA.Selenium;
 
 namespace UIAutomationProject.Pages.SauceDemo
 {
     public class SauceDemoCartPage : SauceDemoInventoryPage
     {
         new public string title = "Cart";
-        public By Checkout => By.Id("checkout");
-        public By ContinueShopping => By.Id("continue-shopping");
+        public WebLocator Checkout => Locator("id","checkout");
+        public WebLocator ContinueShopping => Locator("id","continue-shopping");
 
     }
 }

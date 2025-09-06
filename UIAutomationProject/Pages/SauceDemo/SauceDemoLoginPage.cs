@@ -1,20 +1,21 @@
-﻿using OpenQA.Selenium;
+﻿using Boa.Constrictor.Selenium;
+using OpenQA.Selenium;
 
 namespace UIAutomationProject.Pages.SauceDemo
 {
-    public class SauceDemoLoginPage
+    public class SauceDemoLoginPage : BasePage
     {
         public string title = "Swag Labs";
 
         public string AccountUserName = "";
         public string AccountPassword = "";
         public int RandomIndex = 0;
-        public By UserNameTextBox => By.Id("user-name");
-        public By PasswordTextBox => By.Id("password");
-        public By LoginButton => By.Id("login-button");
-        public By LoginUserCredentialsText => By.Id("login_credentials");
-        public By LoginPasswordCredentialsText => By.XPath("//div[contains(@class,'login_password')]");
-        public By LoginFailureText => By.XPath("//*[contains(@text,'Epic sadface: Sorry, this user has been locked out.')]");
-        public By LoginErrorContainer => By.XPath("//h3[contains(@data-test,'error')]");
+        public WebLocator UserNameTextBox => Locator("id","user-name");
+        public WebLocator PasswordTextBox => Locator("id","password");
+        public WebLocator LoginButton => Locator("id","login-button");
+        public WebLocator LoginUserCredentialsText => Locator("id","login_credentials");
+        public WebLocator LoginPasswordCredentialsText => Locator("class", "login_password", "div");
+        public WebLocator LoginFailureText => Locator("text", "Epic sadface: Sorry, this user has been locked out.");
+        public WebLocator LoginErrorContainer => Locator("data-test", "error", "h3");
     }
 }

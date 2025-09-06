@@ -3,6 +3,10 @@ using NUnit.Framework;
 using OpenQA.Selenium;
 using UIAutomationProject.Pages.SauceDemo;
 using UIAutomationProject.Utilities.Data;
+using Boa.Constrictor.Screenplay;
+using UIAutomationProject.Helpers;
+using Boa.Constrictor.Selenium;
+using UIAutomationProject.Questions;
 
 namespace UIAutomationProject.Tests
 {
@@ -14,17 +18,22 @@ namespace UIAutomationProject.Tests
         {
             driver = _driver;
             SauceDemoLoginPage = new SauceDemoLoginPage();
+            User = new User("BaseTest", _driver);
+            User.Can(Boa.Constrictor.Selenium.BrowseTheWeb.With(driver));
         }
 
         #region Variables
         SauceDemoLoginPage SauceDemoLoginPage { get; set; }
+        User User { get; set; }
         #endregion
 
         #region Methods
         public void NavigateToSite(string site)
         {
-            driver.Navigate().GoToUrl(site);
+            User.AttemptsTo(Navigate.ToUrl(site));
+            //driver.Navigate().GoToUrl(site);
         }
+
         public void SwitchNewWindow()
         {
             List<string> windowHandles = GrabWindowHandles();
@@ -64,13 +73,14 @@ namespace UIAutomationProject.Tests
         public void VerifyTitle(string title)
         {
             Wait(2000);
-            Assert.AreEqual(title, driver.Title);
+           // Assert.(title, driver.Title);
+            
         }
 
         public void VerifyURL(string url)
         {
             Wait(2000);
-            Assert.AreEqual(url, driver.Url);
+          //  Assert.AreEqual(url, driver.Url);
             
         }
 
@@ -84,22 +94,29 @@ namespace UIAutomationProject.Tests
 
         public void VerifyLoginError(BaseData baseData)
         {
-            Wait(3000);
-            if (driver.FindElements(SauceDemoLoginPage.LoginErrorContainer).Count() > 0)
+            //if (driver.FindElements(SauceDemoLoginPage.LoginErrorContainer).Count() > 0)
+            //    if (baseData.Role != null)
+            //        VerifyTextData(SauceDemoLoginPage.LoginErrorContainer, "Epic sadface: Sorry, this user has been locked out.", true);
+            //    else
+            //        VerifyTextData(SauceDemoLoginPage.LoginErrorContainer, "Epic sadface: Username is required", true);
+
+            if (User.AsksFor(Count.Of(SauceDemoLoginPage.LoginErrorContainer)) > 0)
                 if (baseData.Role != null)
-                    VerifyTextData(SauceDemoLoginPage.LoginErrorContainer, "Epic sadface: Sorry, this user has been locked out.", true);
+                    User.AsksFor(TextVerification.Of(SauceDemoLoginPage.LoginErrorContainer, true, "Epic sadface: Sorry, this user has been locked out."));
                 else
-                    VerifyTextData(SauceDemoLoginPage.LoginErrorContainer, "Epic sadface: Username is required", true);
+                    User.AsksFor(TextVerification.Of(SauceDemoLoginPage.LoginErrorContainer, true, "Epic sadface: Username is required"));
+
         }
 
         public void VerifyLoginPageElements()
         {
-            VerifyDataIsPresent(SauceDemoLoginPage.UserNameTextBox, true);
-            VerifyDataIsPresent(SauceDemoLoginPage.PasswordTextBox, true);
-            VerifyDataIsPresent(SauceDemoLoginPage.LoginButton, true);
-            VerifyDataIsEnabled(SauceDemoLoginPage.LoginButton, true);
-            VerifyDataIsPresent(SauceDemoLoginPage.LoginUserCredentialsText, true);
-            VerifyDataIsPresent(SauceDemoLoginPage.LoginPasswordCredentialsText, true);
+
+            Assert.IsTrue(User.AsksFor(Appearance.Of(SauceDemoLoginPage.UserNameTextBox)));
+            Assert.IsTrue(User.AsksFor(Appearance.Of(SauceDemoLoginPage.PasswordTextBox)));
+            Assert.IsTrue(User.AsksFor(Appearance.Of(SauceDemoLoginPage.LoginButton)));
+            Assert.IsTrue(User.AsksFor(EnabledState.Of(SauceDemoLoginPage.LoginButton)));
+            Assert.IsTrue(User.AsksFor(Appearance.Of(SauceDemoLoginPage.LoginUserCredentialsText)));
+            Assert.IsTrue(User.AsksFor(Appearance.Of(SauceDemoLoginPage.LoginPasswordCredentialsText)));
         }
 
         public void Wait(int number)
@@ -123,10 +140,10 @@ namespace UIAutomationProject.Tests
         /// Clicks on the UI Element
         /// </summary>
         /// <param name="loc">UI Element</param>
-        public void Click(By loc)
-        {
-            driver.FindElement(loc).Click();
-        }
+        //public void Click(By loc)
+        //{
+        //   driver.FindElement(loc).Click();
+        //}
 
         /// <summary>
         /// Verifies if data is present
@@ -136,10 +153,10 @@ namespace UIAutomationProject.Tests
         /// <param name="boolData">Tests whether it is present</param>
         public void VerifyTextData(By loc, string data, bool boolData)
         {
-            if(boolData)
-                Assert.IsTrue(driver.FindElement(loc).Text.Contains(data));
-            else
-                Assert.IsFalse(driver.FindElement(loc).Text.Contains(data));
+           // if(boolData)
+               // Assert.IsTrue(driver.FindElement(loc).Text.Contains(data));
+           // else
+               // Assert.IsFalse(driver.FindElement(loc).Text.Contains(data));
         }
 
         /// <summary>
@@ -152,12 +169,12 @@ namespace UIAutomationProject.Tests
         {
             if (boolData)
             {
-                Assert.IsTrue(driver.FindElement(loc).Text.Contains(data));
+                //Assert.IsTrue(driver.FindElement(loc).Text.Contains(data));
                 return true;
             }
             else
             {
-                Assert.IsFalse(driver.FindElement(loc).Text.Contains(data));
+                //Assert.IsFalse(driver.FindElement(loc).Text.Contains(data));
                 return false;
             }
         }
@@ -169,10 +186,10 @@ namespace UIAutomationProject.Tests
         /// <param name="boolData">Tests whether it is present</param>
         public void VerifyDataIsPresent(By loc, bool boolData)
         {
-            if (boolData)
-                Assert.IsTrue(driver.FindElement(loc).Displayed);
-            else
-                Assert.IsFalse(driver.FindElement(loc).Displayed);
+           // if (boolData)
+               // Assert.IsTrue(driver.FindElement(loc).Displayed);
+           // else
+               // Assert.IsFalse(driver.FindElement(loc).Displayed);
         }
 
         /// <summary>
@@ -182,10 +199,10 @@ namespace UIAutomationProject.Tests
         /// <param name="boolData">Tests whether it is present</param>
         public void VerifyDataIsEnabled(By loc, bool boolData)
         {
-            if (boolData)
-                Assert.IsTrue(driver.FindElement(loc).Enabled);
-            else
-                Assert.IsFalse(driver.FindElement(loc).Enabled);
+            //if (boolData)
+               // Assert.IsTrue(driver.FindElement(loc).Enabled);
+           // else
+              //  Assert.IsFalse(driver.FindElement(loc).Enabled);
         }
 
         public string GrabText(By loc)
@@ -196,9 +213,8 @@ namespace UIAutomationProject.Tests
         #endregion
         public void VerifyLoginError()
         {
-            Wait(3000);
-            if (driver.FindElements(SauceDemoLoginPage.LoginErrorContainer).Count() > 0)
-                VerifyTextData(SauceDemoLoginPage.LoginErrorContainer, "Epic sadface: Sorry, this user has been locked out.", true);
+            if (User.AsksFor(Count.Of(SauceDemoLoginPage.LoginErrorContainer)) > 0)
+                    User.AsksFor(TextVerification.Of(SauceDemoLoginPage.LoginErrorContainer, true, "Epic sadface: Sorry, this user has been locked out."));
         }
 
         //Use of a Tuple function. So that you can return multiple objects

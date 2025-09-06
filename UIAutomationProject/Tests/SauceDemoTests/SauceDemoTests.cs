@@ -1,7 +1,10 @@
-﻿using NUnit.Framework;
+﻿using Boa.Constrictor.Selenium;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
+using UIAutomationProject.Helpers;
 using UIAutomationProject.Pages.SauceDemo;
+using UIAutomationProject.Questions;
 using UIAutomationProject.Utilities.Data;
 
 namespace UIAutomationProject.Tests.SauceDemoTests
@@ -16,12 +19,15 @@ namespace UIAutomationProject.Tests.SauceDemoTests
             SauceDemoLoginPage = new SauceDemoLoginPage();
             SauceDemoInventoryPage = new SauceDemoInventoryPage();
             SauceDemoCartPage = new SauceDemoCartPage();
+            User = new User("SauceDemoTests", driver);
+            User.Can(Boa.Constrictor.Selenium.BrowseTheWeb.With(driver));
         }
 
         #region Variables
         SauceDemoLoginPage SauceDemoLoginPage { get; set; }
         SauceDemoInventoryPage SauceDemoInventoryPage { get; set; }
         SauceDemoCartPage SauceDemoCartPage { get; set; }
+        User User { get; set; }
         #endregion
 
 
@@ -31,61 +37,59 @@ namespace UIAutomationProject.Tests.SauceDemoTests
         {
             Console.WriteLine($"Thread ID: {Thread.CurrentThread.ManagedThreadId}");
             Console.WriteLine($"Time: {DateTime.Now}");
-            Wait(2000);
-            Enter(SauceDemoLoginPage.UserNameTextBox, baseData.Role);
-            Enter(SauceDemoLoginPage.PasswordTextBox, "secret_sauce");
-            Click(SauceDemoLoginPage.LoginButton);
+            User.AttemptsTo(SendKeys.To(SauceDemoLoginPage.UserNameTextBox, baseData.Role));
+            User.AttemptsTo(SendKeys.To(SauceDemoLoginPage.PasswordTextBox, "secret_sauce"));
+            User.AttemptsTo(Click.On(SauceDemoLoginPage.LoginButton));
         }
 
         public void EnterUserCredSauceDemo(string role)
         {
             Wait(2000);
-            Enter(SauceDemoLoginPage.UserNameTextBox, role);
-            Enter(SauceDemoLoginPage.PasswordTextBox, "secret_sauce");
-            Click(SauceDemoLoginPage.LoginButton);
+            User.AttemptsTo(SendKeys.To(SauceDemoLoginPage.UserNameTextBox, role));
+            User.AttemptsTo(SendKeys.To(SauceDemoLoginPage.PasswordTextBox, "secret_sauce"));
+            User.AttemptsTo(Click.On(SauceDemoLoginPage.LoginButton));
         }
 
         public void VerifyProductPage()                
         {
-            Wait(3000);
-            if(driver.FindElements(SauceDemoLoginPage.LoginErrorContainer).Count() > 0)
-                VerifyTextData(SauceDemoLoginPage.LoginErrorContainer, "Epic sadface: Sorry, this user has been locked out.", true);
+            //if(driver.FindElements(SauceDemoLoginPage.LoginErrorContainer).Count() > 0)
+                //VerifyTextData(SauceDemoLoginPage.LoginErrorContainer, "Epic sadface: Sorry, this user has been locked out.", true);
+            if(User.AsksFor(Count.Of(SauceDemoLoginPage.LoginErrorContainer)) > 0)
+                User.AsksFor(TextVerification.Of(SauceDemoLoginPage.LoginErrorContainer, true, "Epic sadface: Sorry, this user has been locked out."));
             else
-                VerifyTextData(SauceDemoInventoryPage.Title, "Products", true);
+                User.AsksFor(TextVerification.Of(SauceDemoInventoryPage.Title, true, "Products"));
+                //VerifyTextData(SauceDemoInventoryPage.Title, "Products", true);
         }
 
         public void VerifyICanLogout()
         {
-            Wait(2000);
-            Click(SauceDemoInventoryPage.MenuButton);
-            Wait(500);
-            Click(SauceDemoInventoryPage.LogoutLink);
-            Wait(2000);
-            VerifyDataIsPresent(SauceDemoLoginPage.LoginButton,true);
+            User.AttemptsTo(Click.On(SauceDemoInventoryPage.MenuButton));
+            User.AttemptsTo(Click.On(SauceDemoInventoryPage.LogoutLink));
+            Assert.IsTrue(User.AsksFor(Appearance.Of(SauceDemoLoginPage.LoginButton)));
+            //VerifyDataIsPresent(SauceDemoLoginPage.LoginButton,true);
         }
 
         public void AddItemToCart(string item, string action = "add")
         {
-            Wait(3000);
             switch (item)
             {
                 case "Sauce Labs Backpack":
-                    Click(SauceDemoInventoryPage.SauceLabsBackpack(action));
+                    User.AttemptsTo(Click.On(SauceDemoInventoryPage.SauceLabsBackpack(action)));
                     break;
                 case "Sauce Labs Bike Light":
-                    Click(SauceDemoInventoryPage.SauceLabsBikeLight(action));
+                    User.AttemptsTo(Click.On(SauceDemoInventoryPage.SauceLabsBikeLight(action)));
                     break;
                 case "Sauce Labs Bolt T-Shirt":
-                    Click(SauceDemoInventoryPage.SauceLabsBoltTshirt(action));
+                    User.AttemptsTo(Click.On(SauceDemoInventoryPage.SauceLabsBoltTshirt(action)));
                     break;
                 case "Sauce Labs Fleece Jacket":
-                    Click(SauceDemoInventoryPage.SauceLabsFleeceJacket(action));
+                    User.AttemptsTo(Click.On(SauceDemoInventoryPage.SauceLabsFleeceJacket(action)));
                     break;
                 case "Sauce Labs Onesie":
-                    Click(SauceDemoInventoryPage.SauceLabsOnsie(action));
+                    User.AttemptsTo(Click.On(SauceDemoInventoryPage.SauceLabsOnsie(action)));
                     break;                
                 case "Test.allTheThings() T-Shirt (Red)":
-                    Click(SauceDemoInventoryPage.SauceLabsTshirtRed(action));
+                    User.AttemptsTo(Click.On(SauceDemoInventoryPage.SauceLabsTshirtRed(action)));
                     break;
                 default:
                     throw new NotFoundException();
@@ -95,26 +99,25 @@ namespace UIAutomationProject.Tests.SauceDemoTests
 
         public void AddItemToCart(InventoryData item, string action = "add")
         {
-            Wait(3000);
             switch (item.ItemName)
             {
                 case "Sauce Labs Backpack":
-                    Click(SauceDemoInventoryPage.SauceLabsBackpack(action));
+                    User.AttemptsTo(Click.On(SauceDemoInventoryPage.SauceLabsBackpack(action)));
                     break;
                 case "Sauce Labs Bike Light":
-                    Click(SauceDemoInventoryPage.SauceLabsBikeLight(action));
+                    User.AttemptsTo(Click.On(SauceDemoInventoryPage.SauceLabsBikeLight(action)));
                     break;
                 case "Sauce Labs Bolt T-Shirt":
-                    Click(SauceDemoInventoryPage.SauceLabsBoltTshirt(action));
+                    User.AttemptsTo(Click.On(SauceDemoInventoryPage.SauceLabsBoltTshirt(action)));
                     break;
                 case "Sauce Labs Fleece Jacket":
-                    Click(SauceDemoInventoryPage.SauceLabsFleeceJacket(action));
+                    User.AttemptsTo(Click.On(SauceDemoInventoryPage.SauceLabsFleeceJacket(action)));
                     break;
                 case "Sauce Labs Onesie":
-                    Click(SauceDemoInventoryPage.SauceLabsOnsie(action));
+                    User.AttemptsTo(Click.On(SauceDemoInventoryPage.SauceLabsOnsie(action)));
                     break;
                 case "Test.allTheThings() T-Shirt (Red)":
-                    Click(SauceDemoInventoryPage.SauceLabsTshirtRed(action));
+                    User.AttemptsTo(Click.On(SauceDemoInventoryPage.SauceLabsTshirtRed(action)));
                     break;
                 default:
                     throw new NotFoundException();
@@ -123,25 +126,30 @@ namespace UIAutomationProject.Tests.SauceDemoTests
 
         public void VerifyItemsInCart(string data)
         {
-            VerifyTextData(SauceDemoInventoryPage.CartDescription,data, true);
+            //VerifyTextData(SauceDemoInventoryPage.CartDescription,data, true);
+            User.AsksFor(TextVerification.Of(SauceDemoInventoryPage.CartDescription, true, data));
+
         }
 
         public void VerifyItemsInCart(InventoryData data)
         {
-            Click(SauceDemoCartPage.ShoppingCartLink);
-            VerifyTextData(SauceDemoInventoryPage.CartDescription, data.ItemName, true);
+            User.AttemptsTo(Click.On(SauceDemoInventoryPage.ShoppingCartLink));
+            User.AsksFor(Text.Of(SauceDemoInventoryPage.CartDescription));
+            //VerifyTextData(SauceDemoInventoryPage.CartDescription, data.ItemName, true);
+            User.AsksFor(TextVerification.Of(SauceDemoInventoryPage.CartDescription, true, data.ItemName));
         }
 
         public void ClearCart()
         {
             int finalCount = CartCount();
             for (int cartCount = 1; cartCount <= finalCount; cartCount++)
-                Click(SauceDemoInventoryPage.RemoveButton);
+                User.AttemptsTo(Click.On(SauceDemoInventoryPage.RemoveButton));
         }
 
         public int CartCount()
         {
-            string count = GrabText(SauceDemoInventoryPage.ShoppingCartBadge);
+            // string count = GrabText(SauceDemoInventoryPage.ShoppingCartBadge);
+            string count = User.AskingFor(Text.Of(SauceDemoInventoryPage.ShoppingCartBadge));
             return Int32.Parse(count);
         }
         #endregion

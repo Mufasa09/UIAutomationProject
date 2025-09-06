@@ -13,7 +13,7 @@ namespace UIAutomationProject.Support
     public class Screenshots
     {
         private readonly IWebDriver driver;
-        private static string Date;
+        private static string? Date;
         private String testName;
         private string featureName;
         private string stepName;

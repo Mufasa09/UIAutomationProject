@@ -12,7 +12,7 @@ namespace UIAutomationProject.Helpers
         protected IWebDriver Driver { get; private set; }
         public IAPIStorage _APIStorage { get; set; }
         private readonly IObjectContainer _objectContainer;
-        private string baseUrl = "";
+        public string baseUrl = "";
         private FeatureContext featureContext;
         private string featureName = "";
         string browser = "Chrome";
@@ -53,8 +53,10 @@ namespace UIAutomationProject.Helpers
             if (featureName.Contains("API"))
                 headless = true;
 
-            _APIStorage = new APIStorage();
-            _APIStorage.BaseUrl = baseUrl;
+            _APIStorage = new APIStorage
+            {
+                BaseUrl = baseUrl
+            };
             _APIStorage.response = _APIStorage.GetResponse(baseUrl);
             DriverFactory.setDriver(new WebDriverFactory().ChooseDriver(browser, headless, useRemote));
             Driver = DriverFactory.getWebDriver();

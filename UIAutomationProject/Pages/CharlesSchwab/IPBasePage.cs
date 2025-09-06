@@ -1,15 +1,21 @@
-﻿using OpenQA.Selenium;
+﻿using Boa.Constrictor.Selenium;
+using OpenQA.Selenium;
 
 namespace UIAutomationProject.Pages.CharlesSchwab
 {
     public class IPBasePage : BasePage
     {
 
-        public By OpenAnAccountButton => CustomXpath("type", "open-an-account");
-        public By SearchBar => CustomXpath("type", "search");
-        public By ChatLink => CustomXpath("id", "chatGlobalHeader");
-        public By FindBranchButton => CustomXpath("data-dl-link.name", "Find a Branch");
-        public By LoginButton => CustomXpath("data-dl-component.title", "Log In menu");
+        #region Common variable
+        private string identifier = "data-dl-link.name";
+        #endregion
+
+
+        public WebLocator OpenAnAccountButton => Locator("type", "open-an-account");
+        public WebLocator SearchBar => Locator("type", "search");
+        public WebLocator ChatLink => Locator("id", "chatGlobalHeader");
+        public WebLocator FindBranchButton => Locator(identifier, "Find a Branch");
+        public WebLocator LoginButton => Locator("data-dl-component.title", "Log In menu");
 
 
 
@@ -36,21 +42,21 @@ namespace UIAutomationProject.Pages.CharlesSchwab
         #endregion
 
 
-        public By SchwabIntelligentPortfolios => CustomXpath("data-dl-link.name", "Schwab Intelligent Portfolios");
-        public By SchwabIntelligentPortfoliosPremium => CustomXpath("data-dl-link.name", "Schwab Intelligent Portfolios Premium");
-        public By SchwabIntelligentIncome => CustomXpath("data-dl-link.name", "Schwab Intelligent Income");
+        public WebLocator SchwabIntelligentPortfolios => Locator(identifier, "Schwab Intelligent Portfolios");
+        public WebLocator SchwabIntelligentPortfoliosPremium => Locator(identifier, "Schwab Intelligent Portfolios Premium");
+        public WebLocator SchwabIntelligentIncome => Locator(identifier, "Schwab Intelligent Income");
 
         #region Compare Soultions
-        public By CompareSoultions => CustomXpath("data-dl-link.name", "Compare Solutions");
-        public By CompareOurSoultions => CustomXpath("data-dl-link.name", "Compare our Solutions");
-        public By CompareUsToOthers => CustomXpath("data-dl-link.name", "Compare us to others");
+        public WebLocator CompareSoultions => Locator(identifier, "Compare Solutions");
+        public WebLocator CompareOurSoultions => Locator(identifier, "Compare our Solutions");
+        public WebLocator CompareUsToOthers => Locator(identifier, "Compare us to others");
         #endregion
 
         #region Resources
-        public By Resources => CustomXpath("data-dl-link.name", "Resources");
-        public By RoboAdvice => CustomXpath("data-dl-link.name", "An Introduction to Robo-Advice");
-        public By RoboAdvisorMyths => CustomXpath("data-dl-link.name", "Robo Advisor Myths");
-        public By Education => CustomXpath("data-dl-link.name", "Education");
+        public WebLocator Resources => Locator(identifier, "Resources");
+        public WebLocator RoboAdvice => Locator(identifier, "An Introduction to Robo-Advice");
+        public WebLocator RoboAdvisorMyths => Locator(identifier, "Robo Advisor Myths");
+        public WebLocator Education => Locator(identifier, "Education");
         #endregion
 
         #endregion
