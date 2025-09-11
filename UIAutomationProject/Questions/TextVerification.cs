@@ -21,13 +21,8 @@ namespace UIAutomationProject.Questions
             new TextVerification(locator, boolData, Data);
         public bool RequestAs(IActor actor)
         {
-//            throw new NotImplementedException();
             var driver = actor.Using<BrowseTheWeb>().WebDriver;
             return driver.FindElement(Locator.Query).Text.Contains(Data);
-            //if (BoolData)
-            //    return Assert.IsTrue(driver.FindElement(Locator.Query).Text.Contains(Data));
-            //else
-            //    return Assert.IsFalse(driver.FindElement(Locator.Query).Text.Contains(Data));
         }
     }
 }

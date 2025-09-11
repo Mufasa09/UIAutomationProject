@@ -1,6 +1,7 @@
 ﻿using Boa.Constrictor.Selenium;
 using OpenQA.Selenium;
 using UIAutomationProject.Helpers;
+using UIAutomationProject.Interactions.CharlesSchwab;
 using UIAutomationProject.Pages;
 using UIAutomationProject.Pages.CharlesSchwab;
 
@@ -22,8 +23,7 @@ namespace UIAutomationProject.Tests.CharlesSchwabTests
         {
             User = new User("NavigateToPages", driver);
             User.Can(Boa.Constrictor.Selenium.BrowseTheWeb.With(driver));
-            User.AttemptsTo(Click.On(ConvertMenuStringToWebLocator(menu)));
-            User.AttemptsTo(Click.On(ConvertMenuStringToWebLocator(subMenu)));
+            User.AttemptsTo(MenuNavigation.To(menu, subMenu));
         }
 
         public void AccessButton(String button)
@@ -53,18 +53,5 @@ namespace UIAutomationProject.Tests.CharlesSchwabTests
                     throw new NotFoundException("Not found");
             }
         }
-
-
-        #region Helper functions
-        public By ConvertMenuStringToBy(String item)
-        {
-            return BasePage.CustomExactXpath("data-dl-link.name", item);
-        }
-
-        public static WebLocator ConvertMenuStringToWebLocator(String item)
-        {
-            return BasePage.ExactLocator("data-dl-link.name", item);
-        }
-        #endregion
     }
 }

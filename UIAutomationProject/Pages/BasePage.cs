@@ -17,7 +17,7 @@ namespace UIAutomationProject.Pages
 
         public static By CustomExactXpath(String identifier, String name, String type = "*")
         {
-            return By.XPath($"//{type}[contains(@{identifier}='{name}')]");
+            return By.XPath($"//{type}[@{identifier}='{name}']");
         }
 
         public static WebLocator Locator(String locator, String name, String type = "*")

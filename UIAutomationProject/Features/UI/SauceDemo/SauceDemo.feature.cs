@@ -106,14 +106,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 8
  testRunner.When("I enter locked_out_user user credentials on SauceDemo site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table5.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Role",
                             "locked_out"});
 #line 9
- testRunner.Then("I verify login error", ((string)(null)), table5, "Then ");
+ testRunner.Then("I verify login error", ((string)(null)), table3, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -189,14 +189,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 19
  testRunner.When("I verify login page elements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table6.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "Role",
                             ""});
 #line 20
- testRunner.Then("I verify login error", ((string)(null)), table6, "Then ");
+ testRunner.Then("I verify login error", ((string)(null)), table4, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

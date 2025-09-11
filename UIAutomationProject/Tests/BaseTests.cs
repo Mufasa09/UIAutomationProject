@@ -7,6 +7,7 @@ using Boa.Constrictor.Screenplay;
 using UIAutomationProject.Helpers;
 using Boa.Constrictor.Selenium;
 using UIAutomationProject.Questions;
+using FluentAssertions;
 
 namespace UIAutomationProject.Tests
 {
@@ -37,14 +38,18 @@ namespace UIAutomationProject.Tests
         public void SwitchNewWindow()
         {
             List<string> windowHandles = GrabWindowHandles();
-            driver.SwitchTo().Window(windowHandles[1]);
+            //for (int i = 0; i < windowHandles.Count(); i++)
+            //{
+            //    Console.WriteLine(windowHandles[i]);
+            //}
+            Thread.Sleep(3000);
+            //User.AttemptsTo(Refresh.Browser());
+            //User.AttemptsTo(SwitchWindowToLatest.InBrowser());
+            User.AttemptsTo(SwitchWindow.To(windowHandles[1]));
+            Thread.Sleep(3000);  
+            //driver.SwitchTo().Window(windowHandles[1]);
         }
 
-
-        public void SwitchWindow(String window)
-        {
-            driver.SwitchTo().Window(window);
-        }
 
         public void AllWindows()
         {
@@ -73,13 +78,16 @@ namespace UIAutomationProject.Tests
         public void VerifyTitle(string title)
         {
             Wait(2000);
-           // Assert.(title, driver.Title);
+            // Assert.(title, driver.Title);
+           // Console.WriteLine(User.AsksFor(Title.OfPage()));
+            User.AsksFor(Title.OfPage()).Should().Be(title);
             
         }
 
         public void VerifyURL(string url)
         {
             Wait(2000);
+            User.AsksFor(CurrentUrl.FromBrowser());
           //  Assert.AreEqual(url, driver.Url);
             
         }

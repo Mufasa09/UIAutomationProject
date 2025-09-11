@@ -74,58 +74,6 @@ namespace UIAutomationProject.Features.API
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify basic API calls")]
-        public virtual void VerifyBasicAPICalls()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify basic API calls", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 6
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Key",
-                            "Value"});
-                table1.AddRow(new string[] {
-                            "StatusCode",
-                            "OK"});
-#line 7
- testRunner.When("I verify successful api call", ((string)(null)), table1, "When ");
-#line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Key",
-                            "Value"});
-                table2.AddRow(new string[] {
-                            "TxtFile",
-                            "APIMain"});
-                table2.AddRow(new string[] {
-                            "StatusCode",
-                            "OK"});
-#line 10
- testRunner.Then("I verify response body", ((string)(null)), table2, "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify basic API calls for jsonplaceholder")]
         public virtual void VerifyBasicAPICallsForJsonplaceholder()
         {
@@ -152,38 +100,38 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table3.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "StatusCode",
                             "OK"});
 #line 16
- testRunner.When("I verify successful api call", ((string)(null)), table3, "When ");
+ testRunner.When("I verify successful api call", ((string)(null)), table1, "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table4.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "userID",
                             "1"});
-                table4.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "id",
                             "101"});
-                table4.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "title",
                             "Test"});
-                table4.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "body",
                             "Testing it out please"});
-                table4.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "APIUrl",
                             "https://jsonplaceholder.typicode.com/posts"});
-                table4.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "TxtFile",
                             "APIMain.txt"});
 #line 19
- testRunner.Then("I make an api post call", ((string)(null)), table4, "Then ");
+ testRunner.Then("I make an api post call", ((string)(null)), table2, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
