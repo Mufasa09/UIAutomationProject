@@ -38,16 +38,13 @@ namespace UIAutomationProject.Tests
         public void SwitchNewWindow()
         {
             List<string> windowHandles = GrabWindowHandles();
-            //for (int i = 0; i < windowHandles.Count(); i++)
-            //{
-            //    Console.WriteLine(windowHandles[i]);
-            //}
+            for (int i = 0; i < windowHandles.Count(); i++)
+            {
+                Console.WriteLine(windowHandles[i]);
+            }
             Thread.Sleep(3000);
-            //User.AttemptsTo(Refresh.Browser());
-            //User.AttemptsTo(SwitchWindowToLatest.InBrowser());
             User.AttemptsTo(SwitchWindow.To(windowHandles[1]));
             Thread.Sleep(3000);  
-            //driver.SwitchTo().Window(windowHandles[1]);
         }
 
 

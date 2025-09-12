@@ -25,7 +25,6 @@
 
   <ItemGroup>
     <Folder Include="Features\API\" />
-    <Folder Include="Features\UI\Schwab\IntelligentPortfolio\" />
     <Folder Include="Screenshots\" />
   </ItemGroup>
 
