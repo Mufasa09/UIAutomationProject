@@ -8,6 +8,7 @@ using UIAutomationProject.Helpers;
 using Boa.Constrictor.Selenium;
 using UIAutomationProject.Questions;
 using FluentAssertions;
+using TechTalk.SpecFlow;
 
 namespace UIAutomationProject.Tests
 {
@@ -74,19 +75,27 @@ namespace UIAutomationProject.Tests
 
         public void VerifyTitle(string title)
         {
-            Wait(2000);
-            // Assert.(title, driver.Title);
-           // Console.WriteLine(User.AsksFor(Title.OfPage()));
+            User.AsksFor(Title.OfPage()).Should().Be(title);   
+        }
+
+        public void VerifyTitle(string title, BaseData baseData)
+        {
+            if (title.Contains("�"))
+            {
+                if(baseData.TitleEnding.Contains("TM"))
+                    title = title.Replace("�", "™");
+                if(baseData.TitleEnding.Contains("Dash"))
+                    title = title.Replace("�", "–");
+                if (baseData.TitleEnding.Contains("CR"))
+                    title = title.Replace("�", "®");
+            }
+
             User.AsksFor(Title.OfPage()).Should().Be(title);
-            
         }
 
         public void VerifyURL(string url)
         {
-            Wait(2000);
-            User.AsksFor(CurrentUrl.FromBrowser());
-          //  Assert.AreEqual(url, driver.Url);
-            
+            User.AsksFor(CurrentUrl.FromBrowser());            
         }
 
         public void EnterUserCred(BaseData baseData, string userNameTextBox, string passwordTextBox)
@@ -99,12 +108,6 @@ namespace UIAutomationProject.Tests
 
         public void VerifyLoginError(BaseData baseData)
         {
-            //if (driver.FindElements(SauceDemoLoginPage.LoginErrorContainer).Count() > 0)
-            //    if (baseData.Role != null)
-            //        VerifyTextData(SauceDemoLoginPage.LoginErrorContainer, "Epic sadface: Sorry, this user has been locked out.", true);
-            //    else
-            //        VerifyTextData(SauceDemoLoginPage.LoginErrorContainer, "Epic sadface: Username is required", true);
-
             if (User.AsksFor(Count.Of(SauceDemoLoginPage.LoginErrorContainer)) > 0)
                 if (baseData.Role != null)
                     User.AsksFor(TextVerification.Of(SauceDemoLoginPage.LoginErrorContainer, true, "Epic sadface: Sorry, this user has been locked out."));

@@ -20,6 +20,16 @@ namespace UIAutomationProject.Pages
             return By.XPath($"//{type}[@{identifier}='{name}']");
         }
 
+        public static By CustomExactTextXpath(String name, String type = "*")
+        {
+            return By.XPath($"//{type}[text()='{name}']");
+        }//*[@id="«Rkdlb6H1»"]/ul/li[4]/a
+
+        public static By Xpath(String path)
+        {
+            return By.XPath($"{path}");
+        }
+
         public static WebLocator Locator(String locator, String name, String type = "*")
         {
             return L("", By.XPath($"//{type}[contains(@{locator},'{name}')]"));
