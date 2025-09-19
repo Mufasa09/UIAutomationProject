@@ -48,7 +48,7 @@ Scenario: Verify you can access the paperMoney page
 Scenario: Verify you can access the thinkorswim Download Instructions page
 	Given I navigate to the secondary link thinkorswim Platforms
 		| Key   | Value                            |
-		| Item1 | thinkorswim Download Instruction |
+		| Item1 | thinkorswim Download Instructions |
 	When I verify the title of the site is thinkorswim Download | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/trading/thinkorswim/download
 

@@ -83,12 +83,12 @@ namespace UIAutomationProject.Features.UI.Schwab.Navigation.AccountsProducts.Bro
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify you can access the Brokerage And Trading Account page")]
+        [NUnit.Framework.DescriptionAttribute("Verify you can access the Brokerage and Trading Account page")]
         public virtual void VerifyYouCanAccessTheBrokerageAndTradingAccountPage()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Brokerage And Trading Account page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Brokerage and Trading Account page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 8
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -113,7 +113,7 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
 #line 9
- testRunner.Given("I navigate to the secondary link Brokerage And Trading Account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to the secondary link Brokerage and Trading Account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 10
  testRunner.When("I verify the title of the site is Brokerage account | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

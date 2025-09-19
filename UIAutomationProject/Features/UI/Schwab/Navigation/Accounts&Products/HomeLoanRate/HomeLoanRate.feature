@@ -6,7 +6,7 @@ Background:
 	Given I navigate to Home Loans & Rates from Accounts & Products
 
 Scenario: Verify you can access the Overview page
-	Given I navigate to the secondary link Schwab Order Execution Advantage
+	Given I navigate to the secondary link Overview
 	When I verify the title of the site is Mortgage – Apply for mortgages at low interest rates | Schwab Bank
 		| Key         | Value |
 		| TitleEnding | Dash  |

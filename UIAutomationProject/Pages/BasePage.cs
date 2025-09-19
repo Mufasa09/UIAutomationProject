@@ -23,7 +23,12 @@ namespace UIAutomationProject.Pages
         public static By CustomExactTextXpath(String name, String type = "*")
         {
             return By.XPath($"//{type}[text()='{name}']");
-        }//*[@id="«Rkdlb6H1»"]/ul/li[4]/a
+        }
+
+        public static By CustomTextXpath(String name, String type = "*")
+        {
+            return By.XPath($"//{type}[contains(text(),'{name}')]");
+        }
 
         public static By Xpath(String path)
         {
@@ -43,6 +48,16 @@ namespace UIAutomationProject.Pages
         public static WebLocator ExactLocator(String locator, String name, String type = "*")
         {
             return L("", By.XPath($"//{type}[@{locator}='{name}']"));
+        }
+
+        public static WebLocator CustomExactTextLocator(String name, String type = "*")
+        {
+            return L("", By.XPath($"//{type}[text()='{name}']"));
+        }
+
+        public static WebLocator CustomTextLocator(String name, String type = "*")
+        {
+            return L("", By.XPath($"//{type}[contains(text(),'{name}')]"));
         }
     }
 }

@@ -20,8 +20,8 @@ namespace UIAutomationProject.Features.UI.Schwab.Navigation.AccountsProducts.Ord
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Charles Schwab Annuities Navigation")]
-    public partial class CharlesSchwabAnnuitiesNavigationFeature
+    [NUnit.Framework.DescriptionAttribute("Charles Schwab Order Execution Navigation")]
+    public partial class CharlesSchwabOrderExecutionNavigationFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -35,7 +35,7 @@ namespace UIAutomationProject.Features.UI.Schwab.Navigation.AccountsProducts.Ord
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/UI/Schwab/Navigation/Accounts&Products/OrderExecution", "Charles Schwab Annuities Navigation", "Basic scenarios for navigating Annuities", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/UI/Schwab/Navigation/Accounts&Products/OrderExecution", "Charles Schwab Order Execution Navigation", "Basic scenarios for navigating Order Execution", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -78,7 +78,7 @@ namespace UIAutomationProject.Features.UI.Schwab.Navigation.AccountsProducts.Ord
 #line 5
 #line hidden
 #line 6
- testRunner.Given("I navigate to Annuities from Accounts & Products", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to Order Execution from Accounts & Products", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
         
@@ -113,14 +113,13 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
 #line 9
- testRunner.Given("I navigate to the secondary link Annuities Overview", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to the secondary link Schwab Order Execution Advantage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 10
- testRunner.When("I verify the title of the site is Annuities: Saving for Retirement Income | Charl" +
-                        "es Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I verify the title of the site is Trade execution quality | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 11
- testRunner.Then("I verify the url of the site is https://www.schwab.com/annuities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I verify the url of the site is https://www.schwab.com/execution-quality", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -201,15 +200,15 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
 #line 19
- testRunner.Given("I navigate to the secondary link Income Annuity Estimator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to the secondary link Price Improvement", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 20
- testRunner.When("I verify the title of the site is Income Annuity Estimator: Calculate Your Payout" +
-                        " | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I verify the title of the site is Understanding Price Improvement | Charles Schwa" +
+                        "b", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 21
- testRunner.Then("I verify the url of the site is https://www.schwab.com/annuities/fixed-income-ann" +
-                        "uity-calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I verify the url of the site is https://www.schwab.com/execution-quality/price-im" +
+                        "provement", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

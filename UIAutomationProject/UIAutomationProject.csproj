@@ -25,10 +25,6 @@
 
   <ItemGroup>
     <Folder Include="Features\API\" />
-    <Folder Include="Features\UI\Schwab\Navigation\Accounts&amp;Products\MutualFunds\" />
-    <Folder Include="Features\UI\Schwab\Navigation\Accounts&amp;Products\ETFs\" />
-    <Folder Include="Features\UI\Schwab\Navigation\Accounts&amp;Products\Options\" />
-    <Folder Include="Features\UI\Schwab\Navigation\Accounts&amp;Products\Stocks\" />
     <Folder Include="Screenshots\" />
   </ItemGroup>
 

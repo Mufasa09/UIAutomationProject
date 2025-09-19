@@ -1,6 +1,6 @@
-Feature: Charles Schwab Annuities Navigation
+Feature: Charles Schwab Futures Navigation
 
-Basic scenarios for navigating Annuities
+Basic scenarios for navigating Futures
 
 Background: 
 	Given I navigate to Futures from Accounts & Products

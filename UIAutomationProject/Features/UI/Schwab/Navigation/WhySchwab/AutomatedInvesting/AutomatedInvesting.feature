@@ -6,17 +6,17 @@ Background:
 	Given I navigate to Automated Investing from Why Schwab
 
 Scenario: Verify you can access the Schwab Intelligent Portfolios page
-	Given I navigate to the secondary link  Schwab Intelligent Portfolios link
+	Given I navigate to the secondary link  Schwab Intelligent Portfolios
 	When I verify the title of the site is Automated Investing | Schwab Intelligent Portfolios | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/intelligent-portfolios
 
 Scenario: Verify you can access the Schwab Intelligent Portfolios Premium page
-	Given I navigate to the secondary link  Schwab Intelligent Portfolios Premium link
+	Given I navigate to the secondary link  Schwab Intelligent Portfolios Premium
 	When I verify the title of the site is Schwab automated investing with unlimited guidance | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/intelligent-portfolios-premium
 
 Scenario: Verify you can access the Schwab Intelligent Income page
-	Given I navigate to the secondary link  Schwab Intelligent Income link
+	Given I navigate to the secondary link  Schwab Intelligent Income
 	When I verify the title of the site is Schwab Intelligent Income™ | Automated withdrawals | Charles Schwab | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/automated-investing/intelligent-income
 

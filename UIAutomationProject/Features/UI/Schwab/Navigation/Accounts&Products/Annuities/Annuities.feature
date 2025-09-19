@@ -1,13 +1,13 @@
-Feature: Charles Schwab Order Execution Navigation
+Feature: Charles Schwab Annuities Navigation
 
-Basic scenarios for navigating Order Execution
+Basic scenarios for navigating Annuities
 
 Background:
-	Given I navigate to Order Execution from Accounts & Products
+	Given I navigate to Annuities from Accounts & Products
 
 Scenario: Verify you can access the Schwab Order Execution Advantage page
-	Given I navigate to the secondary link Schwab Order Execution Advantage
-	When I verify the title of the site is Trade execution quality | Charles Schwab
+	Given I navigate to the secondary link Annuities Overview
+	When I verify the title of the site is Annuities: Saving for Retirement Income | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/execution-quality
 
 Scenario: Verify you can access the Variable Annuities Overview page
@@ -57,12 +57,14 @@ Scenario: Verify you can access the Single Premium Immediate Annuities page
 		| Key   | Value                              |
 		| Item1 | Single Premium Immediate Annuities |
 	When I verify the title of the site is Income Annuities–Retirement Income | Charles Schwab
+			| Key         | Value |
+		| TitleEnding | Dash    |
 	Then I verify the url of the site is https://www.schwab.com/annuities/income-annuity
 
 Scenario: Verify you can access the Deferred Income Annuities page
 	Given I navigate to the secondary link Income Annuities
 		| Key   | Value                     |
-		| Item1 | Deferred Income Annuities |
+		| Item1 | Deferred Income Annuities  |
 	When I verify the title of the site is Deferred Income Annuities Overview | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/annuities/deferred-income-annuities
 

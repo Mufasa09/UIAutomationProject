@@ -6,9 +6,9 @@ Background:
 	Given I navigate to Order Execution from Accounts & Products
 
 Scenario: Verify you can access the Annuities Overview page
-	Given I navigate to the secondary link Annuities Overview
-	When I verify the title of the site is Annuities: Saving for Retirement Income | Charles Schwab
-	Then I verify the url of the site is https://www.schwab.com/annuities
+	Given I navigate to the secondary link Schwab Order Execution Advantage
+	When I verify the title of the site is Trade execution quality | Charles Schwab
+	Then I verify the url of the site is https://www.schwab.com/execution-quality
 
 Scenario: Verify you can access the Order Routing Process page
 	Given I navigate to the secondary link Order Routing Process
@@ -16,8 +16,8 @@ Scenario: Verify you can access the Order Routing Process page
 	Then I verify the url of the site is https://www.schwab.com/execution-quality/order-routing-process
 
 Scenario: Verify you can access the Income Annuity Estimator page
-	Given I navigate to the secondary link Income Annuity Estimator
-	When I verify the title of the site is Income Annuity Estimator: Calculate Your Payout | Charles Schwab
-	Then I verify the url of the site is https://www.schwab.com/annuities/fixed-income-annuity-calculator
+	Given I navigate to the secondary link Price Improvement
+	When I verify the title of the site is Understanding Price Improvement | Charles Schwab
+	Then I verify the url of the site is https://www.schwab.com/execution-quality/price-improvement
 
 

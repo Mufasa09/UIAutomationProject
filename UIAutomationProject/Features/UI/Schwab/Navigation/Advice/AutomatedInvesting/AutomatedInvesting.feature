@@ -3,27 +3,27 @@ Feature: Charles Schwab Automated Investing Navigation
 Basic scenarios for navigating Automted Investing  
 
 Background:
-	Given I navigate to Automated Investing from Advice
+	Given I navigate to Advice Automated Investing from Advice
 
 Scenario: Verify you can access the Schwab Intelligent Portfolios page
-	Given I navigate to the secondary link  Schwab Intelligent Portfolios link
+	Given I navigate to the secondary link  Schwab Intelligent Portfolios
 	When I verify the title of the site is Automated Investing | Schwab Intelligent Portfolios | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/intelligent-portfolios
 
 Scenario: Verify you can access the Schwab Intelligent Portfolios Premium page
-	Given I navigate to the secondary link  Schwab Intelligent Portfolios Premium link
+	Given I navigate to the secondary link  Schwab Intelligent Portfolios Premium
 	When I verify the title of the site is Schwab automated investing with unlimited guidance | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/intelligent-portfolios-premium
 
 Scenario: Verify you can access the Schwab Intelligent Income page
-	Given I navigate to the secondary link  Schwab Intelligent Income link
+	Given I navigate to the secondary link  Schwab Intelligent Income
 	When I verify the title of the site is Schwab Intelligent Income™ | Automated withdrawals | Charles Schwab | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/automated-investing/intelligent-income
 
 Scenario: Verify you can access the Compare our Solutions page
 	Given I navigate to the secondary link Compare Solutions
-		| Key   | Value                |
-		| Item1 | Compare our Solution |
+		| Key   | Value                 |
+		| Item1 | Compare our Solutions |
 	When I verify the title of the site is Compare Our Intelligent Solutions | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/automated-investing/compare
 

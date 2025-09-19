@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace UIAutomationProject.Features.UI.Schwab.Navigation.AccountsProducts.OrderExecution
+namespace UIAutomationProject.Features.UI.Schwab.Navigation.AccountsProducts.Futures
 {
     using TechTalk.SpecFlow;
     using System;
@@ -20,22 +20,22 @@ namespace UIAutomationProject.Features.UI.Schwab.Navigation.AccountsProducts.Ord
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Charles Schwab Annuities Navigation")]
-    public partial class CharlesSchwabAnnuitiesNavigationFeature
+    [NUnit.Framework.DescriptionAttribute("Charles Schwab Futures Navigation")]
+    public partial class CharlesSchwabFuturesNavigationFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "OrderExecution.feature"
+#line 1 "Futures.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/UI/Schwab/Navigation/Accounts&Products/OrderExecution", "Charles Schwab Annuities Navigation", "Basic scenarios for navigating Annuities", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/UI/Schwab/Navigation/Accounts&Products/Futures", "Charles Schwab Futures Navigation", "Basic scenarios for navigating Futures", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -78,17 +78,17 @@ namespace UIAutomationProject.Features.UI.Schwab.Navigation.AccountsProducts.Ord
 #line 5
 #line hidden
 #line 6
- testRunner.Given("I navigate to Annuities from Accounts & Products", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to Futures from Accounts & Products", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify you can access the Annuities Overview page")]
-        public virtual void VerifyYouCanAccessTheAnnuitiesOverviewPage()
+        [NUnit.Framework.DescriptionAttribute("Verify you can access the Why Trade Futures Through Us page")]
+        public virtual void VerifyYouCanAccessTheWhyTradeFuturesThroughUsPage()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Annuities Overview page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Why Trade Futures Through Us page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 8
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -113,26 +113,26 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
 #line 9
- testRunner.Given("I navigate to the secondary link Annuities Overview", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to the secondary link Why Trade Futures Through Us", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 10
- testRunner.When("I verify the title of the site is Annuities: Saving for Retirement Income | Charl" +
-                        "es Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I verify the title of the site is Futures Trading | Charles Schwab Futures and Fo" +
+                        "rex", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 11
- testRunner.Then("I verify the url of the site is https://www.schwab.com/annuities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I verify the url of the site is https://www.schwab.com/futures/futures-trading", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify you can access the Order Routing Process page")]
-        public virtual void VerifyYouCanAccessTheOrderRoutingProcessPage()
+        [NUnit.Framework.DescriptionAttribute("Verify you can access the Around the Clock Trading page")]
+        public virtual void VerifyYouCanAccessTheAroundTheClockTradingPage()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Order Routing Process page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Around the Clock Trading page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 13
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -157,26 +157,27 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
 #line 14
- testRunner.Given("I navigate to the secondary link Order Routing Process", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to the secondary link Around the Clock Trading", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 15
- testRunner.When("I verify the title of the site is Trade order routing process | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I verify the title of the site is Futures Around the Clock Trading | Charles Schw" +
+                        "ab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 16
- testRunner.Then("I verify the url of the site is https://www.schwab.com/execution-quality/order-ro" +
-                        "uting-process", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I verify the url of the site is https://www.schwab.com/futures/futures-around-the" +
+                        "-clock-trading", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify you can access the Income Annuity Estimator page")]
-        public virtual void VerifyYouCanAccessTheIncomeAnnuityEstimatorPage()
+        [NUnit.Framework.DescriptionAttribute("Verify you can access the Get Started page")]
+        public virtual void VerifyYouCanAccessTheGetStartedPage()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Income Annuity Estimator page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Get Started page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 18
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -201,15 +202,14 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
 #line 19
- testRunner.Given("I navigate to the secondary link Income Annuity Estimator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to the secondary link Get Started", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 20
- testRunner.When("I verify the title of the site is Income Annuity Estimator: Calculate Your Payout" +
-                        " | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I verify the title of the site is Futures Account | Charles Schwab Futures and Fo" +
+                        "rex", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 21
- testRunner.Then("I verify the url of the site is https://www.schwab.com/annuities/fixed-income-ann" +
-                        "uity-calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I verify the url of the site is https://www.schwab.com/futures/trade-futures", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

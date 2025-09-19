@@ -78,7 +78,7 @@ namespace UIAutomationProject.Features.UI.Schwab.Navigation.Advice.Complimentary
 #line 5
 #line hidden
 #line 6
- testRunner.Given("I navigate to Complimentary Planning from Advice", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to Complimentary Plan from Advice", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
         

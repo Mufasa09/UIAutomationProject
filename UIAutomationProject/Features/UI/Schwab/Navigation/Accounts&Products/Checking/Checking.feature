@@ -6,7 +6,7 @@ Background:
 	Given I navigate to Checking from Accounts & Products
 
 Scenario: Verify you can access the Overview page
-	Given I navigate to the secondary link Schwab Order Execution Advantage
+	Given I navigate to the secondary link Overview
 	When I verify the title of the site is Open a Checking Account Online | Schwab Bank
 	Then I verify the url of the site is https://www.schwab.com/checking
 

@@ -101,7 +101,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 7
- testRunner.Given("I navigate to Automated Investing from Advice", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to Advice Automated Investing from Advice", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 8
  testRunner.When("I verify the title of the site is Automated Investing | Schwab Intelligent Portfo" +
@@ -142,7 +142,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 12
- testRunner.Given("I navigate to Automated Investing from Advice", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to Advice Automated Investing from Advice", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 13
  testRunner.When("I verify the title of the site is Automated Investing | Schwab Intelligent Portfo" +
@@ -187,7 +187,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 18
- testRunner.Given("I navigate to Automated Investing from Advice", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to Advice Automated Investing from Advice", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 19
  testRunner.When("I verify the title of the site is Automated Investing | Schwab Intelligent Portfo" +
@@ -232,7 +232,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 24
- testRunner.Given("I navigate to Automated Investing from Advice", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to Advice Automated Investing from Advice", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 25
  testRunner.When("I verify the title of the site is Automated Investing | Schwab Intelligent Portfo" +
@@ -277,7 +277,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 30
- testRunner.Given("I navigate to Automated Investing from Advice", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to Advice Automated Investing from Advice", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 31
  testRunner.When("I verify the title of the site is Automated Investing | Schwab Intelligent Portfo" +
@@ -322,7 +322,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 36
- testRunner.Given("I navigate to Automated Investing from Advice", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to Advice Automated Investing from Advice", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 37
  testRunner.When("I verify the title of the site is Automated Investing | Schwab Intelligent Portfo" +

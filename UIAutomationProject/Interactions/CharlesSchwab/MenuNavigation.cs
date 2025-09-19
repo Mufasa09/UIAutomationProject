@@ -9,8 +9,9 @@ namespace UIAutomationProject.Interactions.CharlesSchwab
 {
     public class MenuNavigation : ITask
     {
-        private string Menu { get; }
+        private string Menu { get; set; }
         private string SubMenu { get; }
+        private string Option { get; }
         private bool SecondaryNavigation { get; }
         User User { get; set; }
 
@@ -20,18 +21,19 @@ namespace UIAutomationProject.Interactions.CharlesSchwab
             SubMenu = subMenu;
         }
 
-        public MenuNavigation(string menu, string subMenu, bool secondaryNavigation)
+        public MenuNavigation(string menu, string subMenu, bool secondaryNavigation, string option)
         {
             Menu = menu;
             SubMenu = subMenu;
             SecondaryNavigation = secondaryNavigation;
+            Option = option;
         }
 
         public static MenuNavigation To(string menu, string subMenu) => 
             new MenuNavigation(menu, subMenu);
 
-        public static MenuNavigation To(string menu, string subMenu = "", bool secondaryNavigation =  true) =>
-            new MenuNavigation(menu, subMenu, secondaryNavigation);
+        public static MenuNavigation To(string menu, string subMenu = "", bool secondaryNavigation =  true, string option = "none") =>
+            new MenuNavigation(menu, subMenu, secondaryNavigation, option);
 
         public void PerformAs(IActor actor)
         {
@@ -39,23 +41,104 @@ namespace UIAutomationProject.Interactions.CharlesSchwab
             if (SecondaryNavigation)
             {
                 User = new User("SecondaryMenuNavigation", driver);
-                actor.WaitsUntil(Appearance.Of(ConvertMenuStringToWebLocator(Menu)), IsEqualTo.True());
-                driver.FindElement(ConvertMenuStringToBy(Menu)).Click();
-                Thread.Sleep(500);
-                if(!SubMenu.Contains(""))
-                    driver.FindElement(ConvertMenuStringToBy(SubMenu)).Click();
+              
+                if (SubMenu.Equals(""))
+                {
+                    switch (Menu)
+                    {
+                        case "Annuities Overview":
+                        case "Schwab Intelligent Income":
+                        case "Schwab Intelligent Portfolios Premium":
+                        case "Schwab Intelligent Portfolios":
+                        case "Calculators & Tools":
+                        case "Complimentary Plan":
+                        case "How to reach your goals":
+                        case "Education and Custodial":
+                            MainMenuOption2(actor, driver);
+                            break;
+                        default:
+                            MainMenuOption1(actor, driver);
+                            break;
+                    }
+                }
+                else
+                {
+                    switch (Menu)
+                    {
+                        case "Income Annuities":
+                        case "Indexed Annuities":
+                        case "Variable Annuities":
+                        case "Compare Solutions":
+                        case "Resources":
+                        case "529 Savings Plan":
+                        case "Custodial Account":
+                            MenuOption2(actor, driver);
+                            break;
+                        case "Active Trading":
+                        case "thinkorswim Platforms":
+                            MenuOption1(actor, driver);
+                            break;
+                        default:
+                            MenuOption3(actor, driver);
+                            break;
+                    }
+                }
             }
             else
             {
                 User = new User("MenuNavigation", driver);
                 actor.WaitsUntil(Appearance.Of(ConvertMenuStringToWebLocator(Menu)), IsEqualTo.True());
                 driver.FindElement(ConvertMenuStringToBy(Menu)).Click();
-                Thread.Sleep(500);
+                Thread.Sleep(800);
                 driver.FindElement(ConvertMenuStringToBy(SubMenu)).Click();
             }
         }
 
         #region Helper functions
+
+        public void MenuOption1(IActor actor, IWebDriver driver)
+        {
+            if (Menu != null)
+            {
+                Menu = Menu.Replace(" ", "");
+                Menu = "section_" + Menu;
+            }
+            actor.WaitsUntil(Appearance.Of(BasePage.Locator("id", Menu)), IsEqualTo.True());
+            driver.FindElement(BasePage.CustomXpath("id", Menu)).Click();
+            Thread.Sleep(500);
+            driver.FindElement(BasePage.CustomExactTextXpath(SubMenu, "span")).Click();
+        }
+
+        public void MenuOption2(IActor actor, IWebDriver driver)
+        {
+            actor.WaitsUntil(Appearance.Of(BasePage.CustomTextLocator(Menu, "span")), IsEqualTo.True());
+            driver.FindElement(BasePage.CustomTextXpath(Menu, "span")).Click();
+            Thread.Sleep(500);
+            driver.FindElement(BasePage.CustomExactTextXpath(SubMenu, "a")).Click();
+        }
+
+        public void MenuOption3(IActor actor, IWebDriver driver)
+        {
+            actor.WaitsUntil(Appearance.Of(BasePage.CustomTextLocator(Menu, "span")), IsEqualTo.True());
+            driver.FindElement(BasePage.CustomTextXpath(Menu, "span")).Click();
+            Thread.Sleep(500);
+            driver.FindElement(BasePage.CustomTextXpath(SubMenu, "span")).Click();
+        }
+
+        public void MainMenuOption1(IActor actor, IWebDriver driver)
+        {
+            actor.WaitsUntil(Appearance.Of(BasePage.CustomTextLocator(Menu, "span")), IsEqualTo.True());
+            driver.FindElement(BasePage.CustomTextXpath(Menu, "span")).Click();
+            Thread.Sleep(500);
+        }
+
+        public void MainMenuOption2(IActor actor, IWebDriver driver)
+        {
+            actor.WaitsUntil(Appearance.Of(BasePage.CustomTextLocator(Menu, "a")), IsEqualTo.True());
+            driver.FindElement(BasePage.CustomTextXpath(Menu, "a")).Click();
+            Thread.Sleep(500);
+        }
+
         public By ConvertMenuStringToBy(string item)
         {
             switch (item)
@@ -94,6 +177,8 @@ namespace UIAutomationProject.Interactions.CharlesSchwab
                     return BasePage.Xpath("//*[@id=\"«Rldlb6»\"]/ul/li[2]/a");
                 case "Investment Stocks":
                     return BasePage.Xpath("//*[@id=\"«Rhdlb6H2»\"]/ul/li[3]/a");
+                case "Advice Automated Investing":
+                    return BasePage.Xpath("//*[@id=\"«Ridlb6»\"]/ul/li[3]/a");
                 case "Automated Investing":
                     return BasePage.Xpath("//*[@id=\"«Rkdlb6H1»\"]/ul/li[4]/a");
                 case "Trading Overview":

@@ -83,12 +83,12 @@ namespace UIAutomationProject.Features.UI.Schwab.Navigation.AccountsProducts.Edu
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify you can access the Trading Overview page")]
-        public virtual void VerifyYouCanAccessTheTradingOverviewPage()
+        [NUnit.Framework.DescriptionAttribute("Verify you can access the Education and Custodial page")]
+        public virtual void VerifyYouCanAccessTheEducationAndCustodialPage()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Trading Overview page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Education and Custodial page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 8
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -200,14 +200,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table32 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table33 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table32.AddRow(new string[] {
+                table33.AddRow(new string[] {
                             "Item1",
                             "Overview"});
 #line 19
- testRunner.Given("I navigate to the secondary link 529 Savings Plan", ((string)(null)), table32, "Given ");
+ testRunner.Given("I navigate to the secondary link 529 Savings Plan", ((string)(null)), table33, "Given ");
 #line hidden
 #line 22
  testRunner.When("I verify the title of the site is Schwab 529 Savings Plan | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -249,14 +249,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table33 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table34 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table33.AddRow(new string[] {
+                table34.AddRow(new string[] {
                             "Item1",
                             "529 State Tax Calculator"});
 #line 26
- testRunner.Given("I navigate to the secondary link 529 Savings Plan", ((string)(null)), table33, "Given ");
+ testRunner.Given("I navigate to the secondary link 529 Savings Plan", ((string)(null)), table34, "Given ");
 #line hidden
 #line 29
  testRunner.When("I verify the title of the site is 529 State Tax Calculator | Schwab 529 Savings P" +
@@ -300,14 +300,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table34 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table35 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table34.AddRow(new string[] {
+                table35.AddRow(new string[] {
                             "Item1",
                             "Learning Quest 529 Plan"});
 #line 33
- testRunner.Given("I navigate to the secondary link 529 Savings Plan", ((string)(null)), table34, "Given ");
+ testRunner.Given("I navigate to the secondary link 529 Savings Plan", ((string)(null)), table35, "Given ");
 #line hidden
 #line 36
  testRunner.When("I verify the title of the site is Learning Quest 529 Plan | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -393,14 +393,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table35 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table36 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table35.AddRow(new string[] {
+                table36.AddRow(new string[] {
                             "Item1",
                             "Overview"});
 #line 45
- testRunner.Given("I navigate to the secondary link Custodial Account", ((string)(null)), table35, "Given ");
+ testRunner.Given("I navigate to the secondary link Custodial Account", ((string)(null)), table36, "Given ");
 #line hidden
 #line 48
  testRunner.When("I verify the title of the site is Schwab One� Custodial Account | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -442,14 +442,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table36 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table37 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table36.AddRow(new string[] {
+                table37.AddRow(new string[] {
                             "Item1",
                             "Custodial Transfer"});
 #line 52
- testRunner.Given("I navigate to the secondary link Custodial Account", ((string)(null)), table36, "Given ");
+ testRunner.Given("I navigate to the secondary link Custodial Account", ((string)(null)), table37, "Given ");
 #line hidden
 #line 55
  testRunner.When("I verify the title of the site is Custodial Account Transfer | Schwab One� Custod" +

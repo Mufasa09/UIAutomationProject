@@ -113,7 +113,7 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
 #line 9
- testRunner.Given("I navigate to the secondary link Schwab Order Execution Advantage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to the secondary link Overview", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 10
  testRunner.When("I verify the title of the site is Open a Checking Account Online | Schwab Bank", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -201,15 +201,15 @@ this.FeatureBackground();
 #line 19
  testRunner.Given("I navigate to the secondary link Send Money with Zelle", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table31 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table32 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table31.AddRow(new string[] {
+                table32.AddRow(new string[] {
                             "TitleEnding",
                             "CR"});
 #line 20
  testRunner.When("I verify the title of the site is Send and receive money with Zelle� | Schwab Ban" +
-                        "k | Charles Schwab", ((string)(null)), table31, "When ");
+                        "k | Charles Schwab", ((string)(null)), table32, "When ");
 #line hidden
 #line 23
  testRunner.Then("I verify the url of the site is https://www.schwab.com/checking/zelle", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

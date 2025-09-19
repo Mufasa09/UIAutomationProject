@@ -3,7 +3,7 @@ Feature: Charles Schwab Financial Planning Offering Navigation
 Basic scenarios for navigating Financial Planning Offering 
 
 Background: 
-	Given I navigate to Financial Planning Offering from Advice
+	Given I navigate to Financial Planning Offering  from Advice
 
 Scenario: Verify you can access the Complimentary Plan page
 	Given I navigate to the secondary link Complimentary Plan

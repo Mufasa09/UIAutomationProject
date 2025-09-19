@@ -155,14 +155,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table28 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table29 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table28.AddRow(new string[] {
+                table29.AddRow(new string[] {
                             "Item1",
                             "Bond Funds, Bond ETFs, and Preferred Securities"});
 #line 14
- testRunner.Given("I navigate to the secondary link Fixed Income Products", ((string)(null)), table28, "Given ");
+ testRunner.Given("I navigate to the secondary link Fixed Income Products", ((string)(null)), table29, "Given ");
 #line hidden
 #line 17
  testRunner.When("I verify the title of the site is Bond Funds and Bond ETFs | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -205,14 +205,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table29 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table30 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table29.AddRow(new string[] {
+                table30.AddRow(new string[] {
                             "Item1",
                             "Certificates of Deposit"});
 #line 21
- testRunner.Given("I navigate to the secondary link Fixed Income Products", ((string)(null)), table29, "Given ");
+ testRunner.Given("I navigate to the secondary link Fixed Income Products", ((string)(null)), table30, "Given ");
 #line hidden
 #line 24
  testRunner.When("I verify the title of the site is Certificate of Deposit | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -255,14 +255,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table30 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table31 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table30.AddRow(new string[] {
+                table31.AddRow(new string[] {
                             "Item1",
                             "Individual Bonds"});
 #line 28
- testRunner.Given("I navigate to the secondary link Fixed Income Products", ((string)(null)), table30, "Given ");
+ testRunner.Given("I navigate to the secondary link Fixed Income Products", ((string)(null)), table31, "Given ");
 #line hidden
 #line 31
  testRunner.When("I verify the title of the site is Bonds: Buying & Investing in Bonds | Charles Sc" +

@@ -3,7 +3,7 @@ Feature: Charles Schwab Complimentary Planning Navigation
 Basic scenarios for navigating Schwab Wealth Advisory 
 
 Background: 
-	Given I navigate to Complimentary Planning from Advice
+	Given I navigate to Complimentary Plan from Advice
 
 Scenario: Verify you can access the Complimentary Plan page
 	Given I navigate to the secondary link Complimentary Plan

@@ -78,7 +78,7 @@ namespace UIAutomationProject.Features.UI.Schwab.Navigation.Advice.FinancialPlan
 #line 5
 #line hidden
 #line 6
- testRunner.Given("I navigate to Financial Planning Offering from Advice", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to Financial Planning Offering  from Advice", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
         

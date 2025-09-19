@@ -5,8 +5,8 @@ Basic scenarios for navigating Brokerage and Trading
 Background:
 	Given I navigate to Brokerage and Trading from Accounts & Products
 
-Scenario: Verify you can access the Brokerage And Trading Account page
-	Given I navigate to the secondary link Brokerage And Trading Account
+Scenario: Verify you can access the Brokerage and Trading Account page
+	Given I navigate to the secondary link Brokerage and Trading Account
 	When I verify the title of the site is Brokerage account | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/brokerage
 

@@ -20,8 +20,8 @@ namespace UIAutomationProject.Features.UI.Schwab.Navigation.Pricing.CostsConside
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Charles Schwab Costs & Considerations Navigation")]
-    public partial class CharlesSchwabCostsConsiderationsNavigationFeature
+    [NUnit.Framework.DescriptionAttribute("Charles Schwab Costs and Considerations Navigation")]
+    public partial class CharlesSchwabCostsAndConsiderationsNavigationFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -35,7 +35,7 @@ namespace UIAutomationProject.Features.UI.Schwab.Navigation.Pricing.CostsConside
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/UI/Schwab/Navigation/Pricing/Costs&Considerations", "Charles Schwab Costs & Considerations Navigation", "Basic scenarios for navigating Costs & Considerations", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/UI/Schwab/Navigation/Pricing/Costs&Considerations", "Charles Schwab Costs and Considerations Navigation", "Basic scenarios for navigating Costs and Considerations", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -78,17 +78,17 @@ namespace UIAutomationProject.Features.UI.Schwab.Navigation.Pricing.CostsConside
 #line 5
 #line hidden
 #line 6
- testRunner.Given("I navigate to Costs & Considerations from Pricing", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to Costs and Considerations from Pricing", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify you can access the Complimentary Plan page")]
-        public virtual void VerifyYouCanAccessTheComplimentaryPlanPage()
+        [NUnit.Framework.DescriptionAttribute("Verify you can access the Transfer of Accounts page")]
+        public virtual void VerifyYouCanAccessTheTransferOfAccountsPage()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Complimentary Plan page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Transfer of Accounts page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 8
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -127,12 +127,12 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify you can access the Calculators & Tools page")]
-        public virtual void VerifyYouCanAccessTheCalculatorsToolsPage()
+        [NUnit.Framework.DescriptionAttribute("Verify you can access the Consolidation Benefits page")]
+        public virtual void VerifyYouCanAccessTheConsolidationBenefitsPage()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Calculators & Tools page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Consolidation Benefits page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 13
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -157,7 +157,7 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
 #line 14
- testRunner.Given("I navigate to the secondary link Consideration Benefits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to the secondary link Consolidation Benefits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 15
  testRunner.When("I verify the title of the site is Consolidate Accounts - Asset Transfer | Charles" +
@@ -172,12 +172,12 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify you can access the How to reach your goals page")]
-        public virtual void VerifyYouCanAccessTheHowToReachYourGoalsPage()
+        [NUnit.Framework.DescriptionAttribute("Verify you can access the FAQs page")]
+        public virtual void VerifyYouCanAccessTheFAQsPage()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the How to reach your goals page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the FAQs page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 18
 this.ScenarioInitialize(scenarioInfo);
 #line hidden

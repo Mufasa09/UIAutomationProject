@@ -113,17 +113,17 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
 #line 9
- testRunner.Given("I navigate to the secondary link Schwab Order Execution Advantage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to the secondary link Overview", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table43 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table57 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table43.AddRow(new string[] {
+                table57.AddRow(new string[] {
                             "TitleEnding",
                             "Dash"});
 #line 10
  testRunner.When("I verify the title of the site is Mortgage � Apply for mortgages at low interest " +
-                        "rates | Schwab Bank", ((string)(null)), table43, "When ");
+                        "rates | Schwab Bank", ((string)(null)), table57, "When ");
 #line hidden
 #line 13
  testRunner.Then("I verify the url of the site is https://www.schwab.com/mortgages", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -209,14 +209,14 @@ this.FeatureBackground();
 #line 21
  testRunner.Given("I navigate to the secondary link Rates", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table44 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table58 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table44.AddRow(new string[] {
+                table58.AddRow(new string[] {
                             "TitleEnding",
                             "Dash"});
 #line 22
- testRunner.When("I verify the title of the site is Mortgage Rates | Schwab Bank | Charles Schwab", ((string)(null)), table44, "When ");
+ testRunner.When("I verify the title of the site is Mortgage Rates | Schwab Bank | Charles Schwab", ((string)(null)), table58, "When ");
 #line hidden
 #line 25
  testRunner.Then("I verify the url of the site is https://www.schwab.com/mortgages/mortgage-rates", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
