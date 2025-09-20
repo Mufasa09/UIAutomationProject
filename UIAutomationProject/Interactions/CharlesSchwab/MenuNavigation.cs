@@ -54,6 +54,41 @@ namespace UIAutomationProject.Interactions.CharlesSchwab
                         case "Complimentary Plan":
                         case "How to reach your goals":
                         case "Education and Custodial":
+                        case "Fraud and Security Video Library":
+                        case "Schwab Security Guarantee":
+                        case "Protecting senior investors":
+                        case "Resources to keep you safe online":
+                        case "Our commitment to your security":
+                        case "Comprehensive Wealth Management":
+                        case "Personalized Approach":
+                        case "Experienced Team":
+                        case "Sample Scenarios":
+                        case "Overview":
+                        case "Around the Clock Trading":
+                        case "Get Started":
+                        case "Stocks Overview":
+                        case "Schwab IRA Calculators":
+                        case "Other IRAs":
+                        case "Rollover IRA":
+                        case "Retirement Accounts (IRAs)":
+                        case "Research Tools":
+                        case "Investment Research":
+                        case "Mutual Funds Overview":
+                        case "Select List":
+                        case "Invest in a Portfolio Solution":
+                        case "Rates":
+                        case "Start Your Loan":
+                        case "Products":
+                        case "Selecting ETFs":
+                        case "ETF Overview":
+                        case "FAQs":
+                        case "Send Money with Zelle":
+                        case "Schwab Bank Debit Card":
+                        case "Types of Brokerage Accounts":
+                        case "What is a Brokerage Account":
+                        case "Brokerage and Trading Account":
+                        case "Selecting Fixed Income":
+                        case "Pricing":
                             MainMenuOption2(actor, driver);
                             break;
                         default:
@@ -72,6 +107,20 @@ namespace UIAutomationProject.Interactions.CharlesSchwab
                         case "Resources":
                         case "529 Savings Plan":
                         case "Custodial Account":
+                        case "International Stocks":
+                        case "Why Trade Stocks at Schwab":
+                        case "Understanding Stocks":
+                        case "Traditional IRA":
+                        case "Roth IRA":
+                        case "Schwab Trading Activity Index™ (STAX)":
+                        case "Introduction to Options":
+                        case "Find Mutual Funds":
+                        case "Understanding Mutual Funds":
+                        case "Types of Mutual Funds":
+                        case "Types of ETFs":
+                        case "Understanding ETFs":
+                        case "ETFs at Schwab":
+                        case "Fixed Income Products":
                             MenuOption2(actor, driver);
                             break;
                         case "Active Trading":
@@ -175,6 +224,8 @@ namespace UIAutomationProject.Interactions.CharlesSchwab
                     return BasePage.Xpath("//*[@id=\"«Rldlb6»\"]/ul/li[1]/a");
                 case "Stocks":
                     return BasePage.Xpath("//*[@id=\"«Rldlb6»\"]/ul/li[2]/a");
+                case "Investment Products Stocks":
+                    return BasePage.Xpath("//*[@id=\"«Rhdlb6H2»\"]/ul/li[3]/a");
                 case "Investment Stocks":
                     return BasePage.Xpath("//*[@id=\"«Rhdlb6H2»\"]/ul/li[3]/a");
                 case "Advice Automated Investing":

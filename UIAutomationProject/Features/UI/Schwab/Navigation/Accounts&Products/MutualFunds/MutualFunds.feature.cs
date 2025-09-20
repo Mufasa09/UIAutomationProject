@@ -78,7 +78,7 @@ namespace UIAutomationProject.Features.UI.Schwab.Navigation.AccountsProducts.Mut
 #line 5
 #line hidden
 #line 6
- testRunner.Given("I navigate to Mutual Funds from Accounts & Products", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to Investment Mutual Funds from Accounts & Products", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
         
@@ -155,14 +155,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table59 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table61 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table59.AddRow(new string[] {
+                table61.AddRow(new string[] {
                             "Item1",
                             "Find Mutual Funds"});
 #line 14
- testRunner.Given("I navigate to the secondary link Find Mutual Funds", ((string)(null)), table59, "Given ");
+ testRunner.Given("I navigate to the secondary link Find Mutual Funds", ((string)(null)), table61, "Given ");
 #line hidden
 #line 17
  testRunner.When("I verify the title of the site is Find and Invest in Mutual Funds | Charles Schwa" +
@@ -206,14 +206,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table60 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table62 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table60.AddRow(new string[] {
+                table62.AddRow(new string[] {
                             "Item1",
                             "Investor Information"});
 #line 21
- testRunner.Given("I navigate to the secondary link Find Mutual Funds", ((string)(null)), table60, "Given ");
+ testRunner.Given("I navigate to the secondary link Find Mutual Funds", ((string)(null)), table62, "Given ");
 #line hidden
 #line 24
  testRunner.When("I verify the title of the site is Mutual Fund Prospectuses: Investor Information " +
@@ -347,14 +347,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table61 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table63 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table61.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "Item1",
                             "Overview"});
 #line 39
- testRunner.Given("I navigate to the secondary link Understanding Mutual Funds", ((string)(null)), table61, "Given ");
+ testRunner.Given("I navigate to the secondary link Understanding Mutual Funds", ((string)(null)), table63, "Given ");
 #line hidden
 #line 42
  testRunner.When("I verify the title of the site is What is an ETF (Exchange-Traded Fund)? | Charle" +
@@ -397,14 +397,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table62 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table64 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table62.AddRow(new string[] {
+                table64.AddRow(new string[] {
                             "Item1",
                             "Benefits and Considerations of Mutual Funds"});
 #line 46
- testRunner.Given("I navigate to the secondary link Understanding Mutual Funds", ((string)(null)), table62, "Given ");
+ testRunner.Given("I navigate to the secondary link Understanding Mutual Funds", ((string)(null)), table64, "Given ");
 #line hidden
 #line 49
  testRunner.When("I verify the title of the site is Mutual Fund Benefits - Diversification at Low C" +
@@ -447,14 +447,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table63 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table65 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table63.AddRow(new string[] {
+                table65.AddRow(new string[] {
                             "Item1",
                             "Costs and Fees of Mutual Funds"});
 #line 53
- testRunner.Given("I navigate to the secondary link Understanding Mutual Funds", ((string)(null)), table63, "Given ");
+ testRunner.Given("I navigate to the secondary link Understanding Mutual Funds", ((string)(null)), table65, "Given ");
 #line hidden
 #line 56
  testRunner.When("I verify the title of the site is Mutual Fund Fees, Costs & Expense Ratios | Char" +
@@ -497,14 +497,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table64 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table66 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table64.AddRow(new string[] {
+                table66.AddRow(new string[] {
                             "Item1",
                             "ETFs vs. Mutual Funds"});
 #line 60
- testRunner.Given("I navigate to the secondary link Understanding Mutual Funds", ((string)(null)), table64, "Given ");
+ testRunner.Given("I navigate to the secondary link Understanding Mutual Funds", ((string)(null)), table66, "Given ");
 #line hidden
 #line 63
  testRunner.When("I verify the title of the site is ETFs vs. Mutual Funds � What�s the Difference? " +
@@ -547,14 +547,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table65 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table67 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table65.AddRow(new string[] {
+                table67.AddRow(new string[] {
                             "Item1",
                             "Types of Mutual Funds"});
 #line 67
- testRunner.Given("I navigate to the secondary link Types of Mutual Funds", ((string)(null)), table65, "Given ");
+ testRunner.Given("I navigate to the secondary link Types of Mutual Funds", ((string)(null)), table67, "Given ");
 #line hidden
 #line 70
  testRunner.When("I verify the title of the site is Types of mutual funds | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -596,14 +596,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table66 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table68 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table66.AddRow(new string[] {
+                table68.AddRow(new string[] {
                             "Item1",
                             "Equity Mutual Funds"});
 #line 74
- testRunner.Given("I navigate to the secondary link Types of Mutual Funds", ((string)(null)), table66, "Given ");
+ testRunner.Given("I navigate to the secondary link Types of Mutual Funds", ((string)(null)), table68, "Given ");
 #line hidden
 #line 77
  testRunner.When("I verify the title of the site is Equity mutual funds | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -646,14 +646,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table67 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table69 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table67.AddRow(new string[] {
+                table69.AddRow(new string[] {
                             "Item1",
                             "Index Mutual Funds"});
 #line 81
- testRunner.Given("I navigate to the secondary link  Types of Mutual Funds", ((string)(null)), table67, "Given ");
+ testRunner.Given("I navigate to the secondary link  Types of Mutual Funds", ((string)(null)), table69, "Given ");
 #line hidden
 #line 84
  testRunner.When("I verify the title of the site is Index Mutual Funds | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -696,14 +696,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table68 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table70 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table68.AddRow(new string[] {
+                table70.AddRow(new string[] {
                             "Item1",
                             "Asset Allocation Mutual Funds"});
 #line 88
- testRunner.Given("I navigate to the secondary link  Types of Mutual Funds", ((string)(null)), table68, "Given ");
+ testRunner.Given("I navigate to the secondary link  Types of Mutual Funds", ((string)(null)), table70, "Given ");
 #line hidden
 #line 91
  testRunner.When("I verify the title of the site is Asset Allocation Mutual Funds | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -746,14 +746,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table69 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table71 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table69.AddRow(new string[] {
+                table71.AddRow(new string[] {
                             "Item1",
                             "Target Date Mutual Funds"});
 #line 95
- testRunner.Given("I navigate to the secondary link Types of Mutual Funds", ((string)(null)), table69, "Given ");
+ testRunner.Given("I navigate to the secondary link Types of Mutual Funds", ((string)(null)), table71, "Given ");
 #line hidden
 #line 98
  testRunner.When("I verify the title of the site is Target Date Mutual Funds | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -796,14 +796,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table70 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table72 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table70.AddRow(new string[] {
+                table72.AddRow(new string[] {
                             "Item1",
                             "Commodity Mutual Funds"});
 #line 102
- testRunner.Given("I navigate to the secondary link  Types of Mutual Funds", ((string)(null)), table70, "Given ");
+ testRunner.Given("I navigate to the secondary link  Types of Mutual Funds", ((string)(null)), table72, "Given ");
 #line hidden
 #line 105
  testRunner.When("I verify the title of the site is Commodity mutual funds | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -848,14 +848,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table71 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table73 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table71.AddRow(new string[] {
+                table73.AddRow(new string[] {
                             "Item1",
                             "Environmental, Social and Governance (ESG) Mutual Funds"});
 #line 109
- testRunner.Given("I navigate to the secondary link  Types of Mutual Funds", ((string)(null)), table71, "Given ");
+ testRunner.Given("I navigate to the secondary link  Types of Mutual Funds", ((string)(null)), table73, "Given ");
 #line hidden
 #line 112
  testRunner.When("I verify the title of the site is Socially Responsible Mutual Funds | Charles Sch" +

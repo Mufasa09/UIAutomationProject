@@ -22,8 +22,8 @@ Scenario: Verify you can access the Schwab Intelligent Income page
 
 Scenario: Verify you can access the Compare our Solutions page
 	Given I navigate to the secondary link Compare Solutions
-		| Key   | Value                |
-		| Item1 | Compare our Solution |
+		| Key   | Value                 |
+		| Item1 | Compare our Solutions |
 	When I verify the title of the site is Compare Our Intelligent Solutions | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/automated-investing/compare
 

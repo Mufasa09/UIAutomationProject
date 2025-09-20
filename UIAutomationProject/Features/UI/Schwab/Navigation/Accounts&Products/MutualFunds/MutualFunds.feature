@@ -3,7 +3,7 @@ Feature: Charles Schwab Mutual Funds Navigation
 Basic scenarios for navigating Mutual Funds
 
 Background:
-	Given I navigate to Mutual Funds from Accounts & Products
+	Given I navigate to Investment Mutual Funds from Accounts & Products
 
 Scenario: Verify you can access the Mutual Funds Overview page
 	Given I navigate to the secondary link Mutual Funds Overview

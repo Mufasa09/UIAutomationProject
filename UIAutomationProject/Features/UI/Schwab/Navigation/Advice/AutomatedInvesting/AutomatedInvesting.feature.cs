@@ -246,14 +246,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table119 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table121 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table119.AddRow(new string[] {
+                table121.AddRow(new string[] {
                             "Item1",
                             "Compare our Solutions"});
 #line 24
- testRunner.Given("I navigate to the secondary link Compare Solutions", ((string)(null)), table119, "Given ");
+ testRunner.Given("I navigate to the secondary link Compare Solutions", ((string)(null)), table121, "Given ");
 #line hidden
 #line 27
  testRunner.When("I verify the title of the site is Compare Our Intelligent Solutions | Charles Sch" +
@@ -297,14 +297,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table120 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table122 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table120.AddRow(new string[] {
+                table122.AddRow(new string[] {
                             "Item1",
                             "Compare us to others"});
 #line 31
- testRunner.Given("I navigate to the secondary link Compare Solutions", ((string)(null)), table120, "Given ");
+ testRunner.Given("I navigate to the secondary link Compare Solutions", ((string)(null)), table122, "Given ");
 #line hidden
 #line 34
  testRunner.When("I verify the title of the site is Schwab Intelligent Portfolios Compare Us | Char" +
@@ -348,14 +348,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table121 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table123 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table121.AddRow(new string[] {
+                table123.AddRow(new string[] {
                             "Item1",
                             "An Introduction to Robo-Advice"});
 #line 38
- testRunner.Given("I navigate to the secondary link Resources", ((string)(null)), table121, "Given ");
+ testRunner.Given("I navigate to the secondary link Resources", ((string)(null)), table123, "Given ");
 #line hidden
 #line 41
  testRunner.When("I verify the title of the site is What is a Robo Advisor | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -398,14 +398,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table122 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table124 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table122.AddRow(new string[] {
+                table124.AddRow(new string[] {
                             "Item1",
                             "Robo Advisor Myths"});
 #line 45
- testRunner.Given("I navigate to the secondary link Resources", ((string)(null)), table122, "Given ");
+ testRunner.Given("I navigate to the secondary link Resources", ((string)(null)), table124, "Given ");
 #line hidden
 #line 48
  testRunner.When("I verify the title of the site is What is a Robo-Advisor: Debunking Myths | Charl" +
@@ -449,14 +449,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table123 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table125 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table123.AddRow(new string[] {
+                table125.AddRow(new string[] {
                             "Item1",
                             "Education"});
 #line 52
- testRunner.Given("I navigate to the secondary link Resources", ((string)(null)), table123, "Given ");
+ testRunner.Given("I navigate to the secondary link Resources", ((string)(null)), table125, "Given ");
 #line hidden
 #line 55
  testRunner.When("I verify the title of the site is Schwab Intelligent Portfolios Investing Insight" +

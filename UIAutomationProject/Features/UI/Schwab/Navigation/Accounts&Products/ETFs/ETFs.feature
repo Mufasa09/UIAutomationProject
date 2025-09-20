@@ -3,7 +3,7 @@ Feature: Charles Schwab ETFs Navigation
 Basic scenarios for navigating ETFs
 
 Background:
-	Given I navigate to ETFs from Accounts & Products
+	Given I navigate to Investment ETFs from Accounts & Products
 
 Scenario: Verify you can access the ETF Overview page
 	Given I navigate to the secondary link ETF Overview
@@ -23,7 +23,6 @@ Scenario: Verify you can access the Investor Information page
 		| Item1 | Investor Information |
 	When I verify the title of the site is Investor Information for ETFs | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/etfs/investor-information
-
 
 Scenario: Verify you can access the Education page
 	Given I navigate to the secondary link Selecting ETFs
@@ -58,54 +57,67 @@ Scenario: Verify you can access the ETFs vs. Mutual Funds page
 	When I verify the title of the site is ETFs vs. Mutual Funds – What’s the Difference? | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/etfs/mutual-funds-vs-etfs
 
-	##
-Scenario: Verify you can access the Types of Mutual Funds page
-	Given I navigate to the secondary link Types of Mutual Funds
+Scenario: Verify you can access the Types of ETFss page
+	Given I navigate to the secondary link Types of ETFs
 		| Key   | Value                 |
-		| Item1 | Types of Mutual Funds |
-	When I verify the title of the site is Types of mutual funds | Charles Schwab
-	Then I verify the url of the site is https://www.schwab.com/mutual-funds/types
+		| Item1 | Types of ETFs |
+	When I verify the title of the site is Types of ETFs: Choosing ETFs for Your Portfolio | Charles Schwab | Charles Schwab
+	Then I verify the url of the site is https://www.schwab.com/etfs/types
 
-Scenario: Verify you can access the Equity Mutual Funds page
-	Given I navigate to the secondary link Types of Mutual Funds
+Scenario: Verify you can access the Complex ETPs page
+	Given I navigate to the secondary link Types of ETFs
 		| Key   | Value               |
-		| Item1 | Equity Mutual Funds |
-	When I verify the title of the site is Equity mutual funds | Charles Schwab
-	Then I verify the url of the site is https://www.schwab.com/mutual-funds/types/equity-mutual-funds
+		| Item1 | Complex ETPs |
+	When I verify the title of the site is Complex exchange-traded products (ETPs) | Charles Schwab
+	Then I verify the url of the site is https://www.schwab.com/etfs/types/complex-etps
 
-Scenario: Verify you can access the Index Mutual Funds page
-	Given I navigate to the secondary link  Types of Mutual Funds
+Scenario: Verify you can access the Sector ETFs page
+	Given I navigate to the secondary link Types of ETFs
 		| Key   | Value              |
-		| Item1 | Index Mutual Funds |
-	When I verify the title of the site is Index Mutual Funds | Charles Schwab
-	Then I verify the url of the site is https://www.schwab.com/mutual-funds/types/index-mutual-funds
+		| Item1 | Sector ETFs |
+	When I verify the title of the site is Sector ETFs | Charles Schwab
+	Then I verify the url of the site is https://www.schwab.com/etfs/types/sector-etfs
 
-Scenario: Verify you can access the Asset Allocation Mutual Funds page
-	Given I navigate to the secondary link  Types of Mutual Funds
+Scenario: Verify you can access the Dividend ETFspage
+	Given I navigate to the secondary link Types of ETFs
 		| Key   | Value                         |
-		| Item1 | Asset Allocation Mutual Funds |
-	When I verify the title of the site is Asset Allocation Mutual Funds | Charles Schwab
-	Then I verify the url of the site is https://www.schwab.com/mutual-funds/types/asset-allocation-mutual-funds
+		| Item1 | Dividend ETFs |
+	When I verify the title of the site is Dividend ETFs for Income Investing | Charles Schwab
+	Then I verify the url of the site is https://www.schwab.com/etfs/types/dividend-etfs
 
-Scenario: Verify you can access the Target Date Mutual Funds page
-	Given I navigate to the secondary link Types of Mutual Funds
+Scenario: Verify you can access the Smart Beta ETFs page
+	Given I navigate to the secondary link Types of ETFs
 		| Key   | Value                    |
-		| Item1 | Target Date Mutual Funds |
-	When I verify the title of the site is Target Date Mutual Funds | Charles Schwab
-	Then I verify the url of the site is https://www.schwab.com/mutual-funds/types/target-date-mutual-funds
-
-Scenario: Verify you can access the Commodity Mutual Funds page
-	Given I navigate to the secondary link  Types of Mutual Funds
-		| Key   | Value                  |
-		| Item1 | Commodity Mutual Funds |
-	When I verify the title of the site is Commodity mutual funds | Charles Schwab
-	Then I verify the url of the site is https://www.schwab.com/mutual-funds/types/commodity-mutual-funds
+		| Item1 | Smart Beta ETFs |
+	When I verify the title of the site is Smart Beta ETFs | Charles Schwab
+	Then I verify the url of the site is https://www.schwab.com/etfs/types/smart-beta-etfs
 
 Scenario: Verify you can access the Environmental, Social and Governance (ESG) Mutual Funds page
-	Given I navigate to the secondary link  Types of Mutual Funds
+	Given I navigate to the secondary link Types of ETFs
 		| Key   | Value                                                   |
 		| Item1 | Environmental, Social and Governance (ESG) Mutual Funds |
-	When I verify the title of the site is Socially Responsible Mutual Funds | Charles Schwab
-	Then I verify the url of the site is https://www.schwab.com/mutual-funds/types/socially-responsible-mutual-funds
+	When I verify the title of the site is Environmental, Social, and Governance (ESG) ETFs | Charles Schwab
+	Then I verify the url of the site is https://www.schwab.com/etfs/types/socially-responsible-etfs
+
+Scenario: Verify you can access the Bond ETFs page
+	Given I navigate to the secondary link Types of ETFs
+		| Key   | Value                  |
+		| Item1 | Bond ETFs |
+	When I verify the title of the site is Bond Funds and Bond ETFs | Charles Schwab
+	Then I verify the url of the site is https://www.schwab.com/fixed-income/bond-funds-etfs
+
+Scenario: Verify you can access the Commodity ETFs page
+	Given I navigate to the secondary link Types of ETFs
+		| Key   | Value                  |
+		| Item1 | Commodity ETFss |
+	When I verify the title of the site is Commodity ETFs | Charles Schwab
+	Then I verify the url of the site is https://www.schwab.com/etfs/types/commodity-etfs
+
+Scenario: Verify you can access the Currency ETFs page
+	Given I navigate to the secondary link Types of ETFs
+		| Key   | Value                  |
+		| Item1 | Currency ETFs |
+	When I verify the title of the site is Currency ETFs | Charles Schwab
+	Then I verify the url of the site is https://www.schwab.com/etfs/types/currency-etfs
 
 

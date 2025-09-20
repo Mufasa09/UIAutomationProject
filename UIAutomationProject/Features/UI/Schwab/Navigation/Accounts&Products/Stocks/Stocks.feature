@@ -3,7 +3,7 @@ Feature: Charles Schwab Stocks Navigation
 Basic scenarios for navigating Stocks
 
 Background:
-	Given I navigate to Stocks from Accounts & Products
+	Given I navigate to Investment Products Stocks from Accounts & Products
 
 Scenario: Verify you can access the Stock Overview page
 	Given I navigate to the secondary link Options Overview

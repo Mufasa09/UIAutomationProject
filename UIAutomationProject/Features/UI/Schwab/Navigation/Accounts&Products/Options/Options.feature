@@ -3,7 +3,7 @@ Feature: Charles Schwab Options Navigation
 Basic scenarios for navigating Options
 
 Background:
-	Given I navigate to Options from Accounts & Products
+	Given I navigate to Investment Options from Accounts & Products
 
 Scenario: Verify you can access the Options Overview page
 	Given I navigate to the secondary link Options Overview
@@ -17,7 +17,7 @@ Scenario: Verify you can access the Why Trade Options at Schwab page
 
 	Scenario: Verify you can access the Get Started page
 	Given I navigate to the secondary link Get Started
-	When I verify the title of the site is Why Trade Options at Schwab | Charles Schwab
+	When I verify the title of the site is Trade Options | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/options/options-trading
 
 Scenario: Verify you can access the Intro to Options page

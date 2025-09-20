@@ -78,7 +78,7 @@ namespace UIAutomationProject.Features.UI.Schwab.Navigation.AccountsProducts.Sto
 #line 5
 #line hidden
 #line 6
- testRunner.Given("I navigate to Stocks from Accounts & Products", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to Investment Products Stocks from Accounts & Products", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
         
@@ -243,14 +243,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table94 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table96 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table94.AddRow(new string[] {
+                table96.AddRow(new string[] {
                             "Item1",
                             "International Stocks Overview"});
 #line 24
- testRunner.Given("I navigate to the secondary link International Stocks", ((string)(null)), table94, "Given ");
+ testRunner.Given("I navigate to the secondary link International Stocks", ((string)(null)), table96, "Given ");
 #line hidden
 #line 27
  testRunner.When("I verify the title of the site is International Stocks: How and Why to Invest | C" +
@@ -294,14 +294,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table95 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table97 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table95.AddRow(new string[] {
+                table97.AddRow(new string[] {
                             "Item1",
                             "ADRs, Foreign Ordinaries & Canadian Stocks"});
 #line 31
- testRunner.Given("I navigate to the secondary link International Stocks", ((string)(null)), table95, "Given ");
+ testRunner.Given("I navigate to the secondary link International Stocks", ((string)(null)), table97, "Given ");
 #line hidden
 #line 34
  testRunner.When("I verify the title of the site is Investing in ADRs, Foreign Ordinaries, & Canadi" +
@@ -345,14 +345,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table96 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table98 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table96.AddRow(new string[] {
+                table98.AddRow(new string[] {
                             "Item1",
                             "Trading Stocks at Schwab"});
 #line 38
- testRunner.Given("I navigate to the secondary link Trading Stocks at Schwab", ((string)(null)), table96, "Given ");
+ testRunner.Given("I navigate to the secondary link Trading Stocks at Schwab", ((string)(null)), table98, "Given ");
 #line hidden
 #line 41
  testRunner.When("I verify the title of the site is Why Trade Stocks at Schwab | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -394,14 +394,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table97 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table99 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table97.AddRow(new string[] {
+                table99.AddRow(new string[] {
                             "Item1",
                             "Order Execution"});
 #line 45
- testRunner.Given("I navigate to the secondary link Why Trade Stocks at Schwab", ((string)(null)), table97, "Given ");
+ testRunner.Given("I navigate to the secondary link Why Trade Stocks at Schwab", ((string)(null)), table99, "Given ");
 #line hidden
 #line 48
  testRunner.When("I verify the title of the site is Trade execution quality | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -443,14 +443,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table98 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table100 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table98.AddRow(new string[] {
+                table100.AddRow(new string[] {
                             "Item1",
                             "Investment Research"});
 #line 52
- testRunner.Given("I navigate to the secondary link Why Trade Stocks at Schwab", ((string)(null)), table98, "Given ");
+ testRunner.Given("I navigate to the secondary link Why Trade Stocks at Schwab", ((string)(null)), table100, "Given ");
 #line hidden
 #line 55
  testRunner.When("I verify the title of the site is Investment Research | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -492,14 +492,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table99 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table101 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table99.AddRow(new string[] {
+                table101.AddRow(new string[] {
                             "Item1",
                             "Dividend Reinvestment Plans (DRIPs)"});
 #line 59
- testRunner.Given("I navigate to the secondary link Why Trade Stocks at Schwab", ((string)(null)), table99, "Given ");
+ testRunner.Given("I navigate to the secondary link Why Trade Stocks at Schwab", ((string)(null)), table101, "Given ");
 #line hidden
 #line 62
  testRunner.When("I verify the title of the site is Stocks Dividend Reinvestment Plan | Charles Sch" +
@@ -543,14 +543,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table100 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table102 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table100.AddRow(new string[] {
+                table102.AddRow(new string[] {
                             "Item1",
                             "Restricted Stock Services"});
 #line 66
- testRunner.Given("I navigate to the secondary link Why Trade Stocks at Schwab", ((string)(null)), table100, "Given ");
+ testRunner.Given("I navigate to the secondary link Why Trade Stocks at Schwab", ((string)(null)), table102, "Given ");
 #line hidden
 #line 69
  testRunner.When("I verify the title of the site is Restricted Stock Services | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -593,14 +593,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table101 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table103 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table101.AddRow(new string[] {
+                table103.AddRow(new string[] {
                             "Item1",
                             "Intro to Stocks"});
 #line 73
- testRunner.Given("I navigate to the secondary link Understanding Stocks", ((string)(null)), table101, "Given ");
+ testRunner.Given("I navigate to the secondary link Understanding Stocks", ((string)(null)), table103, "Given ");
 #line hidden
 #line 76
  testRunner.When("I verify the title of the site is What are stocks? | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -642,14 +642,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table102 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table104 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table102.AddRow(new string[] {
+                table104.AddRow(new string[] {
                             "Item1",
                             "Over-the-counter Stocks (OTCs)"});
 #line 80
- testRunner.Given("I navigate to the secondary link Understanding Stocks", ((string)(null)), table102, "Given ");
+ testRunner.Given("I navigate to the secondary link Understanding Stocks", ((string)(null)), table104, "Given ");
 #line hidden
 #line 83
  testRunner.When("I verify the title of the site is OTC (Over-the-Counter) Markets: Trading & Secur" +
@@ -693,14 +693,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table103 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table105 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table103.AddRow(new string[] {
+                table105.AddRow(new string[] {
                             "Item1",
                             "Master Limited Partnerships (MLPs)"});
 #line 87
- testRunner.Given("I navigate to the secondary link Understanding Stocks", ((string)(null)), table103, "Given ");
+ testRunner.Given("I navigate to the secondary link Understanding Stocks", ((string)(null)), table105, "Given ");
 #line hidden
 #line 90
  testRunner.When("I verify the title of the site is Master Limited Partnerships (MLPs) | Charles Sc" +
@@ -744,14 +744,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table104 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table106 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table104.AddRow(new string[] {
+                table106.AddRow(new string[] {
                             "Item1",
                             "Real Estate Investment Trusts (REITs)"});
 #line 94
- testRunner.Given("I navigate to the secondary link Understanding Stocks", ((string)(null)), table104, "Given ");
+ testRunner.Given("I navigate to the secondary link Understanding Stocks", ((string)(null)), table106, "Given ");
 #line hidden
 #line 97
  testRunner.When("I verify the title of the site is Real Estate Investment Trusts (REITs) | Charles" +
@@ -795,14 +795,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table105 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table107 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table105.AddRow(new string[] {
+                table107.AddRow(new string[] {
                             "Item1",
                             "Business Development Companies (BDCs)"});
 #line 101
- testRunner.Given("I navigate to the secondary link Understanding Stocks", ((string)(null)), table105, "Given ");
+ testRunner.Given("I navigate to the secondary link Understanding Stocks", ((string)(null)), table107, "Given ");
 #line hidden
 #line 104
  testRunner.When("I verify the title of the site is Business Development Companies (BDCs) | Charles" +
@@ -846,14 +846,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table106 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table108 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table106.AddRow(new string[] {
+                table108.AddRow(new string[] {
                             "Item1",
                             "IPO/DPO Stocks"});
 #line 108
- testRunner.Given("I navigate to the secondary link Understanding Stocks", ((string)(null)), table106, "Given ");
+ testRunner.Given("I navigate to the secondary link Understanding Stocks", ((string)(null)), table108, "Given ");
 #line hidden
 #line 111
  testRunner.When("I verify the title of the site is IPO & DPO Stocks: Types of New Issue Stocks | C" +

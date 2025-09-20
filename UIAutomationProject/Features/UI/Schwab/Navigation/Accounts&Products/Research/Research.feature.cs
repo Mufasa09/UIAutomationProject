@@ -199,24 +199,24 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table77 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table79 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table77.AddRow(new string[] {
+                table79.AddRow(new string[] {
                             "Item1",
                             "STAX Overview"});
 #line 19
- testRunner.Given("I navigate to the secondary link Schwab Trading Activity Index", ((string)(null)), table77, "Given ");
+ testRunner.Given("I navigate to the secondary link Schwab Trading Activity Index", ((string)(null)), table79, "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table78 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table80 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table78.AddRow(new string[] {
+                table80.AddRow(new string[] {
                             "TitleEnding",
                             "TM"});
 #line 22
  testRunner.When("I verify the title of the site is Schwab Trading Activity Index� (STAX) | Charles" +
-                        " Schwab", ((string)(null)), table78, "When ");
+                        " Schwab", ((string)(null)), table80, "When ");
 #line hidden
 #line 25
  testRunner.Then("I verify the url of the site is https://www.schwab.com/investment-research/stax", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -255,24 +255,24 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table79 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table81 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table79.AddRow(new string[] {
+                table81.AddRow(new string[] {
                             "Item1",
                             "View the STAX"});
 #line 28
- testRunner.Given("I navigate to the secondary link Schwab Trading Activity Index", ((string)(null)), table79, "Given ");
+ testRunner.Given("I navigate to the secondary link Schwab Trading Activity Index", ((string)(null)), table81, "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table80 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table82 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table80.AddRow(new string[] {
+                table82.AddRow(new string[] {
                             "TitleEnding",
                             "TM"});
 #line 31
  testRunner.When("I verify the title of the site is Schwab Trading Activity Index� (STAX) | Charles" +
-                        " Schwab", ((string)(null)), table80, "When ");
+                        " Schwab", ((string)(null)), table82, "When ");
 #line hidden
 #line 34
  testRunner.Then("I verify the url of the site is https://www.schwab.com/investment-research/stax/v" +

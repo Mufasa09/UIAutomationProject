@@ -1,6 +1,9 @@
 ﻿using BoDi;
 using Microsoft.Extensions.Configuration;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using System.Diagnostics;
+using System.Reflection;
 using TechTalk.SpecFlow;
 using UIAutomationProject.Utilities.API;
 
@@ -61,6 +64,17 @@ namespace UIAutomationProject.Helpers
             DriverFactory.setDriver(new WebDriverFactory().ChooseDriver(browser, headless, useRemote));
             Driver = DriverFactory.getWebDriver();
             Console.WriteLine($"LOG:[Thread {Thread.CurrentThread.ManagedThreadId}] Launching browser...");
+
+            //// Use reflection to get the "service" field
+            //var serviceField = typeof(ChromeDriver)
+            //    .GetField("service", BindingFlags.NonPublic | BindingFlags.Instance);
+            //var service = serviceField.GetValue(Driver);
+
+            //// Get process via reflection
+            //var processField = service.GetType().GetField("process", BindingFlags.NonPublic | BindingFlags.Instance);
+            //var process = (Process)processField.GetValue(service);
+
+            //Console.WriteLine($"ChromeDriver PID: {process.Id}");
             _objectContainer.RegisterInstanceAs(Driver);
             _objectContainer.RegisterInstanceAs(_APIStorage);
             _objectContainer.RegisterInstanceAs(Configuration);
