@@ -17,8 +17,8 @@ Scenario: Verify you can access the College Savings Calculator page
 
 Scenario: Verify you can access the 529 Savings Plan Overview page
 	Given I navigate to the secondary link 529 Savings Plan
-		| Key   | Value    |
-		| Item1 | Overview |
+		| Key   | Value                     |
+		| Item1 | 529 Savings Plan Overview |
 	When I verify the title of the site is Schwab 529 Savings Plan | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/529-plan
 
@@ -43,9 +43,11 @@ Scenario: Verify you can access the Education Savings Account page
 
 Scenario: Verify you can access the Custodial Account Overview page
 	Given I navigate to the secondary link Custodial Account
-		| Key   | Value    |
-		| Item1 | Overview |
+		| Key   | Value                      |
+		| Item1 | Custodial Account Overview |
 	When I verify the title of the site is Schwab One® Custodial Account | Charles Schwab
+		| Key         | Value |
+		| TitleEnding | CR    |
 	Then I verify the url of the site is https://www.schwab.com/custodial-account
 
 Scenario: Verify you can access the thinkorswim Download Instructions page
@@ -53,6 +55,8 @@ Scenario: Verify you can access the thinkorswim Download Instructions page
 		| Key   | Value              |
 		| Item1 | Custodial Transfer |
 	When I verify the title of the site is Custodial Account Transfer | Schwab One® Custodial Account | Charles Schwab
+		| Key         | Value |
+		| TitleEnding | CR    |
 	Then I verify the url of the site is https://www.schwab.com/custodial-account/custodial-transfer
 
 

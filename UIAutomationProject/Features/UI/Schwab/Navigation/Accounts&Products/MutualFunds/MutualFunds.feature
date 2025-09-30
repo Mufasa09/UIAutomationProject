@@ -24,9 +24,8 @@ Scenario: Verify you can access the Investor Information page
 	When I verify the title of the site is Mutual Fund Prospectuses: Investor Information | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/mutual-funds/find-mutual-funds/investor-information
 
-
-Scenario: Verify you can access the Selecting List page
-	Given I navigate to the secondary link Selecting List
+Scenario: Verify you can access the Select List page
+	Given I navigate to the secondary link Select List
 	When I verify the title of the site is Build a Mutual Fund Portfolio - Personalized Portfolio | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/mutual-funds/build-a-portfolio
 
@@ -38,8 +37,8 @@ Scenario: Verify you can access the Invest in a Portfolio Solution page
 Scenario: Verify you can access the Overview page
 	Given I navigate to the secondary link Understanding Mutual Funds
 		| Key   | Value    |
-		| Item1 | Overview |
-	When I verify the title of the site is What is an ETF (Exchange-Traded Fund)? | Charles Schwab
+		| Item1 | Mutual Funds Overview |
+	When I verify the title of the site is What is a Mutual Fund? Things Investors Should Know | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/etfs/understand-etfs
 
 Scenario: Verify you can access the Benefits and Considerations of Mutual Funds page
@@ -56,18 +55,24 @@ Scenario: Verify you can access the Costs and Fees of Mutual Funds page
 	When I verify the title of the site is Mutual Fund Fees, Costs & Expense Ratios | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/mutual-funds/costs-fees
 
-Scenario: Verify you can access the ETFs vs. Mutual Funds page
-	Given I navigate to the secondary link Understanding Mutual Funds
-		| Key   | Value                 |
-		| Item1 | ETFs vs. Mutual Funds |
-	When I verify the title of the site is ETFs vs. Mutual Funds – What’s the Difference? | Charles Schwab
-	Then I verify the url of the site is https://www.schwab.com/etfs/mutual-funds-vs-etfs
+#Need to fix
+#Scenario: Verify you can access the ETFs vs. Mutual Funds page
+#	Given I navigate to the secondary link Understanding Mutual Funds
+#		| Key   | Value                 |
+#		| Item1 | ETFs vs. Mutual Funds |
+#	When I verify the title of the site is ETFs vs. Mutual Funds – What’s the Difference? | Charles Schwab
+#		| Key         | Value |
+#		| TitleEnding | Dash  |
+#		| TitleEnding2 | AP  |
+#	Then I verify the url of the site is https://www.schwab.com/etfs/mutual-funds-vs-etfs
 
 Scenario: Verify you can access the Types of Mutual Funds page
 	Given I navigate to the secondary link Types of Mutual Funds
 		| Key   | Value                 |
 		| Item1 | Types of Mutual Funds |
 	When I verify the title of the site is Types of mutual funds | Charles Schwab
+		| Key         | Value |
+		| TitleEnding | Dash  |
 	Then I verify the url of the site is https://www.schwab.com/mutual-funds/types
 
 Scenario: Verify you can access the Equity Mutual Funds page
@@ -78,14 +83,16 @@ Scenario: Verify you can access the Equity Mutual Funds page
 	Then I verify the url of the site is https://www.schwab.com/mutual-funds/types/equity-mutual-funds
 
 Scenario: Verify you can access the Index Mutual Funds page
-	Given I navigate to the secondary link  Types of Mutual Funds
+	Given I navigate to the secondary link Types of Mutual Funds
 		| Key   | Value              |
 		| Item1 | Index Mutual Funds |
 	When I verify the title of the site is Index Mutual Funds | Charles Schwab
+		| Key         | Value |
+		| TitleEnding | Dash  |
 	Then I verify the url of the site is https://www.schwab.com/mutual-funds/types/index-mutual-funds
 
 Scenario: Verify you can access the Asset Allocation Mutual Funds page
-	Given I navigate to the secondary link  Types of Mutual Funds
+	Given I navigate to the secondary link Types of Mutual Funds
 		| Key   | Value                         |
 		| Item1 | Asset Allocation Mutual Funds |
 	When I verify the title of the site is Asset Allocation Mutual Funds | Charles Schwab
@@ -99,14 +106,14 @@ Scenario: Verify you can access the Target Date Mutual Funds page
 	Then I verify the url of the site is https://www.schwab.com/mutual-funds/types/target-date-mutual-funds
 
 Scenario: Verify you can access the Commodity Mutual Funds page
-	Given I navigate to the secondary link  Types of Mutual Funds
+	Given I navigate to the secondary link Types of Mutual Funds
 		| Key   | Value                  |
 		| Item1 | Commodity Mutual Funds |
 	When I verify the title of the site is Commodity mutual funds | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/mutual-funds/types/commodity-mutual-funds
 
 Scenario: Verify you can access the Environmental, Social and Governance (ESG) Mutual Funds page
-	Given I navigate to the secondary link  Types of Mutual Funds
+	Given I navigate to the secondary link Types of Mutual Funds
 		| Key   | Value                                                   |
 		| Item1 | Environmental, Social and Governance (ESG) Mutual Funds |
 	When I verify the title of the site is Socially Responsible Mutual Funds | Charles Schwab

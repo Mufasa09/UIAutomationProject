@@ -155,14 +155,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table126 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table130 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table126.AddRow(new string[] {
+                table130.AddRow(new string[] {
                             "Item1",
-                            "Overview"});
+                            "thinkorswim Overview"});
 #line 14
- testRunner.Given("I navigate to the secondary link thinkorswim Platforms", ((string)(null)), table126, "Given ");
+ testRunner.Given("I navigate to the secondary link thinkorswim Platforms", ((string)(null)), table130, "Given ");
 #line hidden
 #line 17
  testRunner.When("I verify the title of the site is thinkorswim | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -204,14 +204,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table127 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table131 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table127.AddRow(new string[] {
+                table131.AddRow(new string[] {
                             "Item1",
                             "thinkorswim Desktop"});
 #line 21
- testRunner.Given("I navigate to the secondary link thinkorswim Platforms", ((string)(null)), table127, "Given ");
+ testRunner.Given("I navigate to the secondary link thinkorswim Platforms", ((string)(null)), table131, "Given ");
 #line hidden
 #line 24
  testRunner.When("I verify the title of the site is thinkorswim desktop | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -254,14 +254,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table128 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table132 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table128.AddRow(new string[] {
+                table132.AddRow(new string[] {
                             "Item1",
                             "thinkorswim Mobile"});
 #line 28
- testRunner.Given("I navigate to the secondary link thinkorswim Platforms", ((string)(null)), table128, "Given ");
+ testRunner.Given("I navigate to the secondary link thinkorswim Platforms", ((string)(null)), table132, "Given ");
 #line hidden
 #line 31
  testRunner.When("I verify the title of the site is thinkorswim mobile | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -304,14 +304,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table129 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table133 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table129.AddRow(new string[] {
+                table133.AddRow(new string[] {
                             "Item1",
                             "thinkorswim Web"});
 #line 35
- testRunner.Given("I navigate to the secondary link thinkorswim Platforms", ((string)(null)), table129, "Given ");
+ testRunner.Given("I navigate to the secondary link thinkorswim Platforms", ((string)(null)), table133, "Given ");
 #line hidden
 #line 38
  testRunner.When("I verify the title of the site is thinkorswim web | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -353,14 +353,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table130 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table134 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table130.AddRow(new string[] {
+                table134.AddRow(new string[] {
                             "Item1",
                             "paperMoney"});
 #line 42
- testRunner.Given("I navigate to the secondary link thinkorswim Platforms", ((string)(null)), table130, "Given ");
+ testRunner.Given("I navigate to the secondary link thinkorswim Platforms", ((string)(null)), table134, "Given ");
 #line hidden
 #line 45
  testRunner.When("I verify the title of the site is Paper Trading | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -403,14 +403,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table131 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table135 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table131.AddRow(new string[] {
+                table135.AddRow(new string[] {
                             "Item1",
                             "thinkorswim Download Instructions"});
 #line 49
- testRunner.Given("I navigate to the secondary link thinkorswim Platforms", ((string)(null)), table131, "Given ");
+ testRunner.Given("I navigate to the secondary link thinkorswim Platforms", ((string)(null)), table135, "Given ");
 #line hidden
 #line 52
  testRunner.When("I verify the title of the site is thinkorswim Download | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

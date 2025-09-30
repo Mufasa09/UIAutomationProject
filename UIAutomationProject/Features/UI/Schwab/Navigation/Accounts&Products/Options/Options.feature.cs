@@ -159,7 +159,7 @@ this.FeatureBackground();
  testRunner.Given("I navigate to the secondary link Why Trade Options at Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 15
- testRunner.When("I verify the title of the site is Options Trading | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I verify the title of the site is Why Trade Options at Schwab | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 16
  testRunner.Then("I verify the url of the site is https://www.schwab.com/options/options-trading", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -241,14 +241,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table74 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table77 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table74.AddRow(new string[] {
+                table77.AddRow(new string[] {
                             "Item1",
                             "Intro to Options"});
 #line 24
- testRunner.Given("I navigate to the secondary link Introduction to Options", ((string)(null)), table74, "Given ");
+ testRunner.Given("I navigate to the secondary link Introduction to Options", ((string)(null)), table77, "Given ");
 #line hidden
 #line 27
  testRunner.When("I verify the title of the site is Introduction to Options | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -291,14 +291,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table75 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table78 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table75.AddRow(new string[] {
+                table78.AddRow(new string[] {
                             "Item1",
                             "Options Contracts"});
 #line 31
- testRunner.Given("I navigate to the secondary link Introduction to Options", ((string)(null)), table75, "Given ");
+ testRunner.Given("I navigate to the secondary link Introduction to Options", ((string)(null)), table78, "Given ");
 #line hidden
 #line 34
  testRunner.When("I verify the title of the site is Options Contracts | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -340,14 +340,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table76 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table79 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table76.AddRow(new string[] {
+                table79.AddRow(new string[] {
                             "Item1",
                             "Options Greeks"});
 #line 38
- testRunner.Given("I navigate to the secondary link Introduction to Options", ((string)(null)), table76, "Given ");
+ testRunner.Given("I navigate to the secondary link Introduction to Options", ((string)(null)), table79, "Given ");
 #line hidden
 #line 41
  testRunner.When("I verify the title of the site is Options Greeks | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -389,14 +389,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table77 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table80 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table77.AddRow(new string[] {
+                table80.AddRow(new string[] {
                             "Item1",
                             "Options Strategies"});
 #line 45
- testRunner.Given("I navigate to the secondary link Introduction to Options", ((string)(null)), table77, "Given ");
+ testRunner.Given("I navigate to the secondary link Introduction to Options", ((string)(null)), table80, "Given ");
 #line hidden
 #line 48
  testRunner.When("I verify the title of the site is Options Trading Strategies | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -439,14 +439,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table78 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table81 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table78.AddRow(new string[] {
+                table81.AddRow(new string[] {
                             "Item1",
                             "How to Trade Options"});
 #line 52
- testRunner.Given("I navigate to the secondary link Introduction to Options", ((string)(null)), table78, "Given ");
+ testRunner.Given("I navigate to the secondary link Introduction to Options", ((string)(null)), table81, "Given ");
 #line hidden
 #line 55
  testRunner.When("I verify the title of the site is How to Trade Options | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

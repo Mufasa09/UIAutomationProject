@@ -1,14 +1,15 @@
-﻿using Newtonsoft.Json;
+﻿using Boa.Constrictor.Screenplay;
+using Boa.Constrictor.Selenium;
+using FluentAssertions;
+using Newtonsoft.Json;
 using NUnit.Framework;
 using OpenQA.Selenium;
-using UIAutomationProject.Pages.SauceDemo;
-using UIAutomationProject.Utilities.Data;
-using Boa.Constrictor.Screenplay;
-using UIAutomationProject.Helpers;
-using Boa.Constrictor.Selenium;
-using UIAutomationProject.Questions;
-using FluentAssertions;
+using System.Text.RegularExpressions;
 using TechTalk.SpecFlow;
+using UIAutomationProject.Helpers;
+using UIAutomationProject.Pages.SauceDemo;
+using UIAutomationProject.Questions;
+using UIAutomationProject.Utilities.Data;
 
 namespace UIAutomationProject.Tests
 {
@@ -43,9 +44,9 @@ namespace UIAutomationProject.Tests
             {
                 Console.WriteLine(windowHandles[i]);
             }
-            Thread.Sleep(3000);
+            Thread.Sleep(6000);
             User.AttemptsTo(SwitchWindow.To(windowHandles[1]));
-            Thread.Sleep(3000);  
+            Thread.Sleep(6000);  
         }
 
 
@@ -82,7 +83,12 @@ namespace UIAutomationProject.Tests
         {
             if (title.Contains("�"))
             {
-                if(baseData.TitleEnding.Contains("TM"))
+                if(baseData.TitleEnding.Contains("Dash") && baseData.TitleEnding2.Contains("AP"))
+                {
+                    title = new Regex("�").Replace(title, "–", 1);
+                    title = new Regex("�").Replace(title, "'", 1);
+                }
+                if (baseData.TitleEnding.Contains("TM"))
                     title = title.Replace("�", "™");
                 if(baseData.TitleEnding.Contains("Dash"))
                     title = title.Replace("�", "–");

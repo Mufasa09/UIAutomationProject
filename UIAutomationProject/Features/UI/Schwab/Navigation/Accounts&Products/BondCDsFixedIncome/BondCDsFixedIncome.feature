@@ -6,7 +6,7 @@ Background:
 	Given I navigate to Bonds, CDs & Fixed Income from Accounts & Products
 
 Scenario: Verify you can access the Schwab Overview page
-	Given I navigate to the secondary link Overview
+	Given I navigate to the secondary link Fixed Income Overview
 	When I verify the title of the site is Fixed Income Investments | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/fixed-income
 

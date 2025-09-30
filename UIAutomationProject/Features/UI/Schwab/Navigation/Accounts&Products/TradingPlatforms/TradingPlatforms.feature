@@ -6,14 +6,14 @@ Background:
 	Given I navigate to Trading Platforms from Accounts & Products
 
 Scenario: Verify you can access the Trading Overview page
-	Given I navigate to the secondary link Trading Overview
+	Given I navigate to the secondary link Trading Platforms Trading Overview
 	When I verify the title of the site is Trading | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/trading
 
 Scenario: Verify you can access the thinkorswim Overview page
 	Given I navigate to the secondary link thinkorswim Platforms
-		| Key   | Value    |
-		| Item1 | Overview |
+		| Key   | Value                |
+		| Item1 | Trading Platform thinkorswim Overview |
 	When I verify the title of the site is thinkorswim | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/trading/thinkorswim
 
@@ -53,12 +53,12 @@ Scenario: Verify you can access the thinkorswim Download Instructions page
 	Then I verify the url of the site is https://www.schwab.com/trading/thinkorswim/download
 
 Scenario: Verify you can access the Education page
-	Given I navigate to the secondary link Education
+	Given I navigate to the secondary link Trading Platforms Education
 	When I verify the title of the site is Learn to Trade | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/trading/learn-to-trade
 
 Scenario: Verify you can access the Support page
-	Given I navigate to the secondary link Support
+	Given I navigate to the secondary link Trading Platforms Support
 	When I verify the title of the site is Trading Support | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/trading/support
 

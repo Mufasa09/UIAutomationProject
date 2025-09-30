@@ -12,7 +12,7 @@ Scenario: Verify you can access the Options Overview page
 
 Scenario: Verify you can access the Why Trade Options at Schwab page
 	Given I navigate to the secondary link Why Trade Options at Schwab
-	When I verify the title of the site is Options Trading | Charles Schwab
+	When I verify the title of the site is Why Trade Options at Schwab | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/options/options-trading
 
 	Scenario: Verify you can access the Get Started page

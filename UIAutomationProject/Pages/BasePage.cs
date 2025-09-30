@@ -1,5 +1,6 @@
-﻿using OpenQA.Selenium;
-using Boa.Constrictor.Selenium;
+﻿using Boa.Constrictor.Selenium;
+using OpenQA.Selenium;
+using OpenQA.Selenium.BiDi.Modules.BrowsingContext;
 using static Boa.Constrictor.Selenium.WebLocator;
 
 namespace UIAutomationProject.Pages
@@ -33,6 +34,11 @@ namespace UIAutomationProject.Pages
         public static By Xpath(String path)
         {
             return By.XPath($"{path}");
+        }
+
+        public static WebLocator LocatorXpath(String path)
+        {
+            return L("", By.XPath($"{path}"));
         }
 
         public static WebLocator Locator(String locator, String name, String type = "*")

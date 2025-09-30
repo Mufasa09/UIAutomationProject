@@ -6,18 +6,20 @@ Background:
 	Given I navigate to Advice Automated Investing from Advice
 
 Scenario: Verify you can access the Schwab Intelligent Portfolios page
-	Given I navigate to the secondary link  Schwab Intelligent Portfolios
+	Given I navigate to the secondary link Schwab Intelligent Portfolios
 	When I verify the title of the site is Automated Investing | Schwab Intelligent Portfolios | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/intelligent-portfolios
 
 Scenario: Verify you can access the Schwab Intelligent Portfolios Premium page
-	Given I navigate to the secondary link  Schwab Intelligent Portfolios Premium
+	Given I navigate to the secondary link Schwab Intelligent Portfolios Premium
 	When I verify the title of the site is Schwab automated investing with unlimited guidance | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/intelligent-portfolios-premium
 
 Scenario: Verify you can access the Schwab Intelligent Income page
-	Given I navigate to the secondary link  Schwab Intelligent Income
+	Given I navigate to the secondary link Schwab Intelligent Income
 	When I verify the title of the site is Schwab Intelligent Income™ | Automated withdrawals | Charles Schwab | Charles Schwab
+		| Key         | Value |
+		| TitleEnding | TM    |
 	Then I verify the url of the site is https://www.schwab.com/automated-investing/intelligent-income
 
 Scenario: Verify you can access the Compare our Solutions page
@@ -50,7 +52,7 @@ Scenario: Verify you can access the Robo Advisor Myths page
 
 Scenario: Verify you can access the Education page
 	Given I navigate to the secondary link Resources
-		| Key   | Value     |
-		| Item1 | Education |
+		| Key   | Value               |
+		| Item1 | Resources Education |
 	When I verify the title of the site is Schwab Intelligent Portfolios Investing Insights | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/learn/intelligent-portfolios-insights

@@ -6,7 +6,7 @@ Background:
 	Given I navigate to Schwab Coaching from Learn
 
 Scenario: Verify you can access the Overview page
-	Given I navigate to the secondary link Overview
+	Given I navigate to the secondary link Schwab Coaching Overview
 	When I verify the title of the site is Schwab Coaching | Overview | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/coaching
 

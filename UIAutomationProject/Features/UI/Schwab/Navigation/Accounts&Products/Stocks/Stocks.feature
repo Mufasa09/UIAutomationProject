@@ -17,7 +17,7 @@ Scenario: Verify you can access the Around the Clock Trading page
 
 Scenario: Verify you can access the Get Started page
 	Given I navigate to the secondary link Get Started
-	When I verify the title of the site is Why Trade Options at Schwab | Charles Schwab
+	When I verify the title of the site is Trade Stocks | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/options/options-trading
 
 Scenario: Verify you can access the International Stocks Overview page
@@ -35,7 +35,7 @@ Scenario: Verify you can access the ADRs, Foreign Ordinaries & Canadian Stocks p
 	Then I verify the url of the site is https://www.schwab.com/stocks/understand-stocks/adrs-foreign-ordinaries-canadian-stocks
 
 Scenario: Verify you can access the Costs and fees of ETFs page
-	Given I navigate to the secondary link Trading Stocks at Schwab
+	Given I navigate to the secondary link Why Trade Stocks at Schwab
 		| Key   | Value                    |
 		| Item1 | Trading Stocks at Schwab |
 	When I verify the title of the site is Why Trade Stocks at Schwab | Charles Schwab
@@ -104,7 +104,7 @@ Scenario: Verify you can access the Business Development Companies (BDCs) page
 	When I verify the title of the site is Business Development Companies (BDCs) | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/stocks/understand-stocks/bdcs
 
-Scenario: Verify you can access the IPO/DPO Stocks page
+Scenario: Verify you can access the IPO DPO Stocks page
 	Given I navigate to the secondary link Understanding Stocks
 		| Key   | Value          |
 		| Item1 | IPO/DPO Stocks |

@@ -12,8 +12,8 @@ Scenario: Verify you can access the Trading Overview page
 
 Scenario: Verify you can access the thinkorswim Overview page
 	Given I navigate to the secondary link thinkorswim Platforms
-		| Key   | Value    |
-		| Item1 | Overview |
+		| Key   | Value                |
+		| Item1 | thinkorswim Overview |
 	When I verify the title of the site is thinkorswim | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/trading/thinkorswim
 

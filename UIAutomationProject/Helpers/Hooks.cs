@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Reflection;
 using TechTalk.SpecFlow;
 using UIAutomationProject.Utilities.API;
+using UIAutomationProject.Utilities.Data;
 
 namespace UIAutomationProject.Helpers
 {
@@ -17,7 +18,6 @@ namespace UIAutomationProject.Helpers
         private readonly IObjectContainer _objectContainer;
         public string baseUrl = "";
         private FeatureContext featureContext;
-        private string featureName = "";
         string browser = "Chrome";
         string returnString;
         bool useRemote, headless = false;
@@ -50,10 +50,10 @@ namespace UIAutomationProject.Helpers
              browser = Configuration.GetValue<string>("Browser");
             useRemote = Configuration.GetValue<bool>("Remote");
 
-            featureName = featureContext.FeatureInfo.Title;
+            BaseData.FeatureName = featureContext.FeatureInfo.Title;
 
-            baseUrl = Configuration.GetValue<string>(WebsiteSelector(featureName) + "Url");
-            if (featureName.Contains("API"))
+            baseUrl = Configuration.GetValue<string>(WebsiteSelector(BaseData.FeatureName) + "Url");
+            if (BaseData.FeatureName.Contains("API"))
                 headless = true;
 
             _APIStorage = new APIStorage
@@ -79,7 +79,7 @@ namespace UIAutomationProject.Helpers
             _objectContainer.RegisterInstanceAs(_APIStorage);
             _objectContainer.RegisterInstanceAs(Configuration);
             Driver.Manage().Window.Maximize();
-            if (featureName.Contains("API"))
+            if (BaseData.FeatureName.Contains("API"))
             {
                 _APIStorage.GetResponse(baseUrl);
             }

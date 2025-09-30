@@ -9,6 +9,8 @@ namespace UIAutomationProject.Utilities.Data
         public string Role { get; set; }
         public string Title { get; set; }
         public string TitleEnding { get; set; }
+        public string TitleEnding2 { get; set; } = "";
         public string Item1 { get; set; }
+        public static string FeatureName { get; set; }
     }
 }

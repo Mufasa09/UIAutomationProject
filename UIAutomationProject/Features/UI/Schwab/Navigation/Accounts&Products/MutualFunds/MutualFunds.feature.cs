@@ -155,14 +155,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table61 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table63 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table61.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "Item1",
                             "Find Mutual Funds"});
 #line 14
- testRunner.Given("I navigate to the secondary link Find Mutual Funds", ((string)(null)), table61, "Given ");
+ testRunner.Given("I navigate to the secondary link Find Mutual Funds", ((string)(null)), table63, "Given ");
 #line hidden
 #line 17
  testRunner.When("I verify the title of the site is Find and Invest in Mutual Funds | Charles Schwa" +
@@ -206,14 +206,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table62 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table64 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table62.AddRow(new string[] {
+                table64.AddRow(new string[] {
                             "Item1",
                             "Investor Information"});
 #line 21
- testRunner.Given("I navigate to the secondary link Find Mutual Funds", ((string)(null)), table62, "Given ");
+ testRunner.Given("I navigate to the secondary link Find Mutual Funds", ((string)(null)), table64, "Given ");
 #line hidden
 #line 24
  testRunner.When("I verify the title of the site is Mutual Fund Prospectuses: Investor Information " +
@@ -228,13 +228,13 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify you can access the Selecting List page")]
-        public virtual void VerifyYouCanAccessTheSelectingListPage()
+        [NUnit.Framework.DescriptionAttribute("Verify you can access the Select List page")]
+        public virtual void VerifyYouCanAccessTheSelectListPage()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Selecting List page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 28
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Select List page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 27
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -257,14 +257,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-#line 29
- testRunner.Given("I navigate to the secondary link Selecting List", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 28
+ testRunner.Given("I navigate to the secondary link Select List", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 30
+#line 29
  testRunner.When("I verify the title of the site is Build a Mutual Fund Portfolio - Personalized Po" +
                         "rtfolio | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 31
+#line 30
  testRunner.Then("I verify the url of the site is https://www.schwab.com/mutual-funds/build-a-portf" +
                         "olio", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -279,7 +279,7 @@ this.FeatureBackground();
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Invest in a Portfolio Solution page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 33
+#line 32
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -302,14 +302,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-#line 34
+#line 33
  testRunner.Given("I navigate to the secondary link Invest in a Portfolio Solution", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 35
+#line 34
  testRunner.When("I verify the title of the site is Invest in Portfolio Solutions - Mutual Funds |C" +
                         "harles Schwab | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 36
+#line 35
  testRunner.Then("I verify the url of the site is https://www.schwab.com/mutual-funds/invest-in-a-p" +
                         "ortfolio-solution", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -324,107 +324,7 @@ this.FeatureBackground();
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Overview page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 38
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 5
-this.FeatureBackground();
-#line hidden
-                TechTalk.SpecFlow.Table table63 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Key",
-                            "Value"});
-                table63.AddRow(new string[] {
-                            "Item1",
-                            "Overview"});
-#line 39
- testRunner.Given("I navigate to the secondary link Understanding Mutual Funds", ((string)(null)), table63, "Given ");
-#line hidden
-#line 42
- testRunner.When("I verify the title of the site is What is an ETF (Exchange-Traded Fund)? | Charle" +
-                        "s Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 43
- testRunner.Then("I verify the url of the site is https://www.schwab.com/etfs/understand-etfs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify you can access the Benefits and Considerations of Mutual Funds page")]
-        public virtual void VerifyYouCanAccessTheBenefitsAndConsiderationsOfMutualFundsPage()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Benefits and Considerations of Mutual Funds page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 45
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 5
-this.FeatureBackground();
-#line hidden
-                TechTalk.SpecFlow.Table table64 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Key",
-                            "Value"});
-                table64.AddRow(new string[] {
-                            "Item1",
-                            "Benefits and Considerations of Mutual Funds"});
-#line 46
- testRunner.Given("I navigate to the secondary link Understanding Mutual Funds", ((string)(null)), table64, "Given ");
-#line hidden
-#line 49
- testRunner.When("I verify the title of the site is Mutual Fund Benefits - Diversification at Low C" +
-                        "ost | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 50
- testRunner.Then("I verify the url of the site is https://www.schwab.com/mutual-funds/benefits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify you can access the Costs and Fees of Mutual Funds page")]
-        public virtual void VerifyYouCanAccessTheCostsAndFeesOfMutualFundsPage()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Costs and Fees of Mutual Funds page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 52
+#line 37
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -452,29 +352,29 @@ this.FeatureBackground();
                             "Value"});
                 table65.AddRow(new string[] {
                             "Item1",
-                            "Costs and Fees of Mutual Funds"});
-#line 53
+                            "Mutual Funds Overview"});
+#line 38
  testRunner.Given("I navigate to the secondary link Understanding Mutual Funds", ((string)(null)), table65, "Given ");
 #line hidden
-#line 56
- testRunner.When("I verify the title of the site is Mutual Fund Fees, Costs & Expense Ratios | Char" +
-                        "les Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 41
+ testRunner.When("I verify the title of the site is What is a Mutual Fund? Things Investors Should " +
+                        "Know | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 57
- testRunner.Then("I verify the url of the site is https://www.schwab.com/mutual-funds/costs-fees", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 42
+ testRunner.Then("I verify the url of the site is https://www.schwab.com/etfs/understand-etfs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify you can access the ETFs vs. Mutual Funds page")]
-        public virtual void VerifyYouCanAccessTheETFsVs_MutualFundsPage()
+        [NUnit.Framework.DescriptionAttribute("Verify you can access the Benefits and Considerations of Mutual Funds page")]
+        public virtual void VerifyYouCanAccessTheBenefitsAndConsiderationsOfMutualFundsPage()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the ETFs vs. Mutual Funds page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 59
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Benefits and Considerations of Mutual Funds page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 44
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -502,29 +402,29 @@ this.FeatureBackground();
                             "Value"});
                 table66.AddRow(new string[] {
                             "Item1",
-                            "ETFs vs. Mutual Funds"});
-#line 60
+                            "Benefits and Considerations of Mutual Funds"});
+#line 45
  testRunner.Given("I navigate to the secondary link Understanding Mutual Funds", ((string)(null)), table66, "Given ");
 #line hidden
-#line 63
- testRunner.When("I verify the title of the site is ETFs vs. Mutual Funds � What�s the Difference? " +
-                        "| Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 48
+ testRunner.When("I verify the title of the site is Mutual Fund Benefits - Diversification at Low C" +
+                        "ost | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 64
- testRunner.Then("I verify the url of the site is https://www.schwab.com/etfs/mutual-funds-vs-etfs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 49
+ testRunner.Then("I verify the url of the site is https://www.schwab.com/mutual-funds/benefits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify you can access the Types of Mutual Funds page")]
-        public virtual void VerifyYouCanAccessTheTypesOfMutualFundsPage()
+        [NUnit.Framework.DescriptionAttribute("Verify you can access the Costs and Fees of Mutual Funds page")]
+        public virtual void VerifyYouCanAccessTheCostsAndFeesOfMutualFundsPage()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Types of Mutual Funds page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 66
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Costs and Fees of Mutual Funds page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 51
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -552,28 +452,29 @@ this.FeatureBackground();
                             "Value"});
                 table67.AddRow(new string[] {
                             "Item1",
-                            "Types of Mutual Funds"});
-#line 67
- testRunner.Given("I navigate to the secondary link Types of Mutual Funds", ((string)(null)), table67, "Given ");
+                            "Costs and Fees of Mutual Funds"});
+#line 52
+ testRunner.Given("I navigate to the secondary link Understanding Mutual Funds", ((string)(null)), table67, "Given ");
 #line hidden
-#line 70
- testRunner.When("I verify the title of the site is Types of mutual funds | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 55
+ testRunner.When("I verify the title of the site is Mutual Fund Fees, Costs & Expense Ratios | Char" +
+                        "les Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 71
- testRunner.Then("I verify the url of the site is https://www.schwab.com/mutual-funds/types", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 56
+ testRunner.Then("I verify the url of the site is https://www.schwab.com/mutual-funds/costs-fees", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify you can access the Equity Mutual Funds page")]
-        public virtual void VerifyYouCanAccessTheEquityMutualFundsPage()
+        [NUnit.Framework.DescriptionAttribute("Verify you can access the Types of Mutual Funds page")]
+        public virtual void VerifyYouCanAccessTheTypesOfMutualFundsPage()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Equity Mutual Funds page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 73
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Types of Mutual Funds page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 69
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -601,79 +502,34 @@ this.FeatureBackground();
                             "Value"});
                 table68.AddRow(new string[] {
                             "Item1",
-                            "Equity Mutual Funds"});
-#line 74
+                            "Types of Mutual Funds"});
+#line 70
  testRunner.Given("I navigate to the secondary link Types of Mutual Funds", ((string)(null)), table68, "Given ");
-#line hidden
-#line 77
- testRunner.When("I verify the title of the site is Equity mutual funds | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 78
- testRunner.Then("I verify the url of the site is https://www.schwab.com/mutual-funds/types/equity-" +
-                        "mutual-funds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify you can access the Index Mutual Funds page")]
-        public virtual void VerifyYouCanAccessTheIndexMutualFundsPage()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Index Mutual Funds page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 80
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 5
-this.FeatureBackground();
 #line hidden
                 TechTalk.SpecFlow.Table table69 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
                 table69.AddRow(new string[] {
-                            "Item1",
-                            "Index Mutual Funds"});
-#line 81
- testRunner.Given("I navigate to the secondary link  Types of Mutual Funds", ((string)(null)), table69, "Given ");
+                            "TitleEnding",
+                            "Dash"});
+#line 73
+ testRunner.When("I verify the title of the site is Types of mutual funds | Charles Schwab", ((string)(null)), table69, "When ");
 #line hidden
-#line 84
- testRunner.When("I verify the title of the site is Index Mutual Funds | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 85
- testRunner.Then("I verify the url of the site is https://www.schwab.com/mutual-funds/types/index-m" +
-                        "utual-funds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 76
+ testRunner.Then("I verify the url of the site is https://www.schwab.com/mutual-funds/types", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify you can access the Asset Allocation Mutual Funds page")]
-        public virtual void VerifyYouCanAccessTheAssetAllocationMutualFundsPage()
+        [NUnit.Framework.DescriptionAttribute("Verify you can access the Equity Mutual Funds page")]
+        public virtual void VerifyYouCanAccessTheEquityMutualFundsPage()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Asset Allocation Mutual Funds page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 87
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Equity Mutual Funds page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 78
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -701,29 +557,29 @@ this.FeatureBackground();
                             "Value"});
                 table70.AddRow(new string[] {
                             "Item1",
-                            "Asset Allocation Mutual Funds"});
-#line 88
- testRunner.Given("I navigate to the secondary link  Types of Mutual Funds", ((string)(null)), table70, "Given ");
+                            "Equity Mutual Funds"});
+#line 79
+ testRunner.Given("I navigate to the secondary link Types of Mutual Funds", ((string)(null)), table70, "Given ");
 #line hidden
-#line 91
- testRunner.When("I verify the title of the site is Asset Allocation Mutual Funds | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 82
+ testRunner.When("I verify the title of the site is Equity mutual funds | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 92
- testRunner.Then("I verify the url of the site is https://www.schwab.com/mutual-funds/types/asset-a" +
-                        "llocation-mutual-funds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 83
+ testRunner.Then("I verify the url of the site is https://www.schwab.com/mutual-funds/types/equity-" +
+                        "mutual-funds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify you can access the Target Date Mutual Funds page")]
-        public virtual void VerifyYouCanAccessTheTargetDateMutualFundsPage()
+        [NUnit.Framework.DescriptionAttribute("Verify you can access the Index Mutual Funds page")]
+        public virtual void VerifyYouCanAccessTheIndexMutualFundsPage()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Target Date Mutual Funds page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 94
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Index Mutual Funds page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 85
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -751,81 +607,35 @@ this.FeatureBackground();
                             "Value"});
                 table71.AddRow(new string[] {
                             "Item1",
-                            "Target Date Mutual Funds"});
-#line 95
+                            "Index Mutual Funds"});
+#line 86
  testRunner.Given("I navigate to the secondary link Types of Mutual Funds", ((string)(null)), table71, "Given ");
-#line hidden
-#line 98
- testRunner.When("I verify the title of the site is Target Date Mutual Funds | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 99
- testRunner.Then("I verify the url of the site is https://www.schwab.com/mutual-funds/types/target-" +
-                        "date-mutual-funds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify you can access the Commodity Mutual Funds page")]
-        public virtual void VerifyYouCanAccessTheCommodityMutualFundsPage()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Commodity Mutual Funds page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 101
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 5
-this.FeatureBackground();
 #line hidden
                 TechTalk.SpecFlow.Table table72 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
                 table72.AddRow(new string[] {
-                            "Item1",
-                            "Commodity Mutual Funds"});
-#line 102
- testRunner.Given("I navigate to the secondary link  Types of Mutual Funds", ((string)(null)), table72, "Given ");
+                            "TitleEnding",
+                            "Dash"});
+#line 89
+ testRunner.When("I verify the title of the site is Index Mutual Funds | Charles Schwab", ((string)(null)), table72, "When ");
 #line hidden
-#line 105
- testRunner.When("I verify the title of the site is Commodity mutual funds | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 106
- testRunner.Then("I verify the url of the site is https://www.schwab.com/mutual-funds/types/commodi" +
-                        "ty-mutual-funds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 92
+ testRunner.Then("I verify the url of the site is https://www.schwab.com/mutual-funds/types/index-m" +
+                        "utual-funds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify you can access the Environmental, Social and Governance (ESG) Mutual Funds" +
-            " page")]
-        public virtual void VerifyYouCanAccessTheEnvironmentalSocialAndGovernanceESGMutualFundsPage()
+        [NUnit.Framework.DescriptionAttribute("Verify you can access the Asset Allocation Mutual Funds page")]
+        public virtual void VerifyYouCanAccessTheAssetAllocationMutualFundsPage()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Environmental, Social and Governance (ESG) Mutual Funds" +
-                    " page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 108
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Asset Allocation Mutual Funds page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 94
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -853,15 +663,167 @@ this.FeatureBackground();
                             "Value"});
                 table73.AddRow(new string[] {
                             "Item1",
-                            "Environmental, Social and Governance (ESG) Mutual Funds"});
+                            "Asset Allocation Mutual Funds"});
+#line 95
+ testRunner.Given("I navigate to the secondary link Types of Mutual Funds", ((string)(null)), table73, "Given ");
+#line hidden
+#line 98
+ testRunner.When("I verify the title of the site is Asset Allocation Mutual Funds | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 99
+ testRunner.Then("I verify the url of the site is https://www.schwab.com/mutual-funds/types/asset-a" +
+                        "llocation-mutual-funds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Verify you can access the Target Date Mutual Funds page")]
+        public virtual void VerifyYouCanAccessTheTargetDateMutualFundsPage()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Target Date Mutual Funds page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 101
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 5
+this.FeatureBackground();
+#line hidden
+                TechTalk.SpecFlow.Table table74 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Key",
+                            "Value"});
+                table74.AddRow(new string[] {
+                            "Item1",
+                            "Target Date Mutual Funds"});
+#line 102
+ testRunner.Given("I navigate to the secondary link Types of Mutual Funds", ((string)(null)), table74, "Given ");
+#line hidden
+#line 105
+ testRunner.When("I verify the title of the site is Target Date Mutual Funds | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 106
+ testRunner.Then("I verify the url of the site is https://www.schwab.com/mutual-funds/types/target-" +
+                        "date-mutual-funds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Verify you can access the Commodity Mutual Funds page")]
+        public virtual void VerifyYouCanAccessTheCommodityMutualFundsPage()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Commodity Mutual Funds page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 108
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 5
+this.FeatureBackground();
+#line hidden
+                TechTalk.SpecFlow.Table table75 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Key",
+                            "Value"});
+                table75.AddRow(new string[] {
+                            "Item1",
+                            "Commodity Mutual Funds"});
 #line 109
- testRunner.Given("I navigate to the secondary link  Types of Mutual Funds", ((string)(null)), table73, "Given ");
+ testRunner.Given("I navigate to the secondary link Types of Mutual Funds", ((string)(null)), table75, "Given ");
 #line hidden
 #line 112
+ testRunner.When("I verify the title of the site is Commodity mutual funds | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 113
+ testRunner.Then("I verify the url of the site is https://www.schwab.com/mutual-funds/types/commodi" +
+                        "ty-mutual-funds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Verify you can access the Environmental, Social and Governance (ESG) Mutual Funds" +
+            " page")]
+        public virtual void VerifyYouCanAccessTheEnvironmentalSocialAndGovernanceESGMutualFundsPage()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Environmental, Social and Governance (ESG) Mutual Funds" +
+                    " page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 115
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 5
+this.FeatureBackground();
+#line hidden
+                TechTalk.SpecFlow.Table table76 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Key",
+                            "Value"});
+                table76.AddRow(new string[] {
+                            "Item1",
+                            "Environmental, Social and Governance (ESG) Mutual Funds"});
+#line 116
+ testRunner.Given("I navigate to the secondary link Types of Mutual Funds", ((string)(null)), table76, "Given ");
+#line hidden
+#line 119
  testRunner.When("I verify the title of the site is Socially Responsible Mutual Funds | Charles Sch" +
                         "wab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 113
+#line 120
  testRunner.Then("I verify the url of the site is https://www.schwab.com/mutual-funds/types/sociall" +
                         "y-responsible-mutual-funds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

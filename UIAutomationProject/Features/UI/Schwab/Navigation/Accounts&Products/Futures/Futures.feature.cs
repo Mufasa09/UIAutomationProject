@@ -78,7 +78,7 @@ namespace UIAutomationProject.Features.UI.Schwab.Navigation.AccountsProducts.Fut
 #line 5
 #line hidden
 #line 6
- testRunner.Given("I navigate to Futures from Accounts & Products", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to Investment Futures from Accounts & Products", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
         

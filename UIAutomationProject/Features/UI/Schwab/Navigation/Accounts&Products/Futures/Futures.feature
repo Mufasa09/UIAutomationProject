@@ -3,7 +3,7 @@ Feature: Charles Schwab Futures Navigation
 Basic scenarios for navigating Futures
 
 Background: 
-	Given I navigate to Futures from Accounts & Products
+	Given I navigate to Investment Futures from Accounts & Products
 
 Scenario: Verify you can access the Why Trade Futures Through Us page
 	Given I navigate to the secondary link Why Trade Futures Through Us

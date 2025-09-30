@@ -1,8 +1,10 @@
 ﻿using Boa.Constrictor.Screenplay;
 using Boa.Constrictor.Selenium;
 using OpenQA.Selenium;
+using TechTalk.SpecFlow;
 using UIAutomationProject.Helpers;
 using UIAutomationProject.Pages;
+using UIAutomationProject.Utilities.Data;
 
 
 namespace UIAutomationProject.Interactions.CharlesSchwab
@@ -14,6 +16,7 @@ namespace UIAutomationProject.Interactions.CharlesSchwab
         private string Option { get; }
         private bool SecondaryNavigation { get; }
         User User { get; set; }
+       
 
         public MenuNavigation(string menu, string subMenu) 
         {
@@ -46,51 +49,92 @@ namespace UIAutomationProject.Interactions.CharlesSchwab
                 {
                     switch (Menu)
                     {
-                        case "Annuities Overview":
-                        case "Schwab Intelligent Income":
-                        case "Schwab Intelligent Portfolios Premium":
-                        case "Schwab Intelligent Portfolios":
-                        case "Calculators & Tools":
-                        case "Complimentary Plan":
-                        case "How to reach your goals":
+                        case "Fixed Income Overview":
+                        case "Checking Overview":
                         case "Education and Custodial":
-                        case "Fraud and Security Video Library":
-                        case "Schwab Security Guarantee":
-                        case "Protecting senior investors":
-                        case "Resources to keep you safe online":
-                        case "Our commitment to your security":
-                        case "Comprehensive Wealth Management":
-                        case "Personalized Approach":
-                        case "Experienced Team":
-                        case "Sample Scenarios":
-                        case "Overview":
-                        case "Around the Clock Trading":
-                        case "Get Started":
-                        case "Stocks Overview":
-                        case "Schwab IRA Calculators":
-                        case "Other IRAs":
-                        case "Rollover IRA":
+                        case "Home Loans & Rates Overview":
+                        case "Trading Overview":
+                        case "Options Overview":
+                        case "Schwab Coaching Overview":
+                        case "Schwab Wealth Advisory Overview":
+                        case "Schwab Intelligent Portfolios":
                         case "Retirement Accounts (IRAs)":
-                        case "Research Tools":
+                            MainMenuOption4(actor, driver, "//*[@id=\"«r45»\"]/ul/li[1]/a");
+                            break;
+                        case "Home Loans & Rates Products":
+                        case "Schwab Intelligent Portfolios Premium":
+                            MainMenuOption4(actor, driver, "//*[@id=\"«r45»\"]/ul/li[2]/a");
+                            break;
+                        case "Home Loans & Rates Rates":
+                        case "Education":
+                        case "Complimentary Plan":
+                            MainMenuOption4(actor, driver, "//*[@id=\"«r45»\"]/ul/li[3]/a");
+                            break;
+                        case "Why Trade Futures Through Us":
+                        case "Support":
+                            MainMenuOption4(actor, driver, "//*[@id=\"«r45»\"]/ul/li[4]/a");
+                            break;
+                        case "Trading Platforms Trading Overview":
+                            MainMenuOption4(actor, driver, "//*[@id=\"«r46»\"]/ul/li[1]/a");
+                            break;
+                        case "Trading Platforms Education":
+                            MainMenuOption4(actor, driver, "//*[@id=\"«r46»\"]/ul/li[3]/a");
+                            break;
+                        case "Trading Platforms Support":
+                            MainMenuOption4(actor, driver, "//*[@id=\"«r46»\"]/ul/li[4]/a");
+                            break;
+                        case "Annuities Overview":
+                        case "Around the Clock Trading":
+                        case "Brokerage and Trading Account":
+                        case "Calculators & Tools":
+                        case "College Savings Calculator":
+                        case "Comprehensive Wealth Management":
+                        case "Education Savings Account":
+                        case "ETF Overview":
+                        case "Experienced Team":
+                        case "FAQs":
+                        case "Fixed Deferred Annuities":
+                        case "Fraud and Security Video Library":
+                        case "Get Started":
+                        case "How to reach your goals":
+                        case "Income Annuity Estimator":
+                        case "Invest in a Portfolio Solution":
                         case "Investment Research":
                         case "Mutual Funds Overview":
-                        case "Select List":
-                        case "Invest in a Portfolio Solution":
-                        case "Rates":
-                        case "Start Your Loan":
+                        case "Order Routing Process":
+                        case "Other IRAs":
+                        case "Our commitment to your security":
+                        case "Overview":
+                        case "Personalized Approach":
+                        case "Price Improvement":
+                        case "Pricing":
                         case "Products":
-                        case "Selecting ETFs":
-                        case "ETF Overview":
-                        case "FAQs":
-                        case "Send Money with Zelle":
+                        case "Protecting senior investors":
+                        case "Rates":
+                        case "Research Tools":
+                        case "Resources to keep you safe online":
+                        case "Rollover IRA":
+                        case "Sample Scenarios":
                         case "Schwab Bank Debit Card":
+                        case "Schwab Intelligent Income":
+                        case "Schwab IRA Calculators":
+                        case "Schwab Order Execution Advantage":
+                        case "Schwab Security Guarantee":
+                        case "Selecting ETFs":
+                        case "Selecting Fixed Income":
+                        case "Select List":
+                        case "Send Money with Zelle":
+                        case "Start Your Loan":
+                        case "Stocks Overview":
                         case "Types of Brokerage Accounts":
                         case "What is a Brokerage Account":
-                        case "Brokerage and Trading Account":
-                        case "Selecting Fixed Income":
-                        case "Pricing":
+                        case "Why Trade Options at Schwab":
+                        case "In-person Events":
+                        case "On-demand Webcasts":
+                        case "Live webcasts & virtual workshops":
                             MainMenuOption2(actor, driver);
                             break;
+
                         default:
                             MainMenuOption1(actor, driver);
                             break;
@@ -112,7 +156,7 @@ namespace UIAutomationProject.Interactions.CharlesSchwab
                         case "Understanding Stocks":
                         case "Traditional IRA":
                         case "Roth IRA":
-                        case "Schwab Trading Activity Index™ (STAX)":
+                        case "Schwab Trading Activity Index":
                         case "Introduction to Options":
                         case "Find Mutual Funds":
                         case "Understanding Mutual Funds":
@@ -125,7 +169,18 @@ namespace UIAutomationProject.Interactions.CharlesSchwab
                             break;
                         case "Active Trading":
                         case "thinkorswim Platforms":
-                            MenuOption1(actor, driver);
+                            if(BaseData.FeatureName.Contains("Active Trading")
+                                || BaseData.FeatureName.Contains("Education")
+                                || BaseData.FeatureName.Contains("Trading Platform")
+                                || BaseData.FeatureName.Contains("Schwab Trading Powered by Ameritrade")
+                                || BaseData.FeatureName.Contains("Support"))
+                            {
+                                MenuOption2(actor, driver);
+                            }
+                            else
+                            {
+                                MenuOption1(actor, driver);
+                            }
                             break;
                         default:
                             MenuOption3(actor, driver);
@@ -163,7 +218,53 @@ namespace UIAutomationProject.Interactions.CharlesSchwab
             actor.WaitsUntil(Appearance.Of(BasePage.CustomTextLocator(Menu, "span")), IsEqualTo.True());
             driver.FindElement(BasePage.CustomTextXpath(Menu, "span")).Click();
             Thread.Sleep(500);
-            driver.FindElement(BasePage.CustomExactTextXpath(SubMenu, "a")).Click();
+            switch(SubMenu)
+            {
+                case "thinkorswim Overview":
+                    driver.FindElement(BasePage.Xpath("//*[@id=\"«r47»\"]/ul/li[1]/a")).Click();
+                    break;
+                case "Mutual Funds Overview":
+                case "Custodial Account Overview":
+                    driver.FindElement(BasePage.Xpath("//*[@id=\"«r4a»\"]/ul/li[1]/a")).Click();
+                    break;
+                case "Resources Education":
+                    driver.FindElement(BasePage.Xpath("//*[@id=\"«r4a»\"]/ul/li[3]/a")).Click();
+                    break;
+                case "Environmental, Social and Governance (ESG) ETFs":
+                    driver.FindElement(BasePage.Xpath("//*[@id=\"«r4a»\"]/ul/li[6]/a")).Click();
+                    break;
+                case "Commodity ETFs":
+                    driver.FindElement(BasePage.Xpath("//*[@id=\"«r4a»\"]/ul/li[8]/a")).Click();
+                    break;
+                case "529 Savings Plan Overview":
+                case "Trading Platform thinkorswim Overview":
+                    driver.FindElement(BasePage.Xpath("//*[@id=\"«r48»\"]/ul/li[1]/a")).Click();
+                    break;
+                case "Withdrawal Rules":
+                    driver.FindElement(BasePage.Xpath("//*[@id=\"«r48»\"]/ul/li[3]/a")).Click();
+                    break;
+                case "Contribution Limits":
+                    driver.FindElement(BasePage.Xpath("//*[@id=\"«r48»\"]/ul/li[4]/a")).Click();
+                    break;
+                case "Order Execution":
+                    driver.FindElement(BasePage.Xpath("//*[@id=\"«r49»\"]/ul/li[2]/a")).Click();
+                    break;
+                case "Roth IRA Contribution Limits":
+                    driver.FindElement(BasePage.Xpath("//*[@id=\"«r48»\"]/ul/li[4]/a")).Click();
+                    break;
+                case "Traditional IRA Contribution Limits":
+                    driver.FindElement(BasePage.Xpath("//*[@id=\"«r47»\"]/ul/li[3]/a")).Click();
+                    break;
+                case "Roth IRA Withdrawal Rules":
+                    driver.FindElement(BasePage.Xpath("//*[@id=\"«r48»\"]/ul/li[3]/a")).Click();
+                    break;
+                case "Traditional IRA Withdrawal Rules":
+                    driver.FindElement(BasePage.Xpath("//*[@id=\"«r47»\"]/ul/li[2]/a")).Click();
+                    break;
+                default:
+                    driver.FindElement(BasePage.CustomTextXpath(SubMenu, "a")).Click();
+                    break;
+            }
         }
 
         public void MenuOption3(IActor actor, IWebDriver driver)
@@ -187,6 +288,13 @@ namespace UIAutomationProject.Interactions.CharlesSchwab
             driver.FindElement(BasePage.CustomTextXpath(Menu, "a")).Click();
             Thread.Sleep(500);
         }
+
+        public void MainMenuOption4(IActor actor, IWebDriver driver, string path)
+        {
+            actor.WaitsUntil(Appearance.Of(BasePage.LocatorXpath(path)), IsEqualTo.True());
+            driver.FindElement(BasePage.Xpath(path)).Click();
+        }
+
 
         public By ConvertMenuStringToBy(string item)
         {

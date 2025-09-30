@@ -113,7 +113,7 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
 #line 9
- testRunner.Given("I navigate to the secondary link  Schwab Intelligent Portfolios", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to the secondary link Schwab Intelligent Portfolios", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 10
  testRunner.When("I verify the title of the site is Automated Investing | Schwab Intelligent Portfo" +
@@ -157,7 +157,7 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
 #line 14
- testRunner.Given("I navigate to the secondary link  Schwab Intelligent Portfolios Premium", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to the secondary link Schwab Intelligent Portfolios Premium", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 15
  testRunner.When("I verify the title of the site is Schwab automated investing with unlimited guida" +
@@ -202,13 +202,19 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
 #line 19
- testRunner.Given("I navigate to the secondary link  Schwab Intelligent Income", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to the secondary link Schwab Intelligent Income", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
+                TechTalk.SpecFlow.Table table136 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Key",
+                            "Value"});
+                table136.AddRow(new string[] {
+                            "TitleEnding",
+                            "TM"});
 #line 20
  testRunner.When("I verify the title of the site is Schwab Intelligent Income� | Automated withdraw" +
-                        "als | Charles Schwab | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+                        "als | Charles Schwab | Charles Schwab", ((string)(null)), table136, "When ");
 #line hidden
-#line 21
+#line 23
  testRunner.Then("I verify the url of the site is https://www.schwab.com/automated-investing/intell" +
                         "igent-income", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -223,7 +229,7 @@ this.FeatureBackground();
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Compare our Solutions page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 23
+#line 25
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -246,20 +252,20 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table132 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table137 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table132.AddRow(new string[] {
+                table137.AddRow(new string[] {
                             "Item1",
                             "Compare our Solutions"});
-#line 24
- testRunner.Given("I navigate to the secondary link Compare Solutions", ((string)(null)), table132, "Given ");
+#line 26
+ testRunner.Given("I navigate to the secondary link Compare Solutions", ((string)(null)), table137, "Given ");
 #line hidden
-#line 27
+#line 29
  testRunner.When("I verify the title of the site is Compare Our Intelligent Solutions | Charles Sch" +
                         "wab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 28
+#line 30
  testRunner.Then("I verify the url of the site is https://www.schwab.com/automated-investing/compar" +
                         "e", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -274,7 +280,7 @@ this.FeatureBackground();
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Compare us to others page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 30
+#line 32
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -297,20 +303,20 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table133 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table138 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table133.AddRow(new string[] {
+                table138.AddRow(new string[] {
                             "Item1",
                             "Compare us to others"});
-#line 31
- testRunner.Given("I navigate to the secondary link Compare Solutions", ((string)(null)), table133, "Given ");
+#line 33
+ testRunner.Given("I navigate to the secondary link Compare Solutions", ((string)(null)), table138, "Given ");
 #line hidden
-#line 34
+#line 36
  testRunner.When("I verify the title of the site is Schwab Intelligent Portfolios Compare Us | Char" +
                         "les Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 35
+#line 37
  testRunner.Then("I verify the url of the site is https://www.schwab.com/automated-investing/compar" +
                         "e-us", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -325,7 +331,7 @@ this.FeatureBackground();
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the An Introduction to Robo-Advice page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 37
+#line 39
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -348,19 +354,19 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table134 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table139 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table134.AddRow(new string[] {
+                table139.AddRow(new string[] {
                             "Item1",
                             "An Introduction to Robo-Advice"});
-#line 38
- testRunner.Given("I navigate to the secondary link Resources", ((string)(null)), table134, "Given ");
+#line 40
+ testRunner.Given("I navigate to the secondary link Resources", ((string)(null)), table139, "Given ");
 #line hidden
-#line 41
+#line 43
  testRunner.When("I verify the title of the site is What is a Robo Advisor | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 42
+#line 44
  testRunner.Then("I verify the url of the site is https://www.schwab.com/automated-investing/what-i" +
                         "s-a-robo-advisor", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -375,7 +381,7 @@ this.FeatureBackground();
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Robo Advisor Myths page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 44
+#line 46
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -398,20 +404,20 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table135 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table140 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table135.AddRow(new string[] {
+                table140.AddRow(new string[] {
                             "Item1",
                             "Robo Advisor Myths"});
-#line 45
- testRunner.Given("I navigate to the secondary link Resources", ((string)(null)), table135, "Given ");
+#line 47
+ testRunner.Given("I navigate to the secondary link Resources", ((string)(null)), table140, "Given ");
 #line hidden
-#line 48
+#line 50
  testRunner.When("I verify the title of the site is What is a Robo-Advisor: Debunking Myths | Charl" +
                         "es Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 49
+#line 51
  testRunner.Then("I verify the url of the site is https://www.schwab.com/automated-investing/robo-a" +
                         "dvisor-myths", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -426,7 +432,7 @@ this.FeatureBackground();
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Education page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 51
+#line 53
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -449,20 +455,20 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table136 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table141 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table136.AddRow(new string[] {
+                table141.AddRow(new string[] {
                             "Item1",
-                            "Education"});
-#line 52
- testRunner.Given("I navigate to the secondary link Resources", ((string)(null)), table136, "Given ");
+                            "Resources Education"});
+#line 54
+ testRunner.Given("I navigate to the secondary link Resources", ((string)(null)), table141, "Given ");
 #line hidden
-#line 55
+#line 57
  testRunner.When("I verify the title of the site is Schwab Intelligent Portfolios Investing Insight" +
                         "s | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 56
+#line 58
  testRunner.Then("I verify the url of the site is https://www.schwab.com/learn/intelligent-portfoli" +
                         "os-insights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

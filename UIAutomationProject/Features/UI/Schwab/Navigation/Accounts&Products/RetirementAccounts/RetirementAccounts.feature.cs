@@ -156,14 +156,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table83 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table86 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table83.AddRow(new string[] {
+                table86.AddRow(new string[] {
                             "Item1",
                             "What is a Traditional IRA?"});
 #line 14
- testRunner.Given("I navigate to the secondary link Traditional IRA", ((string)(null)), table83, "Given ");
+ testRunner.Given("I navigate to the secondary link Traditional IRA", ((string)(null)), table86, "Given ");
 #line hidden
 #line 17
  testRunner.When("I verify the title of the site is What is a Traditional IRA? | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -176,12 +176,12 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify you can access the Withdrawal Rules page")]
-        public virtual void VerifyYouCanAccessTheWithdrawalRulesPage()
+        [NUnit.Framework.DescriptionAttribute("Verify you can access the Withdrawal Rules page from Traditional IRA")]
+        public virtual void VerifyYouCanAccessTheWithdrawalRulesPageFromTraditionalIRA()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Withdrawal Rules page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Withdrawal Rules page from Traditional IRA", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 20
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -205,14 +205,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table84 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table87 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table84.AddRow(new string[] {
+                table87.AddRow(new string[] {
                             "Item1",
-                            "Withdrawal Rules"});
+                            "Traditional IRA Withdrawal Rules"});
 #line 21
- testRunner.Given("I navigate to the secondary link Traditional IRA", ((string)(null)), table84, "Given ");
+ testRunner.Given("I navigate to the secondary link Traditional IRA", ((string)(null)), table87, "Given ");
 #line hidden
 #line 24
  testRunner.When("I verify the title of the site is Traditional IRA Withdrawal Rules | Charles Schw" +
@@ -234,7 +234,7 @@ this.FeatureBackground();
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the Contribution Limits page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 27
-this.ScenarioInitialize(scenarioInfo);
+ this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -256,14 +256,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table85 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table88 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table85.AddRow(new string[] {
+                table88.AddRow(new string[] {
                             "Item1",
-                            "Contribution Limits"});
+                            "Traditional IRA Contribution Limits"});
 #line 28
- testRunner.Given("I navigate to the secondary link Traditional IRA", ((string)(null)), table85, "Given ");
+ testRunner.Given("I navigate to the secondary link Traditional IRA", ((string)(null)), table88, "Given ");
 #line hidden
 #line 31
  testRunner.When("I verify the title of the site is Traditional IRA Contribution Limits for 2024 - " +
@@ -307,14 +307,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table86 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table89 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table86.AddRow(new string[] {
+                table89.AddRow(new string[] {
                             "Item1",
                             "What is a Roth IRA?"});
 #line 35
- testRunner.Given("I navigate to the secondary link Roth IRA", ((string)(null)), table86, "Given ");
+ testRunner.Given("I navigate to the secondary link Roth IRA", ((string)(null)), table89, "Given ");
 #line hidden
 #line 38
  testRunner.When("I verify the title of the site is Roth IRA: What is a Roth IRA? | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -356,14 +356,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table87 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table90 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table87.AddRow(new string[] {
+                table90.AddRow(new string[] {
                             "Item1",
                             "Roth vs Traditional"});
 #line 42
- testRunner.Given("I navigate to the secondary link Roth IRA", ((string)(null)), table87, "Given ");
+ testRunner.Given("I navigate to the secondary link Roth IRA", ((string)(null)), table90, "Given ");
 #line hidden
 #line 45
  testRunner.When("I verify the title of the site is Roth IRA vs. Traditional IRA: Differences and R" +
@@ -407,14 +407,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table88 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table91 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table88.AddRow(new string[] {
+                table91.AddRow(new string[] {
                             "Item1",
-                            "Withdrawal Rules"});
+                            "Roth IRA Withdrawal Rules"});
 #line 49
- testRunner.Given("I navigate to the secondary link Roth IRA", ((string)(null)), table88, "Given ");
+ testRunner.Given("I navigate to the secondary link Roth IRA", ((string)(null)), table91, "Given ");
 #line hidden
 #line 52
  testRunner.When("I verify the title of the site is Roth IRA Withdrawal Rules | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -457,14 +457,14 @@ this.FeatureBackground();
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table89 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table92 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table89.AddRow(new string[] {
+                table92.AddRow(new string[] {
                             "Item1",
-                            "Contribution Limits"});
+                            "Roth IRA Contribution Limits"});
 #line 56
- testRunner.Given("I navigate to the secondary link Roth IRA", ((string)(null)), table89, "Given ");
+ testRunner.Given("I navigate to the secondary link Roth IRA", ((string)(null)), table92, "Given ");
 #line hidden
 #line 59
  testRunner.When("I verify the title of the site is Roth IRA Contribution Limits for 2024-2025 | Ch" +

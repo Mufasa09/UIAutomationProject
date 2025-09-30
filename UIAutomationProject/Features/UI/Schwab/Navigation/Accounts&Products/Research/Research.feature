@@ -28,7 +28,7 @@ Scenario: Verify you can access the View the STAX page
 	Given I navigate to the secondary link Schwab Trading Activity Index
 		| Key   | Value         |
 		| Item1 | View the STAX |
-	When I verify the title of the site is Schwab Trading Activity Index™ (STAX) | Charles Schwab
+	When I verify the title of the site is View the Schwab Trading Activity Index™ | Charles Schwab
 		| Key         | Value |
 		| TitleEnding | TM    |
 	Then I verify the url of the site is https://www.schwab.com/investment-research/stax/view-schwab-trading-activity-index

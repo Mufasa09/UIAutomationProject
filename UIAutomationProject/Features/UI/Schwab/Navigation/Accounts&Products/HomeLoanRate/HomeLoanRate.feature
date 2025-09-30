@@ -6,19 +6,19 @@ Background:
 	Given I navigate to Home Loans & Rates from Accounts & Products
 
 Scenario: Verify you can access the Overview page
-	Given I navigate to the secondary link Overview
+	Given I navigate to the secondary link Home Loans & Rates Overview
 	When I verify the title of the site is Mortgage – Apply for mortgages at low interest rates | Schwab Bank
 		| Key         | Value |
 		| TitleEnding | Dash  |
 	Then I verify the url of the site is https://www.schwab.com/mortgages
 
 Scenario: Verify you can access the Products page
-	Given I navigate to the secondary link Products
+	Given I navigate to the secondary link Home Loans & Rates Products
 	When I verify the title of the site is Products | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/mortgages/mortgage-refinance
 
 Scenario: Verify you can access the Rates page
-	Given I navigate to the secondary link Rates
+	Given I navigate to the secondary link Home Loans & Rates Rates
 	When I verify the title of the site is Mortgage Rates | Schwab Bank | Charles Schwab
 		| Key         | Value |
 		| TitleEnding | Dash  |

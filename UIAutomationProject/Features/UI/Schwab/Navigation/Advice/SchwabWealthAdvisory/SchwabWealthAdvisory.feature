@@ -6,7 +6,7 @@ Background:
 	Given I navigate to Schwab Wealth Advisory from Advice
 
 Scenario: Verify you can access the Overview page
-	Given I navigate to the secondary link Overview
+	Given I navigate to the secondary link Schwab Wealth Advisory Overview
 	When I verify the title of the site is Schwab Wealth Advisory - Wealth Management | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/wealth-management/wealth-advisor
 

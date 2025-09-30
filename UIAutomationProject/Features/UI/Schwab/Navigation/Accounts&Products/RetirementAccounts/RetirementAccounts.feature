@@ -17,17 +17,17 @@ Scenario: Verify you can access the What is a Traditional IRA? page
 	When I verify the title of the site is What is a Traditional IRA? | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/ira/traditional-ira
 
-Scenario: Verify you can access the Withdrawal Rules page
+Scenario: Verify you can access the Withdrawal Rules page from Traditional IRA
 	Given I navigate to the secondary link Traditional IRA
 		| Key   | Value               |
-		| Item1 | Withdrawal Rules |
+		| Item1 | Traditional IRA Withdrawal Rules |
 	When I verify the title of the site is Traditional IRA Withdrawal Rules | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/ira/traditional-ira/withdrawal-rules
 
-Scenario: Verify you can access the Contribution Limits page
+ Scenario: Verify you can access the Contribution Limits page
 	Given I navigate to the secondary link Traditional IRA
 		| Key   | Value              |
-		| Item1 | Contribution Limits |
+		| Item1 | Traditional IRA Contribution Limits |
 	When I verify the title of the site is Traditional IRA Contribution Limits for 2024 - 2025 | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/ira/traditional-ira/contribution-limits
 
@@ -48,14 +48,14 @@ Scenario: Verify you can access the Roth vs Traditional page
 Scenario: Verify you can access the Withdrawal Rules page from Roth IRA
 	Given I navigate to the secondary link Roth IRA
 		| Key   | Value                            |
-		| Item1 | Withdrawal Rules |
+		| Item1 | Roth IRA Withdrawal Rules |
 	When I verify the title of the site is Roth IRA Withdrawal Rules | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/ira/roth-ira/withdrawal-rules
 
 	Scenario: Verify you can access the Contribution Limits page from Roth IRA
 	Given I navigate to the secondary link Roth IRA
 		| Key   | Value                            |
-		| Item1 | Contribution Limits |
+		| Item1 | Roth IRA Contribution Limits |
 	When I verify the title of the site is Roth IRA Contribution Limits for 2024-2025 | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/ira/roth-ira/contribution-limits
 

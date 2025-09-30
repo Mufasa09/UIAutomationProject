@@ -205,7 +205,7 @@ this.FeatureBackground();
                             "Value"});
                 table33.AddRow(new string[] {
                             "Item1",
-                            "Overview"});
+                            "529 Savings Plan Overview"});
 #line 19
  testRunner.Given("I navigate to the secondary link 529 Savings Plan", ((string)(null)), table33, "Given ");
 #line hidden
@@ -398,14 +398,20 @@ this.FeatureBackground();
                             "Value"});
                 table36.AddRow(new string[] {
                             "Item1",
-                            "Overview"});
+                            "Custodial Account Overview"});
 #line 45
  testRunner.Given("I navigate to the secondary link Custodial Account", ((string)(null)), table36, "Given ");
 #line hidden
+                TechTalk.SpecFlow.Table table37 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Key",
+                            "Value"});
+                table37.AddRow(new string[] {
+                            "TitleEnding",
+                            "CR"});
 #line 48
- testRunner.When("I verify the title of the site is Schwab One� Custodial Account | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I verify the title of the site is Schwab One� Custodial Account | Charles Schwab", ((string)(null)), table37, "When ");
 #line hidden
-#line 49
+#line 51
  testRunner.Then("I verify the url of the site is https://www.schwab.com/custodial-account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -419,7 +425,7 @@ this.FeatureBackground();
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify you can access the thinkorswim Download Instructions page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 51
+#line 53
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -442,20 +448,26 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table37 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table38 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table37.AddRow(new string[] {
+                table38.AddRow(new string[] {
                             "Item1",
                             "Custodial Transfer"});
-#line 52
- testRunner.Given("I navigate to the secondary link Custodial Account", ((string)(null)), table37, "Given ");
+#line 54
+ testRunner.Given("I navigate to the secondary link Custodial Account", ((string)(null)), table38, "Given ");
 #line hidden
-#line 55
+                TechTalk.SpecFlow.Table table39 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Key",
+                            "Value"});
+                table39.AddRow(new string[] {
+                            "TitleEnding",
+                            "CR"});
+#line 57
  testRunner.When("I verify the title of the site is Custodial Account Transfer | Schwab One� Custod" +
-                        "ial Account | Charles Schwab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+                        "ial Account | Charles Schwab", ((string)(null)), table39, "When ");
 #line hidden
-#line 56
+#line 60
  testRunner.Then("I verify the url of the site is https://www.schwab.com/custodial-account/custodia" +
                         "l-transfer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

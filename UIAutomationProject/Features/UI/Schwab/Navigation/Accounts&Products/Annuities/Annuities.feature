@@ -57,14 +57,14 @@ Scenario: Verify you can access the Single Premium Immediate Annuities page
 		| Key   | Value                              |
 		| Item1 | Single Premium Immediate Annuities |
 	When I verify the title of the site is Income Annuities–Retirement Income | Charles Schwab
-			| Key         | Value |
-		| TitleEnding | Dash    |
+		| Key         | Value |
+		| TitleEnding | Dash  |
 	Then I verify the url of the site is https://www.schwab.com/annuities/income-annuity
 
 Scenario: Verify you can access the Deferred Income Annuities page
 	Given I navigate to the secondary link Income Annuities
 		| Key   | Value                     |
-		| Item1 | Deferred Income Annuities  |
+		| Item1 | Deferred Income Annuities |
 	When I verify the title of the site is Deferred Income Annuities Overview | Charles Schwab
 	Then I verify the url of the site is https://www.schwab.com/annuities/deferred-income-annuities
 
